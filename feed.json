@@ -12,7 +12,7 @@
         {
             "id": "https://frathom.github.io/hirundo/test.html",
             "url": "https://frathom.github.io/hirundo/test.html",
-            "title": "test",
+            "title": "test blog entry",
             "content_html": "\n  <p>\n    \n  </p>",
             "author": {
                 "name": "Franck"
@@ -20,7 +20,7 @@
             "tags": [
             ],
             "date_published": "2023-01-16T17:53:01+01:00",
-            "date_modified": "2023-01-16T17:53:01+01:00"
+            "date_modified": "2026-07-02T16:13:06+02:00"
         }
     ]
 }
