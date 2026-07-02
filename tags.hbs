@@ -1,0 +1,37 @@
+{{> head}}
+{{> header}}
+
+<main class="main is-archive is-tags">
+   <header class="archive-hero">
+      <div class="wrap">
+         <p class="eyebrow eyebrow--gold">{{@website.name}}</p>
+         <h1 class="archive-hero__title">{{translate 'tags.title'}}</h1>
+      </div>
+   </header>
+
+   <section class="section">
+      <div class="wrap">
+         <ul class="topics-grid">
+            {{#each tags}}
+               <li class="topic">
+                  <a href="{{url}}">
+                     {{#featuredImage}}
+                        {{#if url}}
+                           <span class="topic__media">
+                              <img src="{{url}}"
+                                 {{#if @config.site.responsiveImages}}{{responsiveImageAttributes 'tagImage' srcset sizes}}{{/if}}
+                                 {{lazyload "lazy"}} width="{{width}}" height="{{height}}" alt="{{alt}}">
+                           </span>
+                        {{/if}}
+                     {{/featuredImage}}
+                     <span class="topic__name">{{name}}</span>
+                     <span class="topic__count">{{postsNumber}} {{translate 'tags.postsCount'}}</span>
+                  </a>
+               </li>
+            {{/each}}
+         </ul>
+      </div>
+   </section>
+</main>
+
+{{> footer}}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ @website.language }}">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      {{#if title}}
+         <title>{{title}}</title>
+      {{else}}
+         <title>{{@website.name}}</title>
+      {{/if}}
+      {{metaDescription}}
+      {{metaRobots}}
+      {{{publiiHead}}}
+      {{canonicalLink}}
+      {{feedLink}}
+      {{socialMetaTags}}
+      {{#if @config.custom.faviconUpload}}
+         <link rel="shortcut icon" href="{{@config.custom.faviconUpload}}" type="{{@config.custom.faviconExtension}}">
+      {{else}}
+         <link rel="shortcut icon" href="{{@website.assetsUrl}}/images/favicon/favicon-32.png" type="image/png">
+         <link rel="apple-touch-icon" href="{{@website.assetsUrl}}/images/favicon/apple-touch-icon-180.png">
+      {{/if}}
+      {{#if @pagination}}
+         {{#if @pagination.previousPage}}
+            <link rel="prev" href="{{@pagination.previousPageUrl}}">
+         {{/if}}
+         {{#if @pagination.nextPage}}
+            <link rel="next" href="{{@pagination.nextPageUrl}}">
+         {{/if}}
+      {{/if}}
+      {{> fonts}}
+      <link rel="stylesheet" href="{{css "style.css"}}">
+      {{jsonLD}}
+      <noscript>
+         <style>
+            img[loading] { opacity: 1; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+         </style>
+      </noscript>
+      {{{@headCustomCode}}}
+   </head>
+   <body class="{{#is "index"}}is-home{{/is}}{{#is "index-pagination"}}is-paginated{{/is}}{{#is "tag"}}is-tag{{/is}}{{#is "tag-pagination"}}is-tag is-paginated{{/is}}{{#is "tags"}}is-tags{{/is}}{{#is "page"}}is-page{{/is}}{{#is "post"}}is-post{{/is}}{{#is "author"}}is-author{{/is}}{{#is "author-pagination"}}is-author is-paginated{{/is}}{{#is "404"}}is-error{{/is}}{{#is "search"}}is-search{{/is}}">
+      {{{@bodyCustomCode}}}

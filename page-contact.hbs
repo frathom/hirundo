@@ -1,0 +1,50 @@
+{{> head}}
+{{> header}}
+
+<main class="main is-page-main is-contact">
+   {{#page}}
+      {{#if @config.page.displayTitle}}
+         <header class="page__header">
+            <div class="wrap">
+               <p class="eyebrow eyebrow--gold">{{@website.name}}</p>
+               <h1 class="page__title">{{title}}</h1>
+               {{#if @config.page.introText}}<p class="page__intro lead">{{@config.page.introText}}</p>{{/if}}
+            </div>
+         </header>
+      {{/if}}
+
+      <div class="wrap contact__grid">
+         <div class="contact__body entry">
+            {{{text}}}
+         </div>
+
+         <aside class="contact__aside">
+            <div class="contact-card">
+               <span class="mark mark--56" aria-hidden="true"></span>
+               <h2 class="contact-card__title">{{@config.custom.footerNewsletterHeading}}</h2>
+               {{#if @config.custom.footerNewsletterCode}}
+                  {{{@config.custom.footerNewsletterCode}}}
+               {{else}}
+                  {{#if @website.contactEmail}}
+                     <a class="btn btn--gold btn--lg contact-card__email" href="mailto:{{@website.contactEmail}}">{{@website.contactEmail}}</a>
+                  {{/if}}
+               {{/if}}
+               {{#checkIfAny @config.custom.socialLinkedin @config.custom.socialTwitter @config.custom.socialInstagram @config.custom.socialYoutube}}
+                  <ul class="social social--dark">
+                     {{#if @config.custom.socialLinkedin}}<li><a href="{{@config.custom.socialLinkedin}}" rel="noopener" target="_blank" aria-label="{{translate 'socials.linkedIn'}}">in</a></li>{{/if}}
+                     {{#if @config.custom.socialTwitter}}<li><a href="{{@config.custom.socialTwitter}}" rel="noopener" target="_blank" aria-label="{{translate 'socials.twitter'}}">X</a></li>{{/if}}
+                     {{#if @config.custom.socialInstagram}}<li><a href="{{@config.custom.socialInstagram}}" rel="noopener" target="_blank" aria-label="{{translate 'socials.instagram'}}">IG</a></li>{{/if}}
+                     {{#if @config.custom.socialYoutube}}<li><a href="{{@config.custom.socialYoutube}}" rel="noopener" target="_blank" aria-label="{{translate 'socials.youtube'}}">YT</a></li>{{/if}}
+                  </ul>
+               {{/checkIfAny}}
+            </div>
+         </aside>
+      </div>
+
+      {{#if @config.page.displayComments}}
+         <section class="wrap wrap--narrow comments">{{{@commentsCustomCode}}}</section>
+      {{/if}}
+   {{/page}}
+</main>
+
+{{> footer}}

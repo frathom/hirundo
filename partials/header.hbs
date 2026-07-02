@@ -1,0 +1,32 @@
+{{!-- Site header / primary navigation. On the homepage hero it overlays the
+      navy hero and turns solid on scroll (see scripts.js). The CSS picks the
+      dark or light logo based on the header state, so both are output. --}}
+<header class="site-header{{#if @config.custom.headerSticky}} site-header--sticky{{/if}}{{#is "index"}}{{#if @config.custom.heroEnabled}} site-header--overlay{{/if}}{{/is}}"
+        data-overlay="{{#is "index"}}{{#if @config.custom.heroEnabled}}1{{/if}}{{/is}}">
+   <div class="wrap site-header__inner">
+      <a class="brand" href="{{@website.url}}" aria-label="{{@website.name}}">
+         {{#if @website.logo}}
+            <img class="brand__logo" src="{{@website.logo}}" alt="{{@website.name}}"
+                 width="{{@website.logoSize.width}}" height="{{@website.logoSize.height}}">
+         {{else}}
+            <img class="brand__logo brand__logo--dark" src="{{@website.assetsUrl}}/images/logo-horizontal.png" alt="{{@website.name}}">
+            <img class="brand__logo brand__logo--light" src="{{@website.assetsUrl}}/images/logo-horizontal-onnavy.png" alt="{{@website.name}}">
+         {{/if}}
+      </a>
+
+      <button class="nav-toggle" aria-label="{{translate 'partials.menu.label'}}" aria-expanded="false" aria-controls="primary-nav">
+         <span class="nav-toggle__bar"></span>
+         <span class="nav-toggle__bar"></span>
+         <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="{{translate 'partials.menu.label'}}">
+         {{#if menus.mainMenu}}
+            {{> menu menus.mainMenu}}
+         {{/if}}
+         {{#if @config.custom.headerCtaLabel}}
+            <a class="btn btn--gold nav-cta" href="{{@config.custom.headerCtaUrl}}">{{@config.custom.headerCtaLabel}}</a>
+         {{/if}}
+      </nav>
+   </div>
+</header>

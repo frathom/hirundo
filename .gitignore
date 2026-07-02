@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Packaged theme archive (build artifact)
+Hirundo.zip
+*.zip
+
+# Node (if tooling is added later)
+node_modules/

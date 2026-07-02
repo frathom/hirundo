@@ -1,0 +1,65 @@
+<footer class="site-footer" id="contact">
+   <div class="wrap">
+      <div class="site-footer__top">
+         <div class="site-footer__brand">
+            <a href="{{@website.url}}" class="footer-mark" aria-label="{{@website.name}}">
+               <span class="mark mark--40" aria-hidden="true"></span>
+               <span class="footer-mark__name">{{@website.name}}</span>
+            </a>
+            {{#if @config.custom.footerTagline}}
+               <p class="site-footer__tagline">{{@config.custom.footerTagline}}</p>
+            {{/if}}
+            {{#checkIfAny @config.custom.socialLinkedin @config.custom.socialTwitter @config.custom.socialInstagram @config.custom.socialYoutube}}
+               <ul class="social">
+                  {{#if @config.custom.socialLinkedin}}<li><a href="{{@config.custom.socialLinkedin}}" aria-label="{{translate 'socials.linkedIn'}}" rel="noopener" target="_blank">in</a></li>{{/if}}
+                  {{#if @config.custom.socialTwitter}}<li><a href="{{@config.custom.socialTwitter}}" aria-label="{{translate 'socials.twitter'}}" rel="noopener" target="_blank">X</a></li>{{/if}}
+                  {{#if @config.custom.socialInstagram}}<li><a href="{{@config.custom.socialInstagram}}" aria-label="{{translate 'socials.instagram'}}" rel="noopener" target="_blank">IG</a></li>{{/if}}
+                  {{#if @config.custom.socialYoutube}}<li><a href="{{@config.custom.socialYoutube}}" aria-label="{{translate 'socials.youtube'}}" rel="noopener" target="_blank">YT</a></li>{{/if}}
+               </ul>
+            {{/checkIfAny}}
+         </div>
+
+         {{#if menus.footerMenu}}
+            <nav class="site-footer__nav" aria-label="Footer">
+               {{> menu menus.footerMenu}}
+            </nav>
+         {{/if}}
+
+         {{#if @config.custom.footerNewsletterEnabled}}
+            <div class="site-footer__newsletter">
+               {{#if @config.custom.footerNewsletterHeading}}<h3>{{@config.custom.footerNewsletterHeading}}</h3>{{/if}}
+               {{#if @config.custom.footerNewsletterText}}<p>{{@config.custom.footerNewsletterText}}</p>{{/if}}
+               {{#if @config.custom.footerNewsletterCode}}
+                  {{{@config.custom.footerNewsletterCode}}}
+               {{else}}
+                  <form class="newsletter-form" action="#" method="post" onsubmit="return false;">
+                     <input type="email" name="email" required aria-label="Email"
+                            placeholder="{{translate 'partials.footer.newsletterPlaceholder'}}">
+                     <button type="submit" class="btn btn--gold">{{translate 'partials.footer.newsletterButton'}}</button>
+                  </form>
+               {{/if}}
+            </div>
+         {{/if}}
+      </div>
+
+      <div class="site-footer__bottom">
+         <div class="site-footer__copy">{{{@config.custom.copyrightText}}}</div>
+         <a href="#" class="to-top" aria-label="Back to top">&uarr;</a>
+      </div>
+   </div>
+</footer>
+
+<script defer src="{{js "scripts.min.js"}}"></script>
+{{#if @config.site.mediaLazyLoad}}
+   <script>
+      var _imgs = document.querySelectorAll('img[loading]');
+      for (var i = 0; i < _imgs.length; i++) {
+         if (_imgs[i].complete) { _imgs[i].classList.add('is-loaded'); }
+         else { _imgs[i].addEventListener('load', function () { this.classList.add('is-loaded'); }, false); }
+      }
+   </script>
+{{/if}}
+{{{@footerCustomCode}}}
+{{{publiiFooter}}}
+</body>
+</html>

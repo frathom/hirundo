@@ -1,0 +1,15 @@
+{{#if @pagination}}
+   <nav class="pagination" aria-label="Pagination">
+      {{#if @pagination.previousPage}}
+         <a class="btn btn--ghost" href="{{@pagination.previousPageUrl}}">&larr; {{translate 'partials.pagination.prev'}}</a>
+      {{else}}
+         <span></span>
+      {{/if}}
+      <span class="pagination__count">{{translate 'partials.pagination.page'}} {{@pagination.currentPage}} / {{@pagination.totalPages}}</span>
+      {{#if @pagination.nextPage}}
+         <a class="btn btn--ghost" href="{{@pagination.nextPageUrl}}">{{translate 'partials.pagination.next'}} &rarr;</a>
+      {{else}}
+         <span></span>
+      {{/if}}
+   </nav>
+{{/if}}

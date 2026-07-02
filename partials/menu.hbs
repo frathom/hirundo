@@ -1,0 +1,29 @@
+<ul class="menu">
+   {{#each items}}
+      <li {{menuItemClasses}}>
+         {{#if link}}
+            <a href="{{menuUrl}}"
+               {{#if title}}title="{{title}}"{{/if}}
+               {{#if target}}target="{{target}}"{{/if}}
+               {{#if rel}}rel="{{rel}}"{{/if}}>{{label}}</a>
+         {{else}}
+            <span>{{label}}</span>
+         {{/if}}
+         {{#if items}}
+            <ul class="submenu">
+               {{#each items}}
+                  <li {{menuItemClasses}}>
+                     {{#if link}}
+                        <a href="{{menuUrl}}"
+                           {{#if target}}target="{{target}}"{{/if}}
+                           {{#if rel}}rel="{{rel}}"{{/if}}>{{label}}</a>
+                     {{else}}
+                        <span>{{label}}</span>
+                     {{/if}}
+                  </li>
+               {{/each}}
+            </ul>
+         {{/if}}
+      </li>
+   {{/each}}
+</ul>

@@ -1,0 +1,65 @@
+{{> head}}
+{{> header}}
+
+<main class="main is-page-main">
+   {{#if @customHTML.beforePage}}
+      <div class="wrap banner">{{{@customHTML.beforePage}}}</div>
+   {{/if}}
+
+   {{#page}}
+      <article class="page">
+         {{#if @config.page.displayTitle}}
+            <header class="page__header">
+               <div class="wrap wrap--narrow">
+                  <h1 class="page__title">{{title}}</h1>
+                  {{#if @config.page.introText}}<p class="page__intro lead">{{@config.page.introText}}</p>{{/if}}
+               </div>
+            </header>
+         {{/if}}
+
+         {{#if @config.page.displayFeaturedImage}}
+            {{#featuredImage}}
+               {{#if url}}
+                  <figure class="wrap page__featured">
+                     <img src="{{url}}"
+                        {{#if @config.site.responsiveImages}}{{responsiveImageAttributes 'featuredImage' srcset.post sizes.post}}{{/if}}
+                        {{lazyload "eager"}} width="{{width}}" height="{{height}}" alt="{{alt}}">
+                     {{#checkIfAny caption credits}}<figcaption>{{caption}} {{credits}}</figcaption>{{/checkIfAny}}
+                  </figure>
+               {{/if}}
+            {{/featuredImage}}
+         {{/if}}
+
+         <div class="wrap wrap--narrow page__content entry">
+            {{{text}}}
+         </div>
+
+         {{#if @config.page.displayShareButtons}}
+            <div class="wrap wrap--narrow page__footer">
+               {{#checkIfAll @plugins.socialSharing @plugins.socialSharing.state}}{{{@customSocialSharing}}}{{else}}{{> share-buttons}}{{/checkIfAll}}
+            </div>
+         {{/if}}
+
+         {{#if @config.page.displayChildPages}}
+            {{#if subpages}}
+               <section class="section subpages">
+                  <div class="wrap wrap--narrow">
+                     <h2 class="section__title">{{translate 'page.childPages'}}</h2>
+                     <ul class="subpages__list">{{> subpages-list}}</ul>
+                  </div>
+               </section>
+            {{/if}}
+         {{/if}}
+
+         {{#if @config.page.displayComments}}
+            <section class="wrap wrap--narrow comments">{{{@commentsCustomCode}}}</section>
+         {{/if}}
+      </article>
+
+      {{#if @customHTML.afterPage}}
+         <div class="wrap banner">{{{@customHTML.afterPage}}}</div>
+      {{/if}}
+   {{/page}}
+</main>
+
+{{> footer}}

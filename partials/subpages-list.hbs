@@ -1,0 +1,8 @@
+{{#each subpages}}
+   <li class="subpage">
+      <a href="{{url}}">
+         <span class="subpage__title">{{title}}</span>
+         {{#if excerpt}}<span class="subpage__excerpt">{{excerpt}}</span>{{/if}}
+      </a>
+   </li>
+{{/each}}

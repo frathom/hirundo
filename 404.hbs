@@ -1,0 +1,16 @@
+{{> head}}
+{{> header}}
+
+<main class="main is-error-main">
+   <section class="error">
+      <div class="wrap error__inner">
+         <span class="mark mark--100" aria-hidden="true"></span>
+         <p class="eyebrow eyebrow--gold">404</p>
+         <h1 class="error__title">{{translate 'error.title'}}</h1>
+         <p class="error__text">{{translate 'error.text'}}</p>
+         <a class="btn btn--navy btn--lg" href="{{@website.url}}">{{translate 'error.button'}}</a>
+      </div>
+   </section>
+</main>
+
+{{> footer}}

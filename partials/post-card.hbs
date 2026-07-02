@@ -1,0 +1,38 @@
+{{!-- Reusable blog/insight card. Expects a post context. --}}
+<article class="card">
+   {{#if @config.custom.cardsImage}}
+      {{#featuredImage}}
+         {{#if url}}
+            <a href="{{../url}}" class="card__media" tabindex="-1" aria-hidden="true">
+               <img src="{{url}}"
+                  {{#if @config.site.responsiveImages}}{{responsiveImageAttributes 'featuredImage' srcset.cards sizes.cards}}{{/if}}
+                  {{lazyload "lazy"}} width="{{width}}" height="{{height}}" alt="{{alt}}">
+            </a>
+         {{/if}}
+      {{/featuredImage}}
+   {{/if}}
+   <div class="card__body">
+      <div class="card__meta">
+         {{#if @config.custom.cardsTag}}
+            {{#if mainTag}}<a href="{{mainTag.url}}" class="chip">{{mainTag.name}}</a>{{/if}}
+         {{/if}}
+         {{#if @config.custom.cardsDate}}
+            <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+               {{#checkIf @config.custom.formatDate '!=' 'custom'}}{{date createdAt @config.custom.formatDate}}{{else}}{{date createdAt @config.custom.formatDateCustom}}{{/checkIf}}
+            </time>
+         {{/if}}
+      </div>
+      <h3 class="card__title"><a href="{{url}}">{{title}}</a></h3>
+      {{#if @config.custom.cardsExcerpt}}
+         <p class="card__excerpt">{{excerpt}}</p>
+      {{/if}}
+      {{#if @config.custom.cardsAuthor}}
+         {{#author}}
+            <div class="card__author">
+               {{#if avatar}}<img class="avatar" src="{{avatarImage.url}}" {{lazyload "lazy"}} width="{{avatarImage.width}}" height="{{avatarImage.height}}" alt="{{avatarImage.alt}}">{{/if}}
+               <a href="{{url}}">{{name}}</a>
+            </div>
+         {{/author}}
+      {{/if}}
+   </div>
+</article>

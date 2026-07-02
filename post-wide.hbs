@@ -1,0 +1,63 @@
+{{> head}}
+{{> header}}
+
+<main class="main is-post-main is-post-wide">
+   {{#post}}
+      <article class="post post--wide">
+         <header class="post-wide-hero{{#if featuredImage.url}} post-wide-hero--image{{/if}}"
+            {{#featuredImage}}{{#if url}}style="--hero-image:url('{{url}}')"{{/if}}{{/featuredImage}}>
+            <div class="wrap wrap--narrow post-wide-hero__inner">
+               <div class="post__meta">
+                  {{#if @config.post.displayMainTag}}{{#if mainTag}}<a href="{{mainTag.url}}" class="chip chip--gold">{{mainTag.name}}</a>{{/if}}{{/if}}
+                  {{#if @config.post.displayDate}}
+                     <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                        {{#checkIf @config.custom.formatDate '!=' 'custom'}}{{date createdAt @config.custom.formatDate}}{{else}}{{date createdAt @config.custom.formatDateCustom}}{{/checkIf}}
+                     </time>
+                  {{/if}}
+               </div>
+               <h1 class="post__title">{{title}}</h1>
+               {{#if @config.post.displayAuthor}}
+                  {{#author}}<p class="post__byline post__byline--light">{{translate 'post.postedBy'}} <a href="{{url}}" rel="author">{{name}}</a></p>{{/author}}
+               {{/if}}
+            </div>
+         </header>
+
+         <div class="wrap wrap--narrow post__content entry">
+            {{{text}}}
+         </div>
+
+         <div class="wrap wrap--narrow post__footer">
+            {{#if tags}}<div class="post__tags">{{#each tags}}<a href="{{url}}" class="chip">{{name}}</a>{{/each}}</div>{{/if}}
+            {{#if @config.post.displayShareButtons}}
+               {{#checkIfAll @plugins.socialSharing @plugins.socialSharing.state}}{{{@customSocialSharing}}}{{else}}{{> share-buttons}}{{/checkIfAll}}
+            {{/if}}
+         </div>
+
+         {{#if @config.post.displayAuthorBio}}
+            {{#author}}
+               <div class="wrap wrap--narrow author-bio">
+                  {{#if avatar}}<img class="avatar avatar--lg" src="{{avatarImage.url}}" {{lazyload "lazy"}} width="{{avatarImage.width}}" height="{{avatarImage.height}}" alt="{{avatarImage.alt}}">{{/if}}
+                  <div><p class="eyebrow eyebrow--gold">{{translate 'author.wrote'}}</p><h3><a href="{{url}}" rel="author">{{name}}</a></h3>{{{description}}}</div>
+               </div>
+            {{/author}}
+         {{/if}}
+      </article>
+
+      {{#if @config.post.displayRelatedPosts}}
+         {{#if ../relatedPosts}}
+            <section class="section related">
+               <div class="wrap">
+                  <header class="section__head"><h2 class="section__title">{{translate 'post.relatedPosts'}}</h2></header>
+                  <div class="cards-grid">{{#each ../relatedPosts}}{{> post-card}}{{/each}}</div>
+               </div>
+            </section>
+         {{/if}}
+      {{/if}}
+
+      {{#if @config.post.displayComments}}
+         <section class="wrap wrap--narrow comments">{{{@commentsCustomCode}}}</section>
+      {{/if}}
+   {{/post}}
+</main>
+
+{{> footer}}

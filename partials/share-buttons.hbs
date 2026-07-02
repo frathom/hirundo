@@ -1,0 +1,14 @@
+<div class="share">
+   <span class="share__label">{{translate 'partials.share-buttons.share'}}</span>
+   <ul class="share__list">
+      {{#if @config.custom.shareLinkedin}}
+         <li><a class="share__btn" rel="noopener" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{{@config.site.url}}}{{url}}">{{translate 'socials.linkedIn'}}</a></li>
+      {{/if}}
+      {{#if @config.custom.shareTwitter}}
+         <li><a class="share__btn" rel="noopener" target="_blank" href="https://twitter.com/intent/tweet?text={{title}}&url={{{@config.site.url}}}{{url}}">{{translate 'socials.twitter'}}</a></li>
+      {{/if}}
+      {{#if @config.custom.shareFacebook}}
+         <li><a class="share__btn" rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{{@config.site.url}}}{{url}}">Facebook</a></li>
+      {{/if}}
+   </ul>
+</div>

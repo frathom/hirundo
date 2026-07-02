@@ -1,0 +1,40 @@
+/* ============================================================
+   HIRUNDO — block editor preview styles (Publii admin)
+   Mirrors the front-end .entry typography so the editor matches output.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+   --navy: #2F3E5A; --gold: #D4B968; --cream: #FBF8F1; --ink: #15171C;
+   --gold-700: #A6903F; --ink-line: rgba(21,23,28,0.12); --navy-soft: rgba(47,62,90,0.08);
+   --font-serif: 'Cormorant Garamond', Garamond, serif;
+   --font-sans: 'Inter', system-ui, sans-serif;
+   --font-mono: 'JetBrains Mono', monospace;
+   --radius: 14px;
+}
+
+.post__editor, .post-editor, body {
+   font-family: var(--font-sans);
+   font-size: 1.12rem;
+   line-height: 1.75;
+   color: #2a2d35;
+   background: var(--cream);
+}
+
+h1, h2 { font-family: var(--font-serif); font-weight: 500; letter-spacing: -0.015em; color: var(--ink); line-height: 1.1; }
+h1 { font-size: 2.6rem; }
+h2 { font-size: 2rem; }
+h3, h4, h5, h6 { font-family: var(--font-sans); font-weight: 600; color: var(--ink); }
+a { color: var(--gold-700); text-underline-offset: 3px; }
+
+blockquote {
+   margin: 1.6em 0; padding: 0.4em 0 0.4em 1.4em; border-left: 3px solid var(--gold);
+   font-family: var(--font-serif); font-style: italic; font-size: 1.4rem; line-height: 1.35; color: var(--navy);
+}
+pre, code { font-family: var(--font-mono); }
+pre { background: #1B2434; color: #e8ecf3; padding: 1.2em 1.4em; border-radius: 8px; }
+code { background: var(--navy-soft); padding: 0.15em 0.4em; border-radius: 4px; }
+img, figure img { border-radius: var(--radius); }
+hr { border: 0; border-top: 1px solid var(--ink-line); margin: 2.4em 0; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 0.7em 0.9em; border-bottom: 1px solid var(--ink-line); text-align: left; }

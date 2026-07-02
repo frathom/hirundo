@@ -1,0 +1,63 @@
+{
+    "options": {
+        "group": {
+            "Brand": "Brand",
+            "Header": "Header",
+            "Homepage": "Homepage",
+            "Footer": "Footer",
+            "Social": "Social",
+            "Blog": "Blog",
+            "Blog display": "Blog listing"
+        }
+    },
+    "post": {
+        "readMore": "Read more",
+        "publishedIn": "Filed under",
+        "postedBy": "By",
+        "lastUpdatedDate": "Updated on",
+        "relatedPosts": "Related reading",
+        "prevPost": "Previous",
+        "nextPost": "Next",
+        "backToBlog": "All insights"
+    },
+    "page": {
+        "childPages": "In this section"
+    },
+    "author": {
+        "wrote": "Words by",
+        "posts": "posts"
+    },
+    "tags": {
+        "title": "Topics",
+        "postsCount": "posts"
+    },
+    "partials": {
+        "menu": {
+            "label": "Menu"
+        },
+        "pagination": {
+            "prev": "Newer",
+            "next": "Older",
+            "page": "Page"
+        },
+        "share-buttons": {
+            "shareButtons": "Share",
+            "share": "Share this"
+        },
+        "footer": {
+            "newsletterButton": "Subscribe",
+            "newsletterPlaceholder": "you@company.com"
+        }
+    },
+    "socials": {
+        "linkedIn": "LinkedIn",
+        "twitter": "X",
+        "instagram": "Instagram",
+        "youtube": "YouTube"
+    },
+    "error": {
+        "title": "Page not found",
+        "text": "This page has flown the nest. Let's get you back on course.",
+        "button": "Back to home"
+    }
+}

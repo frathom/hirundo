@@ -1,0 +1,27 @@
+{{> head}}
+{{> header}}
+
+<main class="main is-archive">
+   {{#tag}}
+      <header class="archive-hero">
+         <div class="wrap">
+            <p class="eyebrow eyebrow--gold">{{translate 'post.publishedIn'}}</p>
+            <h1 class="archive-hero__title">{{name}} <sup class="archive-hero__count">{{postsNumber}}</sup></h1>
+            {{#if description}}<div class="archive-hero__desc lead">{{{description}}}</div>{{/if}}
+         </div>
+      </header>
+
+      <section class="section">
+         <div class="wrap">
+            <div class="cards-grid">
+               {{#each ../posts}}
+                  {{> post-card}}
+               {{/each}}
+            </div>
+            {{> pagination}}
+         </div>
+      </section>
+   {{/tag}}
+</main>
+
+{{> footer}}

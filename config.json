@@ -1,0 +1,765 @@
+{
+    "name": "Hirundo",
+    "version": "1.0.0",
+    "author": "Hirundo",
+    "url": "https://getpublii.com",
+    "type": "theme",
+    "menus": {
+        "mainMenu": {
+            "name": "Main menu",
+            "desc": "Primary navigation shown in the header",
+            "maxLevels": 2
+        },
+        "footerMenu": {
+            "name": "Footer menu",
+            "desc": "Compact link list shown in the footer",
+            "maxLevels": 1
+        }
+    },
+    "renderer": {
+        "renderRelatedPosts": true,
+        "relatedPostsNumber": 3,
+        "renderSimilarPosts": false,
+        "renderPrevNextPosts": true,
+        "createContentStructure": true,
+        "includeFeaturedInPosts": false,
+        "tagsIncludeFeaturedInPosts": true,
+        "authorsIncludeFeaturedInPosts": true,
+        "featuredPostsNumber": 3,
+        "tagsFeaturedPostsNumber": 0,
+        "authorsFeaturedPostsNumber": 0,
+        "createTagPages": true,
+        "createAuthorPages": true,
+        "createTagsList": true,
+        "create404page": true,
+        "createSearchPage": false,
+        "customHTML": {
+            "beforePost": "Before every post",
+            "afterPost": "After every post",
+            "beforePage": "Before every page",
+            "afterPage": "After every page"
+        }
+    },
+    "supportedFeatures": {
+        "blockEditor": true,
+        "tagsList": true,
+        "tagPages": true,
+        "tagImages": true,
+        "authorPages": true,
+        "authorImages": true,
+        "searchPage": false,
+        "errorPage": true,
+        "customSearch": false,
+        "customComments": true,
+        "embedConsents": true,
+        "pages": true
+    },
+    "postTemplates": {
+        "wide": "Wide — full-bleed featured image"
+    },
+    "pageTemplates": {
+        "landing": "Landing — full-width marketing sections",
+        "contact": "Contact — intro + form area",
+        "empty": "Empty container (build with blocks)"
+    },
+    "config": [
+        {
+            "name": "postsPerPage",
+            "label": "Posts per page",
+            "value": 9,
+            "type": "number",
+            "group": "Blog"
+        },
+        {
+            "name": "tagsPostsPerPage",
+            "label": "Tag posts per page",
+            "value": 9,
+            "type": "number",
+            "group": "Blog"
+        },
+        {
+            "name": "authorsPostsPerPage",
+            "label": "Author posts per page",
+            "value": 9,
+            "type": "number",
+            "group": "Blog"
+        },
+        {
+            "name": "excerptLength",
+            "label": "Excerpt length (words)",
+            "value": 30,
+            "type": "number",
+            "group": "Blog"
+        }
+    ],
+    "customConfig": [
+        {
+            "name": "separatorBrand",
+            "type": "separator",
+            "label": "Brand colours",
+            "group": "Brand"
+        },
+        {
+            "name": "colorNavy",
+            "label": "Navy (primary)",
+            "group": "Brand",
+            "value": "#2F3E5A",
+            "type": "colorpicker",
+            "note": "Primary brand colour — headers, buttons, dark sections."
+        },
+        {
+            "name": "colorGold",
+            "label": "Gold (accent)",
+            "group": "Brand",
+            "value": "#D4B968",
+            "type": "colorpicker",
+            "note": "Accent colour — highlights, the logo mark, hover states."
+        },
+        {
+            "name": "colorCream",
+            "label": "Cream (paper)",
+            "group": "Brand",
+            "value": "#FBF8F1",
+            "type": "colorpicker",
+            "note": "Warm off-white page background."
+        },
+        {
+            "name": "colorInk",
+            "label": "Ink (text)",
+            "group": "Brand",
+            "value": "#15171C",
+            "type": "colorpicker",
+            "note": "Near-black used for body text on light surfaces."
+        },
+        {
+            "name": "separatorFavicon",
+            "type": "separator",
+            "label": "Favicon",
+            "group": "Brand",
+            "size": "big"
+        },
+        {
+            "name": "faviconUpload",
+            "label": "Upload favicon file",
+            "group": "Brand",
+            "value": "",
+            "type": "smallupload",
+            "note": "Square PNG/ICO. Leave empty to use the bundled Hirundo mark."
+        },
+        {
+            "name": "faviconExtension",
+            "label": "Favicon extension",
+            "group": "Brand",
+            "value": "image/png",
+            "type": "select",
+            "options": [
+                { "label": "PNG", "value": "image/png" },
+                { "label": "ICO", "value": "image/x-icon" },
+                { "label": "SVG", "value": "image/svg+xml" }
+            ]
+        },
+
+        {
+            "name": "separatorHeader",
+            "type": "separator",
+            "label": "Header",
+            "group": "Header"
+        },
+        {
+            "name": "headerSticky",
+            "label": "Sticky header",
+            "group": "Header",
+            "value": true,
+            "type": "checkbox",
+            "note": "Keep the navigation bar pinned to the top on scroll."
+        },
+        {
+            "name": "headerLogoOnDark",
+            "label": "Use light logo on the transparent hero",
+            "group": "Header",
+            "value": true,
+            "type": "checkbox",
+            "note": "When the header sits over a dark hero, swap to the light logo."
+        },
+        {
+            "name": "headerCtaLabel",
+            "label": "Header button label",
+            "group": "Header",
+            "value": "Book a call",
+            "type": "text"
+        },
+        {
+            "name": "headerCtaUrl",
+            "label": "Header button link",
+            "group": "Header",
+            "value": "#contact",
+            "type": "text"
+        },
+
+        {
+            "name": "separatorHero",
+            "type": "separator",
+            "label": "Homepage — Hero",
+            "group": "Homepage"
+        },
+        {
+            "name": "heroEnabled",
+            "label": "Show hero",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "heroEyebrow",
+            "label": "Eyebrow / kicker",
+            "group": "Homepage",
+            "value": "Global growth marketing",
+            "type": "text"
+        },
+        {
+            "name": "heroTitle",
+            "label": "Headline",
+            "group": "Homepage",
+            "value": "Marketing that <em>takes flight</em>.",
+            "type": "text",
+            "note": "You can use &lt;em&gt; to italicise a phrase in the brand serif."
+        },
+        {
+            "name": "heroLead",
+            "label": "Sub-headline",
+            "group": "Homepage",
+            "value": "Hirundo is the growth partner for ambitious brands. Global by nature, agile by design — we turn attention into revenue across every channel.",
+            "type": "textarea"
+        },
+        {
+            "name": "heroCtaPrimaryLabel",
+            "label": "Primary button label",
+            "group": "Homepage",
+            "value": "Start a project",
+            "type": "text"
+        },
+        {
+            "name": "heroCtaPrimaryUrl",
+            "label": "Primary button link",
+            "group": "Homepage",
+            "value": "#contact",
+            "type": "text"
+        },
+        {
+            "name": "heroCtaSecondaryLabel",
+            "label": "Secondary button label",
+            "group": "Homepage",
+            "value": "See our work",
+            "type": "text"
+        },
+        {
+            "name": "heroCtaSecondaryUrl",
+            "label": "Secondary button link",
+            "group": "Homepage",
+            "value": "#work",
+            "type": "text"
+        },
+        {
+            "name": "heroImage",
+            "label": "Hero background image",
+            "group": "Homepage",
+            "value": "",
+            "type": "upload",
+            "note": "Optional. Sits behind a navy gradient. Leave empty for a solid navy hero."
+        },
+
+        {
+            "name": "separatorTrust",
+            "type": "separator",
+            "label": "Homepage — Trust bar",
+            "group": "Homepage",
+            "size": "big"
+        },
+        {
+            "name": "trustEnabled",
+            "label": "Show client logo strip",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "trustHeading",
+            "label": "Trust bar heading",
+            "group": "Homepage",
+            "value": "Trusted by teams scaling across borders",
+            "type": "text"
+        },
+        {
+            "name": "trustLogos",
+            "label": "Logos / client names",
+            "group": "Homepage",
+            "value": "<span>Northwind</span><span>Aperture</span><span>Volari</span><span>Meridian</span><span>Cobalt</span><span>Lumen</span>",
+            "type": "wysiwyg",
+            "note": "Add &lt;img&gt; logos or &lt;span&gt; text names. Rendered greyscale in a row."
+        },
+
+        {
+            "name": "separatorStats",
+            "type": "separator",
+            "label": "Homepage — Stats band",
+            "group": "Homepage",
+            "size": "big"
+        },
+        {
+            "name": "statsEnabled",
+            "label": "Show stats band",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "statsItems",
+            "label": "Stat items",
+            "group": "Homepage",
+            "value": "<div class=\"stat\"><span class=\"stat__num\">+218%</span><span class=\"stat__label\">Average pipeline growth</span></div><div class=\"stat\"><span class=\"stat__num\">40+</span><span class=\"stat__label\">Markets activated</span></div><div class=\"stat\"><span class=\"stat__num\">3.4x</span><span class=\"stat__label\">Median return on ad spend</span></div><div class=\"stat\"><span class=\"stat__num\">120M</span><span class=\"stat__label\">Impressions delivered / yr</span></div>",
+            "type": "wysiwyg",
+            "note": "Each stat = a .stat block with a .stat__num and .stat__label. Keep 3–4."
+        },
+
+        {
+            "name": "separatorServices",
+            "type": "separator",
+            "label": "Homepage — Services",
+            "group": "Homepage",
+            "size": "big"
+        },
+        {
+            "name": "servicesEnabled",
+            "label": "Show services",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "servicesEyebrow",
+            "label": "Services eyebrow",
+            "group": "Homepage",
+            "value": "What we do",
+            "type": "text"
+        },
+        {
+            "name": "servicesTitle",
+            "label": "Services heading",
+            "group": "Homepage",
+            "value": "Full-funnel marketing, one agile team",
+            "type": "text"
+        },
+        {
+            "name": "servicesItems",
+            "label": "Service cards",
+            "group": "Homepage",
+            "value": "<div class=\"service\"><h3>Paid media</h3><p>Search, social and programmatic campaigns engineered for efficient, compounding growth.</p></div><div class=\"service\"><h3>SEO &amp; content</h3><p>Organic strategies and editorial that build authority and durable demand.</p></div><div class=\"service\"><h3>Lifecycle &amp; CRM</h3><p>Email, automation and retention flows that turn first-time buyers into advocates.</p></div><div class=\"service\"><h3>Creative &amp; brand</h3><p>Scroll-stopping creative and positioning that make your brand impossible to ignore.</p></div><div class=\"service\"><h3>Analytics</h3><p>Attribution, dashboards and experimentation so every decision is evidence-led.</p></div><div class=\"service\"><h3>Growth strategy</h3><p>A senior partner mapping the roadmap from first touch to loyal customer.</p></div>",
+            "type": "wysiwyg",
+            "note": "Each card = a .service block with an &lt;h3&gt; and a &lt;p&gt;."
+        },
+
+        {
+            "name": "separatorWork",
+            "type": "separator",
+            "label": "Homepage — Case studies",
+            "group": "Homepage",
+            "size": "big"
+        },
+        {
+            "name": "workEnabled",
+            "label": "Show case studies",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox",
+            "note": "Pulls your Featured posts. Tag case-study posts and mark them as Featured."
+        },
+        {
+            "name": "workEyebrow",
+            "label": "Case studies eyebrow",
+            "group": "Homepage",
+            "value": "Selected work",
+            "type": "text"
+        },
+        {
+            "name": "workTitle",
+            "label": "Case studies heading",
+            "group": "Homepage",
+            "value": "Results we're proud of",
+            "type": "text"
+        },
+
+        {
+            "name": "separatorInsights",
+            "type": "separator",
+            "label": "Homepage — Insights",
+            "group": "Homepage",
+            "size": "big"
+        },
+        {
+            "name": "insightsEnabled",
+            "label": "Show latest insights",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "insightsEyebrow",
+            "label": "Insights eyebrow",
+            "group": "Homepage",
+            "value": "Insights",
+            "type": "text"
+        },
+        {
+            "name": "insightsTitle",
+            "label": "Insights heading",
+            "group": "Homepage",
+            "value": "Ideas from the flock",
+            "type": "text"
+        },
+
+        {
+            "name": "separatorCta",
+            "type": "separator",
+            "label": "Homepage — Call to action",
+            "group": "Homepage",
+            "size": "big"
+        },
+        {
+            "name": "ctaEnabled",
+            "label": "Show CTA band",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "ctaTitle",
+            "label": "CTA heading",
+            "group": "Homepage",
+            "value": "Ready to take flight?",
+            "type": "text"
+        },
+        {
+            "name": "ctaText",
+            "label": "CTA text",
+            "group": "Homepage",
+            "value": "Tell us where you want to grow. We'll bring the strategy, the creative and the numbers.",
+            "type": "textarea"
+        },
+        {
+            "name": "ctaButtonLabel",
+            "label": "CTA button label",
+            "group": "Homepage",
+            "value": "Book a discovery call",
+            "type": "text"
+        },
+        {
+            "name": "ctaButtonUrl",
+            "label": "CTA button link",
+            "group": "Homepage",
+            "value": "#contact",
+            "type": "text"
+        },
+
+        {
+            "name": "separatorFooter",
+            "type": "separator",
+            "label": "Footer",
+            "group": "Footer"
+        },
+        {
+            "name": "footerTagline",
+            "label": "Footer tagline",
+            "group": "Footer",
+            "value": "Global by nature. Agile by design.",
+            "type": "text"
+        },
+        {
+            "name": "footerNewsletterEnabled",
+            "label": "Show newsletter sign-up",
+            "group": "Footer",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "footerNewsletterHeading",
+            "label": "Newsletter heading",
+            "group": "Footer",
+            "value": "The migration report",
+            "type": "text"
+        },
+        {
+            "name": "footerNewsletterText",
+            "label": "Newsletter text",
+            "group": "Footer",
+            "value": "A monthly dispatch on cross-border growth. No fluff, unsubscribe anytime.",
+            "type": "textarea"
+        },
+        {
+            "name": "footerNewsletterCode",
+            "label": "Newsletter form embed (HTML)",
+            "group": "Footer",
+            "value": "",
+            "type": "wysiwyg",
+            "note": "Paste your email provider's form embed. If empty, a mailto placeholder is shown."
+        },
+        {
+            "name": "copyrightText",
+            "label": "Copyright text",
+            "group": "Footer",
+            "value": "&copy; Hirundo. All rights reserved.",
+            "type": "wysiwyg"
+        },
+
+        {
+            "name": "separatorSocial",
+            "type": "separator",
+            "label": "Social links",
+            "group": "Social"
+        },
+        {
+            "name": "socialLinkedin",
+            "label": "LinkedIn URL",
+            "group": "Social",
+            "value": "",
+            "type": "text"
+        },
+        {
+            "name": "socialTwitter",
+            "label": "X (Twitter) URL",
+            "group": "Social",
+            "value": "",
+            "type": "text"
+        },
+        {
+            "name": "socialInstagram",
+            "label": "Instagram URL",
+            "group": "Social",
+            "value": "",
+            "type": "text"
+        },
+        {
+            "name": "socialYoutube",
+            "label": "YouTube URL",
+            "group": "Social",
+            "value": "",
+            "type": "text"
+        },
+        {
+            "name": "separatorSharing",
+            "type": "separator",
+            "label": "Post share buttons",
+            "group": "Social",
+            "size": "big"
+        },
+        {
+            "name": "shareLinkedin",
+            "label": "LinkedIn",
+            "group": "Social",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "shareTwitter",
+            "label": "X (Twitter)",
+            "group": "Social",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "shareFacebook",
+            "label": "Facebook",
+            "group": "Social",
+            "value": false,
+            "type": "checkbox"
+        },
+
+        {
+            "name": "separatorBlogDisplay",
+            "type": "separator",
+            "label": "Blog listing",
+            "group": "Blog display"
+        },
+        {
+            "name": "cardsImage",
+            "label": "Show featured image on cards",
+            "group": "Blog display",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "cardsDate",
+            "label": "Show date on cards",
+            "group": "Blog display",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "cardsAuthor",
+            "label": "Show author on cards",
+            "group": "Blog display",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "cardsTag",
+            "label": "Show main tag on cards",
+            "group": "Blog display",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "cardsExcerpt",
+            "label": "Show excerpt on cards",
+            "group": "Blog display",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "separatorDate",
+            "type": "separator",
+            "label": "Date format",
+            "group": "Blog display",
+            "size": "big"
+        },
+        {
+            "name": "formatDate",
+            "label": "Date format",
+            "group": "Blog display",
+            "value": "MMMM DD, YYYY",
+            "type": "select",
+            "options": [
+                { "label": "November 2, 2025", "value": "MMMM DD, YYYY" },
+                { "label": "2 November 2025", "value": "DD MMMM YYYY" },
+                { "label": "Nov 2, 2025", "value": "MMM DD, YYYY" },
+                { "label": "2025-11-02", "value": "YYYY-MM-DD" },
+                { "label": "02/11/2025", "value": "DD/MM/YYYY" },
+                { "label": "Custom", "value": "custom" }
+            ]
+        },
+        {
+            "name": "formatDateCustom",
+            "label": "Custom date format",
+            "group": "Blog display",
+            "value": "MMMM DD, YYYY",
+            "type": "text",
+            "note": "Used only when Date format is set to Custom. Uses Moment.js tokens."
+        }
+    ],
+    "postConfig": [
+        {
+            "name": "displayDate",
+            "label": "Display publish date",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayAuthor",
+            "label": "Display author",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayMainTag",
+            "label": "Display main tag",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayLastUpdatedDate",
+            "label": "Display last updated date",
+            "value": false,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayShareButtons",
+            "label": "Display share buttons",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayAuthorBio",
+            "label": "Display author bio",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayRelatedPosts",
+            "label": "Display related posts",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayComments",
+            "label": "Display comments",
+            "value": true,
+            "type": "checkbox"
+        }
+    ],
+    "pageConfig": [
+        {
+            "name": "introText",
+            "label": "Intro text",
+            "note": "Shown under the page title on standard pages.",
+            "value": "",
+            "type": "textarea"
+        },
+        {
+            "name": "displayTitle",
+            "label": "Display page title",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayFeaturedImage",
+            "label": "Display featured image",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayShareButtons",
+            "label": "Display share buttons",
+            "value": false,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayChildPages",
+            "label": "Display child pages",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayComments",
+            "label": "Display comments",
+            "value": false,
+            "type": "checkbox"
+        }
+    ],
+    "tagConfig": [
+        {
+            "name": "displayDescription",
+            "label": "Display tag description",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayImage",
+            "label": "Display tag image",
+            "value": true,
+            "type": "checkbox"
+        }
+    ],
+    "authorConfig": [
+        {
+            "name": "displayAvatar",
+            "label": "Display author avatar",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "displayDescription",
+            "label": "Display author bio",
+            "value": true,
+            "type": "checkbox"
+        }
+    ]
+}

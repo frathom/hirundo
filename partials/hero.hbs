@@ -1,0 +1,27 @@
+{{!-- Homepage hero. Navy field with an optional background image behind a
+      gradient; the gold mark floats top-right as a brand signature. --}}
+<section class="hero{{#if @config.custom.heroImage}} hero--image{{/if}}"
+   {{#if @config.custom.heroImage}}style="--hero-image:url('{{@config.custom.heroImage}}')"{{/if}}>
+   <span class="hero__mark mark mark--on-navy mark--160" aria-hidden="true"></span>
+   <div class="wrap hero__inner reveal">
+      {{#if @config.custom.heroEyebrow}}
+         <p class="eyebrow eyebrow--light">{{@config.custom.heroEyebrow}}</p>
+      {{/if}}
+      {{#if @config.custom.heroTitle}}
+         <h1 class="hero__title">{{{@config.custom.heroTitle}}}</h1>
+      {{/if}}
+      {{#if @config.custom.heroLead}}
+         <p class="hero__lead">{{@config.custom.heroLead}}</p>
+      {{/if}}
+      {{#checkIfAny @config.custom.heroCtaPrimaryLabel @config.custom.heroCtaSecondaryLabel}}
+         <div class="hero__actions">
+            {{#if @config.custom.heroCtaPrimaryLabel}}
+               <a class="btn btn--gold btn--lg" href="{{@config.custom.heroCtaPrimaryUrl}}">{{@config.custom.heroCtaPrimaryLabel}}</a>
+            {{/if}}
+            {{#if @config.custom.heroCtaSecondaryLabel}}
+               <a class="btn btn--ghost-light btn--lg" href="{{@config.custom.heroCtaSecondaryUrl}}">{{@config.custom.heroCtaSecondaryLabel}}</a>
+            {{/if}}
+         </div>
+      {{/checkIfAny}}
+   </div>
+</section>

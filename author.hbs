@@ -1,0 +1,33 @@
+{{> head}}
+{{> header}}
+
+<main class="main is-archive is-author">
+   {{#author}}
+      <header class="archive-hero archive-hero--author">
+         <div class="wrap author-hero">
+            {{#if avatar}}
+               <img class="avatar avatar--xl" src="{{avatarImage.url}}" {{lazyload "eager"}} width="{{avatarImage.width}}" height="{{avatarImage.height}}" alt="{{avatarImage.alt}}">
+            {{/if}}
+            <div>
+               <p class="eyebrow eyebrow--gold">{{translate 'author.wrote'}}</p>
+               <h1 class="archive-hero__title">{{name}}</h1>
+               {{#if description}}<div class="archive-hero__desc lead">{{{description}}}</div>{{/if}}
+               <p class="author-hero__count">{{postsNumber}} {{translate 'author.posts'}}</p>
+            </div>
+         </div>
+      </header>
+
+      <section class="section">
+         <div class="wrap">
+            <div class="cards-grid">
+               {{#each ../posts}}
+                  {{> post-card}}
+               {{/each}}
+            </div>
+            {{> pagination}}
+         </div>
+      </section>
+   {{/author}}
+</main>
+
+{{> footer}}

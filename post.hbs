@@ -1,0 +1,113 @@
+{{> head}}
+{{> header}}
+
+<main class="main is-post-main">
+   {{#if @customHTML.beforePost}}
+      <div class="wrap banner">{{{@customHTML.beforePost}}}</div>
+   {{/if}}
+
+   {{#post}}
+      <article class="post">
+         <header class="post__header">
+            <div class="wrap wrap--narrow">
+               <div class="post__meta">
+                  {{#if @config.post.displayMainTag}}
+                     {{#if mainTag}}<a href="{{mainTag.url}}" class="chip chip--gold">{{mainTag.name}}</a>{{/if}}
+                  {{/if}}
+                  {{#if @config.post.displayDate}}
+                     <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                        {{#checkIf @config.custom.formatDate '!=' 'custom'}}{{date createdAt @config.custom.formatDate}}{{else}}{{date createdAt @config.custom.formatDateCustom}}{{/checkIf}}
+                     </time>
+                  {{/if}}
+               </div>
+               <h1 class="post__title">{{title}}</h1>
+               {{#if @config.post.displayAuthor}}
+                  {{#author}}
+                     <div class="post__byline">
+                        {{#if avatar}}<img class="avatar" src="{{avatarImage.url}}" {{lazyload "eager"}} width="{{avatarImage.width}}" height="{{avatarImage.height}}" alt="{{avatarImage.alt}}">{{/if}}
+                        <span>{{translate 'post.postedBy'}} <a href="{{url}}" rel="author">{{name}}</a></span>
+                     </div>
+                  {{/author}}
+               {{/if}}
+            </div>
+         </header>
+
+         {{#featuredImage}}
+            {{#if url}}
+               <figure class="wrap post__featured">
+                  <img src="{{url}}"
+                     {{#if @config.site.responsiveImages}}{{responsiveImageAttributes 'featuredImage' srcset.post sizes.post}}{{/if}}
+                     {{lazyload "eager"}} width="{{width}}" height="{{height}}" alt="{{alt}}">
+                  {{#checkIfAny caption credits}}<figcaption>{{caption}} {{credits}}</figcaption>{{/checkIfAny}}
+               </figure>
+            {{/if}}
+         {{/featuredImage}}
+
+         <div class="wrap wrap--narrow post__content entry">
+            {{{text}}}
+         </div>
+
+         <div class="wrap wrap--narrow post__footer">
+            {{#if @config.post.displayLastUpdatedDate}}
+               {{#if modifiedAt}}
+                  <p class="post__updated">{{translate 'post.lastUpdatedDate'}}
+                     {{#checkIf @config.custom.formatDate '!=' 'custom'}}{{date modifiedAt @config.custom.formatDate}}{{else}}{{date modifiedAt @config.custom.formatDateCustom}}{{/checkIf}}
+                  </p>
+               {{/if}}
+            {{/if}}
+
+            {{#if tags}}
+               <div class="post__tags">
+                  {{#each tags}}<a href="{{url}}" class="chip">{{name}}</a>{{/each}}
+               </div>
+            {{/if}}
+
+            {{#if @config.post.displayShareButtons}}
+               {{#checkIfAll @plugins.socialSharing @plugins.socialSharing.state}}
+                  {{{@customSocialSharing}}}
+               {{else}}
+                  {{> share-buttons}}
+               {{/checkIfAll}}
+            {{/if}}
+         </div>
+
+         {{#if @config.post.displayAuthorBio}}
+            {{#author}}
+               <div class="wrap wrap--narrow author-bio">
+                  {{#if avatar}}<img class="avatar avatar--lg" src="{{avatarImage.url}}" {{lazyload "lazy"}} width="{{avatarImage.width}}" height="{{avatarImage.height}}" alt="{{avatarImage.alt}}">{{/if}}
+                  <div>
+                     <p class="eyebrow eyebrow--gold">{{translate 'author.wrote'}}</p>
+                     <h3><a href="{{url}}" rel="author">{{name}}</a></h3>
+                     {{{description}}}
+                  </div>
+               </div>
+            {{/author}}
+         {{/if}}
+      </article>
+
+      {{#if @config.post.displayRelatedPosts}}
+         {{#if ../relatedPosts}}
+            <section class="section related">
+               <div class="wrap">
+                  <header class="section__head"><h2 class="section__title">{{translate 'post.relatedPosts'}}</h2></header>
+                  <div class="cards-grid">
+                     {{#each ../relatedPosts}}
+                        {{> post-card}}
+                     {{/each}}
+                  </div>
+               </div>
+            </section>
+         {{/if}}
+      {{/if}}
+
+      {{#if @config.post.displayComments}}
+         <section class="wrap wrap--narrow comments">{{{@commentsCustomCode}}}</section>
+      {{/if}}
+
+      {{#if @customHTML.afterPost}}
+         <div class="wrap banner">{{{@customHTML.afterPost}}}</div>
+      {{/if}}
+   {{/post}}
+</main>
+
+{{> footer}}

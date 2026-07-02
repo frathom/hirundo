@@ -1,0 +1,114 @@
+{{> head}}
+{{> header}}
+
+{{#if @renderer.isFirstPage}}
+   {{#if @config.custom.heroEnabled}}
+      {{> hero}}
+   {{/if}}
+
+   {{!-- Trust / client strip --}}
+   {{#if @config.custom.trustEnabled}}
+      <section class="trust reveal">
+         <div class="wrap">
+            {{#if @config.custom.trustHeading}}<p class="trust__heading eyebrow">{{@config.custom.trustHeading}}</p>{{/if}}
+            <div class="trust__logos">{{{@config.custom.trustLogos}}}</div>
+         </div>
+      </section>
+   {{/if}}
+
+   {{!-- Stats band --}}
+   {{#if @config.custom.statsEnabled}}
+      <section class="stats reveal">
+         <div class="wrap stats__grid">{{{@config.custom.statsItems}}}</div>
+      </section>
+   {{/if}}
+
+   {{!-- Services --}}
+   {{#if @config.custom.servicesEnabled}}
+      <section class="section services reveal" id="services">
+         <div class="wrap">
+            <header class="section__head">
+               {{#if @config.custom.servicesEyebrow}}<p class="eyebrow eyebrow--gold">{{@config.custom.servicesEyebrow}}</p>{{/if}}
+               {{#if @config.custom.servicesTitle}}<h2 class="section__title">{{@config.custom.servicesTitle}}</h2>{{/if}}
+            </header>
+            <div class="services__grid">{{{@config.custom.servicesItems}}}</div>
+         </div>
+      </section>
+   {{/if}}
+
+   {{!-- Case studies (Featured posts) --}}
+   {{#if @config.custom.workEnabled}}
+      {{#if featuredPosts}}
+         <section class="section work reveal" id="work">
+            <div class="wrap">
+               <header class="section__head">
+                  {{#if @config.custom.workEyebrow}}<p class="eyebrow eyebrow--gold">{{@config.custom.workEyebrow}}</p>{{/if}}
+                  {{#if @config.custom.workTitle}}<h2 class="section__title">{{@config.custom.workTitle}}</h2>{{/if}}
+               </header>
+               <div class="work__grid">
+                  {{#each featuredPosts}}
+                     <a class="work-card" href="{{url}}">
+                        {{#featuredImage}}
+                           {{#if url}}
+                              <span class="work-card__media">
+                                 <img src="{{url}}"
+                                    {{#if @config.site.responsiveImages}}{{responsiveImageAttributes 'featuredImage' srcset.cards sizes.cards}}{{/if}}
+                                    {{lazyload "lazy"}} width="{{width}}" height="{{height}}" alt="{{alt}}">
+                              </span>
+                           {{/if}}
+                        {{/featuredImage}}
+                        <span class="work-card__body">
+                           {{#if mainTag}}<span class="chip chip--gold">{{mainTag.name}}</span>{{/if}}
+                           <span class="work-card__title">{{title}}</span>
+                           <span class="work-card__excerpt">{{excerpt}}</span>
+                           <span class="work-card__link">{{translate 'post.readMore'}} &rarr;</span>
+                        </span>
+                     </a>
+                  {{/each}}
+               </div>
+            </div>
+         </section>
+      {{/if}}
+   {{/if}}
+{{/if}}
+
+{{!-- Insights / blog feed --}}
+{{#if @config.custom.insightsEnabled}}
+   {{#if posts}}
+      <section class="section insights" id="insights">
+         <div class="wrap">
+            {{#if @renderer.isFirstPage}}
+               <header class="section__head reveal">
+                  {{#if @config.custom.insightsEyebrow}}<p class="eyebrow eyebrow--gold">{{@config.custom.insightsEyebrow}}</p>{{/if}}
+                  {{#if @config.custom.insightsTitle}}<h2 class="section__title">{{@config.custom.insightsTitle}}</h2>{{/if}}
+               </header>
+            {{/if}}
+            <div class="cards-grid">
+               {{#each posts}}
+                  {{> post-card}}
+               {{/each}}
+            </div>
+            {{> pagination}}
+         </div>
+      </section>
+   {{/if}}
+{{/if}}
+
+{{!-- CTA band --}}
+{{#if @renderer.isFirstPage}}
+   {{#if @config.custom.ctaEnabled}}
+      <section class="cta-band reveal">
+         <div class="wrap cta-band__inner">
+            <div>
+               {{#if @config.custom.ctaTitle}}<h2 class="cta-band__title">{{@config.custom.ctaTitle}}</h2>{{/if}}
+               {{#if @config.custom.ctaText}}<p class="cta-band__text">{{@config.custom.ctaText}}</p>{{/if}}
+            </div>
+            {{#if @config.custom.ctaButtonLabel}}
+               <a class="btn btn--gold btn--lg" href="{{@config.custom.ctaButtonUrl}}">{{@config.custom.ctaButtonLabel}}</a>
+            {{/if}}
+         </div>
+      </section>
+   {{/if}}
+{{/if}}
+
+{{> footer}}
