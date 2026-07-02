@@ -1,17 +1,17 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Classroom project",
+    "title": "Hirundo",
     "description": "",
-    "home_page_url": "https://frathom.github.io/classroom-project",
-    "feed_url": "https://frathom.github.io/classroom-project/feed.json",
+    "home_page_url": "https://frathom.github.io/hirundo",
+    "feed_url": "https://frathom.github.io/hirundo/feed.json",
     "user_comment": "",
     "author": {
         "name": "Franck"
     },
     "items": [
         {
-            "id": "https://frathom.github.io/classroom-project/test.html",
-            "url": "https://frathom.github.io/classroom-project/test.html",
+            "id": "https://frathom.github.io/hirundo/test.html",
+            "url": "https://frathom.github.io/hirundo/test.html",
             "title": "test",
             "content_html": "\n  <p>\n    \n  </p>",
             "author": {
