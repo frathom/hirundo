@@ -59,7 +59,8 @@
     },
     "pageTemplates": {
         "landing": "Landing — full-width marketing sections",
-        "contact": "Contact — intro + form area",
+        "team": "Team — member grid",
+        "contact": "Contact — form + details",
         "empty": "Empty container (build with blocks)"
     },
     "config": [
@@ -172,6 +173,14 @@
             "type": "separator",
             "label": "Header",
             "group": "Header"
+        },
+        {
+            "name": "logoHeight",
+            "label": "Logo height (px)",
+            "group": "Header",
+            "value": 46,
+            "type": "number",
+            "note": "Height of the header logo. The Hirundo lockup reads well around 44–56px."
         },
         {
             "name": "headerSticky",
@@ -707,9 +716,23 @@
         {
             "name": "introText",
             "label": "Intro text",
-            "note": "Shown under the page title on standard pages.",
+            "note": "Shown under the page title on standard, landing, team and contact pages.",
             "value": "",
             "type": "textarea"
+        },
+        {
+            "name": "teamMembers",
+            "label": "Team members (Team template — optional override)",
+            "note": "Leave EMPTY to build the Team page automatically from your site's Authors (name, avatar and bio). Fill this only to override with custom cards: one .team-member block per person — a .team-member__photo (an &lt;img&gt; or 2-letter initials), an &lt;h3 class=\"team-member__name\"&gt; name, an optional .team-member__role and .team-member__bio.",
+            "value": "",
+            "type": "wysiwyg"
+        },
+        {
+            "name": "formEmbed",
+            "label": "Form embed (Contact template)",
+            "note": "Used by the Contact template. Paste your Tally or Google Form embed code (an &lt;iframe&gt; or script). Leave empty to show a mailto button instead.",
+            "value": "",
+            "type": "wysiwyg"
         },
         {
             "name": "displayTitle",

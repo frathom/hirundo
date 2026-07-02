@@ -28,6 +28,7 @@ var generateThemeVariables = function (params) {
     var gold  = val(params.colorGold,  '#D4B968');
     var cream = val(params.colorCream, '#FBF8F1');
     var ink   = val(params.colorInk,   '#15171C');
+    var logoH = parseInt(val(params.logoHeight, 46), 10) || 46;
 
     var output = '\n:root {\n' +
         '  --navy: ' + navy + ';\n' +
@@ -40,6 +41,8 @@ var generateThemeVariables = function (params) {
         '  --gold-ring: ' + withAlpha(gold, 0.45) + ';\n' +
         '  --ink-soft: ' + withAlpha(ink, 0.64) + ';\n' +
         '  --ink-line: ' + withAlpha(ink, 0.12) + ';\n' +
+        '  --logo-height: ' + logoH + 'px;\n' +
+        '  --header-h: ' + (logoH + 42) + 'px;\n' +
         '}\n';
 
     return output;

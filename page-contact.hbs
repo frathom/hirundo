@@ -14,20 +14,32 @@
       {{/if}}
 
       <div class="wrap contact__grid">
-         <div class="contact__body entry">
-            {{{text}}}
+         <div class="contact__body">
+            {{#if text}}
+               <div class="entry">{{{text}}}</div>
+            {{/if}}
+            <div class="contact__form">
+               {{#if @config.page.formEmbed}}
+                  {{{@config.page.formEmbed}}}
+               {{else}}
+                  <p class="contact__placeholder">
+                     Add your Tally or Google Form embed in this page's
+                     <strong>Team/Contact &rarr; Form embed</strong> setting to show the form here.
+                  </p>
+                  {{#if @website.contactEmail}}
+                     <a class="btn btn--navy btn--lg" href="mailto:{{@website.contactEmail}}">{{@website.contactEmail}}</a>
+                  {{/if}}
+               {{/if}}
+            </div>
          </div>
 
          <aside class="contact__aside">
             <div class="contact-card">
                <span class="mark mark--56" aria-hidden="true"></span>
-               <h2 class="contact-card__title">{{@config.custom.footerNewsletterHeading}}</h2>
-               {{#if @config.custom.footerNewsletterCode}}
-                  {{{@config.custom.footerNewsletterCode}}}
-               {{else}}
-                  {{#if @website.contactEmail}}
-                     <a class="btn btn--gold btn--lg contact-card__email" href="mailto:{{@website.contactEmail}}">{{@website.contactEmail}}</a>
-                  {{/if}}
+               {{#if @config.custom.footerNewsletterHeading}}<h2 class="contact-card__title">{{@config.custom.footerNewsletterHeading}}</h2>{{/if}}
+               {{#if @config.custom.footerTagline}}<p>{{@config.custom.footerTagline}}</p>{{/if}}
+               {{#if @website.contactEmail}}
+                  <a class="btn btn--gold btn--lg contact-card__email" href="mailto:{{@website.contactEmail}}">{{@website.contactEmail}}</a>
                {{/if}}
                {{#checkIfAny @config.custom.socialLinkedin @config.custom.socialTwitter @config.custom.socialInstagram @config.custom.socialYoutube}}
                   <ul class="social social--dark">

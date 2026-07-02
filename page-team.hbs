@@ -1,0 +1,62 @@
+{{> head}}
+{{> header}}
+
+<main class="main is-page-main is-team">
+   {{#page}}
+      {{#if @config.page.displayTitle}}
+         <header class="archive-hero">
+            <span class="landing-hero__mark mark mark--on-navy mark--120" aria-hidden="true"></span>
+            <div class="wrap landing-hero__inner reveal">
+               <p class="eyebrow eyebrow--light">{{@website.name}}</p>
+               <h1 class="archive-hero__title">{{title}}</h1>
+               {{#if @config.page.introText}}<p class="landing-hero__lead">{{@config.page.introText}}</p>{{/if}}
+            </div>
+         </header>
+      {{/if}}
+
+      <section class="section">
+         <div class="wrap">
+            <div class="team-grid">
+               {{#if @config.page.teamMembers}}
+                  {{!-- Manual override: custom cards from the Team template setting --}}
+                  {{{@config.page.teamMembers}}}
+               {{else}}
+                  {{!-- Default: one card per site Author --}}
+                  {{#each @website.contentStructure.authors}}
+                     <div class="team-member">
+                        {{#if avatar}}
+                           <div class="team-member__photo"><img src="{{avatar}}" {{lazyload "lazy"}} alt="{{name}}"></div>
+                        {{else}}
+                           <div class="team-member__photo team-member__photo--mark" aria-hidden="true"></div>
+                        {{/if}}
+                        <h3 class="team-member__name">{{name}}</h3>
+                        {{#if description}}<div class="team-member__bio">{{{description}}}</div>{{/if}}
+                        {{#if postsNumber}}<a class="team-member__link" href="{{url}}">{{postsNumber}} {{translate 'author.posts'}} &rarr;</a>{{/if}}
+                     </div>
+                  {{/each}}
+               {{/if}}
+            </div>
+         </div>
+      </section>
+
+      {{#if text}}
+         <div class="landing__content entry entry--wide">
+            {{{text}}}
+         </div>
+      {{/if}}
+   {{/page}}
+
+   {{#if @config.custom.ctaEnabled}}
+      <section class="cta-band reveal">
+         <div class="wrap cta-band__inner">
+            <div>
+               {{#if @config.custom.ctaTitle}}<h2 class="cta-band__title">{{@config.custom.ctaTitle}}</h2>{{/if}}
+               {{#if @config.custom.ctaText}}<p class="cta-band__text">{{@config.custom.ctaText}}</p>{{/if}}
+            </div>
+            {{#if @config.custom.ctaButtonLabel}}<a class="btn btn--gold btn--lg" href="{{@config.custom.ctaButtonUrl}}">{{@config.custom.ctaButtonLabel}}</a>{{/if}}
+         </div>
+      </section>
+   {{/if}}
+</main>
+
+{{> footer}}
