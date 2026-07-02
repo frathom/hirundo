@@ -64,6 +64,14 @@
     },
     "config": [
         {
+            "name": "logo",
+            "label": "Website logo",
+            "value": "",
+            "type": "upload",
+            "upload": true,
+            "group": "Header"
+        },
+        {
             "name": "postsPerPage",
             "label": "Posts per page",
             "value": 9,
@@ -761,5 +769,61 @@
             "value": true,
             "type": "checkbox"
         }
-    ]
+    ],
+    "files": {
+        "ignoreAssets": ["scss", ".DS_Store"],
+        "assetsPath": "assets",
+        "useDynamicAssets": true,
+        "partialsPath": "partials",
+        "responsiveImages": {
+            "contentImages": {
+                "sizes": "(max-width: 800px) 100vw, 760px",
+                "dimensions": {
+                    "xs": { "width": 320, "height": "auto" },
+                    "sm": { "width": 480, "height": "auto" },
+                    "md": { "width": 768, "height": "auto" },
+                    "lg": { "width": 1024, "height": "auto" },
+                    "xl": { "width": 1360, "height": "auto" }
+                }
+            },
+            "featuredImages": {
+                "sizes": {
+                    "post": "(max-width: 1240px) 100vw, 1200px",
+                    "cards": "(max-width: 760px) 100vw, 400px"
+                },
+                "dimensions": {
+                    "xs": { "width": 320, "height": "auto", "group": "post,cards" },
+                    "sm": { "width": 480, "height": "auto", "group": "post,cards" },
+                    "md": { "width": 768, "height": "auto", "group": "post,cards" },
+                    "lg": { "width": 1024, "height": "auto", "group": "post" },
+                    "xl": { "width": 1360, "height": "auto", "group": "post" }
+                }
+            },
+            "tagImages": {
+                "sizes": "(max-width: 760px) 100vw, 400px",
+                "dimensions": {
+                    "xs": { "width": 320, "height": "auto" },
+                    "sm": { "width": 480, "height": "auto" },
+                    "md": { "width": 768, "height": "auto" }
+                }
+            },
+            "authorImages": {
+                "sizes": "96px",
+                "dimensions": {
+                    "xs": { "width": 96, "height": "auto" },
+                    "sm": { "width": 192, "height": "auto" }
+                }
+            },
+            "optionImages": {
+                "sizes": "(max-width: 1600px) 100vw, 1600px",
+                "dimensions": {
+                    "xs": { "width": 320, "height": "auto" },
+                    "sm": { "width": 480, "height": "auto" },
+                    "md": { "width": 768, "height": "auto" },
+                    "lg": { "width": 1024, "height": "auto" },
+                    "xl": { "width": 1600, "height": "auto" }
+                }
+            }
+        }
+    }
 }
