@@ -9,8 +9,8 @@
             <img class="brand__logo" src="{{@website.logo}}" alt="{{@website.name}}"
                  width="{{@website.logoSize.width}}" height="{{@website.logoSize.height}}">
          {{else}}
-            <img class="brand__logo brand__logo--dark" src="{{@website.assetsUrl}}/images/logo-horizontal.png" alt="{{@website.name}}">
-            <img class="brand__logo brand__logo--light" src="{{@website.assetsUrl}}/images/logo-horizontal-onnavy.png" alt="{{@website.name}}">
+            <span class="mark brand__mark" aria-hidden="true"></span>
+            <span class="brand__name">{{@website.name}}</span>
          {{/if}}
       </a>
 

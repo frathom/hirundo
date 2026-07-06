@@ -152,9 +152,17 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
 }
 .site-header--sticky { position: sticky; top: 0; }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: var(--header-h, 88px); }
-.brand { display: inline-flex; align-items: center; }
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; }
+.brand:hover { color: inherit; }
 .brand__logo { height: var(--logo-height, 46px); width: auto; }
 .brand__logo--light { display: none; }
+/* CSS mark + serif wordmark (used when no custom logo is uploaded) */
+.brand__mark { width: var(--logo-height, 46px); height: var(--logo-height, 46px); }
+.brand__name {
+   font-family: var(--font-serif); font-weight: 600; line-height: 1;
+   font-size: calc(var(--logo-height, 46px) * 0.66); letter-spacing: 0.005em;
+   color: var(--navy); transition: color var(--dur) var(--ease);
+}
 
 /* Overlay header on the hero */
 .site-header--overlay {
@@ -163,6 +171,7 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
 .site-header--overlay.site-header--sticky { position: fixed; }
 .site-header--overlay .brand__logo--dark { display: none; }
 .site-header--overlay .brand__logo--light { display: block; }
+.site-header--overlay .brand__name { color: var(--cream); }
 .site-header--overlay .menu > li > a { color: var(--cream); }
 .site-header--overlay .menu > li > a:hover { color: var(--gold); }
 .site-header--overlay .nav-toggle__bar { background: var(--cream); }
@@ -173,6 +182,7 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
 }
 .site-header.is-solid .brand__logo--dark { display: block; }
 .site-header.is-solid .brand__logo--light { display: none; }
+.site-header.is-solid .brand__name { color: var(--navy); }
 .site-header.is-solid .menu > li > a { color: var(--navy); }
 .site-header.is-solid .nav-toggle__bar { background: var(--navy); }
 
