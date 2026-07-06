@@ -1,0 +1,21 @@
+{{#if @config.custom.ctaEnabled}}
+   <section class="cta-band reveal">
+      <div class="wrap cta-band__inner">
+         <div>
+            {{#if @config.custom.ctaTitle}}<h2 class="cta-band__title">{{@config.custom.ctaTitle}}</h2>{{/if}}
+            {{#if @config.custom.ctaText}}<p class="cta-band__text">{{@config.custom.ctaText}}</p>{{/if}}
+         </div>
+         {{#if @config.custom.ctaButtonLabel}}
+            {{#if @config.custom.calEnabled}}
+               <a class="btn btn--gold btn--lg"
+                  href="https://cal.com/{{@config.custom.calLink}}"
+                  data-cal-link="{{@config.custom.calLink}}"
+                  data-cal-namespace="{{@config.custom.calNamespace}}"
+                  data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>{{@config.custom.ctaButtonLabel}}</a>
+            {{else}}
+               <a class="btn btn--gold btn--lg" href="{{@config.custom.ctaButtonUrl}}">{{@config.custom.ctaButtonLabel}}</a>
+            {{/if}}
+         {{/if}}
+      </div>
+   </section>
+{{/if}}

@@ -40,17 +40,7 @@
       {{/if}}
    {{/page}}
 
-   {{#if @config.custom.ctaEnabled}}
-      <section class="cta-band reveal">
-         <div class="wrap cta-band__inner">
-            <div>
-               {{#if @config.custom.ctaTitle}}<h2 class="cta-band__title">{{@config.custom.ctaTitle}}</h2>{{/if}}
-               {{#if @config.custom.ctaText}}<p class="cta-band__text">{{@config.custom.ctaText}}</p>{{/if}}
-            </div>
-            {{#if @config.custom.ctaButtonLabel}}<a class="btn btn--gold btn--lg" href="{{@config.custom.ctaButtonUrl}}">{{@config.custom.ctaButtonLabel}}</a>{{/if}}
-         </div>
-      </section>
-   {{/if}}
+   {{> cta-band}}
 </main>
 
 {{> footer}}

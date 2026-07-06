@@ -222,6 +222,36 @@
             "type": "text"
         },
         {
+            "name": "separatorBooking",
+            "type": "separator",
+            "label": "Booking (Cal.com)",
+            "group": "Header",
+            "size": "big"
+        },
+        {
+            "name": "calEnabled",
+            "label": "Open a Cal.com popup on booking buttons",
+            "group": "Header",
+            "value": true,
+            "type": "checkbox",
+            "note": "When on, the header button and the CTA-band button open a Cal.com scheduling popup instead of following their link (no-JS visitors fall back to the Cal.com page)."
+        },
+        {
+            "name": "calLink",
+            "label": "Cal.com event link",
+            "group": "Header",
+            "value": "team/hello-hirundo/discovery-call",
+            "type": "text",
+            "note": "The part after cal.com/ — e.g. team/hello-hirundo/discovery-call"
+        },
+        {
+            "name": "calNamespace",
+            "label": "Cal.com namespace",
+            "group": "Header",
+            "value": "discovery-call",
+            "type": "text"
+        },
+        {
             "name": "separatorHero",
             "type": "separator",
             "label": "Homepage — Hero",
