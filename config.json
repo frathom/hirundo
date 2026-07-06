@@ -163,12 +163,20 @@
             "value": "image/png",
             "type": "select",
             "options": [
-                { "label": "PNG", "value": "image/png" },
-                { "label": "ICO", "value": "image/x-icon" },
-                { "label": "SVG", "value": "image/svg+xml" }
+                {
+                    "label": "PNG",
+                    "value": "image/png"
+                },
+                {
+                    "label": "ICO",
+                    "value": "image/x-icon"
+                },
+                {
+                    "label": "SVG",
+                    "value": "image/svg+xml"
+                }
             ]
         },
-
         {
             "name": "separatorHeader",
             "type": "separator",
@@ -213,7 +221,6 @@
             "value": "#contact",
             "type": "text"
         },
-
         {
             "name": "separatorHero",
             "type": "separator",
@@ -285,7 +292,6 @@
             "type": "upload",
             "note": "Optional. Sits behind a navy gradient. Leave empty for a solid navy hero."
         },
-
         {
             "name": "separatorTrust",
             "type": "separator",
@@ -315,7 +321,6 @@
             "type": "wysiwyg",
             "note": "Add &lt;img&gt; logos or &lt;span&gt; text names. Rendered greyscale in a row."
         },
-
         {
             "name": "separatorStats",
             "type": "separator",
@@ -338,7 +343,6 @@
             "type": "wysiwyg",
             "note": "Each stat = a .stat block with a .stat__num and .stat__label. Keep 3–4."
         },
-
         {
             "name": "separatorServices",
             "type": "separator",
@@ -375,7 +379,6 @@
             "type": "wysiwyg",
             "note": "Each card = a .service block with an &lt;h3&gt; and a &lt;p&gt;."
         },
-
         {
             "name": "separatorWork",
             "type": "separator",
@@ -405,7 +408,6 @@
             "value": "Results we're proud of",
             "type": "text"
         },
-
         {
             "name": "separatorInsights",
             "type": "separator",
@@ -434,7 +436,6 @@
             "value": "Ideas from the flock",
             "type": "text"
         },
-
         {
             "name": "separatorCta",
             "type": "separator",
@@ -477,7 +478,6 @@
             "value": "#contact",
             "type": "text"
         },
-
         {
             "name": "separatorFooter",
             "type": "separator",
@@ -527,7 +527,6 @@
             "value": "&copy; Hirundo. All rights reserved.",
             "type": "wysiwyg"
         },
-
         {
             "name": "separatorSocial",
             "type": "separator",
@@ -590,7 +589,6 @@
             "value": false,
             "type": "checkbox"
         },
-
         {
             "name": "separatorBlogDisplay",
             "type": "separator",
@@ -646,12 +644,30 @@
             "value": "MMMM DD, YYYY",
             "type": "select",
             "options": [
-                { "label": "November 2, 2025", "value": "MMMM DD, YYYY" },
-                { "label": "2 November 2025", "value": "DD MMMM YYYY" },
-                { "label": "Nov 2, 2025", "value": "MMM DD, YYYY" },
-                { "label": "2025-11-02", "value": "YYYY-MM-DD" },
-                { "label": "02/11/2025", "value": "DD/MM/YYYY" },
-                { "label": "Custom", "value": "custom" }
+                {
+                    "label": "November 2, 2025",
+                    "value": "MMMM DD, YYYY"
+                },
+                {
+                    "label": "2 November 2025",
+                    "value": "DD MMMM YYYY"
+                },
+                {
+                    "label": "Nov 2, 2025",
+                    "value": "MMM DD, YYYY"
+                },
+                {
+                    "label": "2025-11-02",
+                    "value": "YYYY-MM-DD"
+                },
+                {
+                    "label": "02/11/2025",
+                    "value": "DD/MM/YYYY"
+                },
+                {
+                    "label": "Custom",
+                    "value": "custom"
+                }
             ]
         },
         {
@@ -724,23 +740,23 @@
         {
             "name": "teamMembers",
             "label": "Team members (Team template — optional override)",
-            "note": "Leave EMPTY to build the Team page automatically from your site's Authors (name, avatar and bio). Fill this only to override with custom cards: one .team-member block per person — a .team-member__photo (an &lt;img&gt; or 2-letter initials), an &lt;h3 class=\"team-member__name\"&gt; name, an optional .team-member__role and .team-member__bio.",
+            "note": "Leave EMPTY to build the Team page automatically from your site's Authors (name, avatar and bio). Fill this only to override with custom cards (HTML): one .team-member block per person — a .team-member__photo (an &lt;img&gt; or 2-letter initials), an &lt;h3 class=\"team-member__name\"&gt; name, an optional .team-member__role and .team-member__bio.",
             "value": "",
-            "type": "wysiwyg"
+            "type": "textarea"
         },
         {
             "name": "formEmbed",
             "label": "Form embed (Contact template)",
-            "note": "Used by the Contact template. Paste your Tally or Google Form embed code (an &lt;iframe&gt; or script). Leave empty to show a mailto button instead.",
+            "note": "Used by the Contact template. Paste your Tally or Google Form embed code here (an &lt;iframe&gt; or script). Leave empty to show a mailto button instead.",
             "value": "",
-            "type": "wysiwyg"
+            "type": "textarea"
         },
         {
             "name": "servicesList",
             "label": "Services (Services template)",
-            "note": "Used by the Services template. One .service-row per offering; the number is added automatically. Inside each: an &lt;h3&gt; title, a &lt;p&gt; description, and an optional &lt;ul&gt; of deliverables.",
+            "note": "Used by the Services template. Paste HTML: one .service-row per offering; the number is added automatically. Inside each: an &lt;h3&gt; title, a &lt;p&gt; description, and an optional &lt;ul&gt; of deliverables.",
             "value": "<div class=\"service-row\"><h3>Paid media</h3><p>Search, social and programmatic campaigns engineered for efficient, compounding growth across every market you operate in.</p><ul><li>Google &amp; Bing Search</li><li>Paid social (Meta, LinkedIn, TikTok)</li><li>Programmatic &amp; display</li><li>Retargeting &amp; RLSA</li></ul></div><div class=\"service-row\"><h3>SEO &amp; content</h3><p>Organic strategies and editorial that build authority and durable, low-cost demand over time.</p><ul><li>Technical SEO audits</li><li>Content strategy &amp; production</li><li>Digital PR &amp; link building</li><li>International &amp; local SEO</li></ul></div><div class=\"service-row\"><h3>Lifecycle &amp; CRM</h3><p>Email, automation and retention flows that turn first-time buyers into repeat customers and advocates.</p><ul><li>Email &amp; marketing automation</li><li>Segmentation &amp; personalisation</li><li>Retention &amp; win-back</li><li>Loyalty programmes</li></ul></div><div class=\"service-row\"><h3>Creative &amp; brand</h3><p>Scroll-stopping creative and sharp positioning that make your brand impossible to ignore.</p><ul><li>Brand &amp; messaging</li><li>Performance creative</li><li>Landing pages &amp; CRO</li><li>Video &amp; motion</li></ul></div><div class=\"service-row\"><h3>Analytics &amp; data</h3><p>Attribution, dashboards and experimentation so every decision is evidence-led.</p><ul><li>Measurement &amp; tracking setup</li><li>Attribution modelling</li><li>Dashboards &amp; reporting</li><li>Experimentation programmes</li></ul></div><div class=\"service-row\"><h3>Growth strategy</h3><p>A senior partner mapping the roadmap from first touch to loyal customer.</p><ul><li>Go-to-market planning</li><li>Channel &amp; budget strategy</li><li>Market expansion</li><li>Fractional growth leadership</li></ul></div>",
-            "type": "wysiwyg"
+            "type": "textarea"
         },
         {
             "name": "displayTitle",
@@ -802,7 +818,10 @@
         }
     ],
     "files": {
-        "ignoreAssets": ["scss", ".DS_Store"],
+        "ignoreAssets": [
+            "scss",
+            ".DS_Store"
+        ],
         "assetsPath": "assets",
         "useDynamicAssets": true,
         "partialsPath": "partials",
@@ -810,11 +829,26 @@
             "contentImages": {
                 "sizes": "(max-width: 800px) 100vw, 760px",
                 "dimensions": {
-                    "xs": { "width": 320, "height": "auto" },
-                    "sm": { "width": 480, "height": "auto" },
-                    "md": { "width": 768, "height": "auto" },
-                    "lg": { "width": 1024, "height": "auto" },
-                    "xl": { "width": 1360, "height": "auto" }
+                    "xs": {
+                        "width": 320,
+                        "height": "auto"
+                    },
+                    "sm": {
+                        "width": 480,
+                        "height": "auto"
+                    },
+                    "md": {
+                        "width": 768,
+                        "height": "auto"
+                    },
+                    "lg": {
+                        "width": 1024,
+                        "height": "auto"
+                    },
+                    "xl": {
+                        "width": 1360,
+                        "height": "auto"
+                    }
                 }
             },
             "featuredImages": {
@@ -823,36 +857,86 @@
                     "cards": "(max-width: 760px) 100vw, 400px"
                 },
                 "dimensions": {
-                    "xs": { "width": 320, "height": "auto", "group": "post,cards" },
-                    "sm": { "width": 480, "height": "auto", "group": "post,cards" },
-                    "md": { "width": 768, "height": "auto", "group": "post,cards" },
-                    "lg": { "width": 1024, "height": "auto", "group": "post" },
-                    "xl": { "width": 1360, "height": "auto", "group": "post" }
+                    "xs": {
+                        "width": 320,
+                        "height": "auto",
+                        "group": "post,cards"
+                    },
+                    "sm": {
+                        "width": 480,
+                        "height": "auto",
+                        "group": "post,cards"
+                    },
+                    "md": {
+                        "width": 768,
+                        "height": "auto",
+                        "group": "post,cards"
+                    },
+                    "lg": {
+                        "width": 1024,
+                        "height": "auto",
+                        "group": "post"
+                    },
+                    "xl": {
+                        "width": 1360,
+                        "height": "auto",
+                        "group": "post"
+                    }
                 }
             },
             "tagImages": {
                 "sizes": "(max-width: 760px) 100vw, 400px",
                 "dimensions": {
-                    "xs": { "width": 320, "height": "auto" },
-                    "sm": { "width": 480, "height": "auto" },
-                    "md": { "width": 768, "height": "auto" }
+                    "xs": {
+                        "width": 320,
+                        "height": "auto"
+                    },
+                    "sm": {
+                        "width": 480,
+                        "height": "auto"
+                    },
+                    "md": {
+                        "width": 768,
+                        "height": "auto"
+                    }
                 }
             },
             "authorImages": {
                 "sizes": "96px",
                 "dimensions": {
-                    "xs": { "width": 96, "height": "auto" },
-                    "sm": { "width": 192, "height": "auto" }
+                    "xs": {
+                        "width": 96,
+                        "height": "auto"
+                    },
+                    "sm": {
+                        "width": 192,
+                        "height": "auto"
+                    }
                 }
             },
             "optionImages": {
                 "sizes": "(max-width: 1600px) 100vw, 1600px",
                 "dimensions": {
-                    "xs": { "width": 320, "height": "auto" },
-                    "sm": { "width": 480, "height": "auto" },
-                    "md": { "width": 768, "height": "auto" },
-                    "lg": { "width": 1024, "height": "auto" },
-                    "xl": { "width": 1600, "height": "auto" }
+                    "xs": {
+                        "width": 320,
+                        "height": "auto"
+                    },
+                    "sm": {
+                        "width": 480,
+                        "height": "auto"
+                    },
+                    "md": {
+                        "width": 768,
+                        "height": "auto"
+                    },
+                    "lg": {
+                        "width": 1024,
+                        "height": "auto"
+                    },
+                    "xl": {
+                        "width": 1600,
+                        "height": "auto"
+                    }
                 }
             }
         }
