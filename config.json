@@ -59,6 +59,7 @@
     },
     "pageTemplates": {
         "landing": "Landing — full-width marketing sections",
+        "services": "Services — detailed offerings",
         "team": "Team — member grid",
         "contact": "Contact — form + details",
         "empty": "Empty container (build with blocks)"
@@ -732,6 +733,13 @@
             "label": "Form embed (Contact template)",
             "note": "Used by the Contact template. Paste your Tally or Google Form embed code (an &lt;iframe&gt; or script). Leave empty to show a mailto button instead.",
             "value": "",
+            "type": "wysiwyg"
+        },
+        {
+            "name": "servicesList",
+            "label": "Services (Services template)",
+            "note": "Used by the Services template. One .service-row per offering; the number is added automatically. Inside each: an &lt;h3&gt; title, a &lt;p&gt; description, and an optional &lt;ul&gt; of deliverables.",
+            "value": "<div class=\"service-row\"><h3>Paid media</h3><p>Search, social and programmatic campaigns engineered for efficient, compounding growth across every market you operate in.</p><ul><li>Google &amp; Bing Search</li><li>Paid social (Meta, LinkedIn, TikTok)</li><li>Programmatic &amp; display</li><li>Retargeting &amp; RLSA</li></ul></div><div class=\"service-row\"><h3>SEO &amp; content</h3><p>Organic strategies and editorial that build authority and durable, low-cost demand over time.</p><ul><li>Technical SEO audits</li><li>Content strategy &amp; production</li><li>Digital PR &amp; link building</li><li>International &amp; local SEO</li></ul></div><div class=\"service-row\"><h3>Lifecycle &amp; CRM</h3><p>Email, automation and retention flows that turn first-time buyers into repeat customers and advocates.</p><ul><li>Email &amp; marketing automation</li><li>Segmentation &amp; personalisation</li><li>Retention &amp; win-back</li><li>Loyalty programmes</li></ul></div><div class=\"service-row\"><h3>Creative &amp; brand</h3><p>Scroll-stopping creative and sharp positioning that make your brand impossible to ignore.</p><ul><li>Brand &amp; messaging</li><li>Performance creative</li><li>Landing pages &amp; CRO</li><li>Video &amp; motion</li></ul></div><div class=\"service-row\"><h3>Analytics &amp; data</h3><p>Attribution, dashboards and experimentation so every decision is evidence-led.</p><ul><li>Measurement &amp; tracking setup</li><li>Attribution modelling</li><li>Dashboards &amp; reporting</li><li>Experimentation programmes</li></ul></div><div class=\"service-row\"><h3>Growth strategy</h3><p>A senior partner mapping the roadmap from first touch to loyal customer.</p><ul><li>Go-to-market planning</li><li>Channel &amp; budget strategy</li><li>Market expansion</li><li>Fractional growth leadership</li></ul></div>",
             "type": "wysiwyg"
         },
         {

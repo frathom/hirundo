@@ -513,6 +513,42 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 .team-member__link { margin-top: 0.9rem; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-700); }
 .team-member__socials { display: flex; gap: 0.5rem; margin-top: 0.9rem; }
 
+/* ---------- Services page ---------- */
+.services-page-list { counter-reset: svc; display: flex; flex-direction: column; }
+.service-row {
+   counter-increment: svc;
+   display: grid; grid-template-columns: auto 1fr; gap: clamp(1.2rem, 4vw, 3rem);
+   padding-block: clamp(2rem, 4vw, 3.2rem); border-top: 1px solid var(--ink-line);
+}
+.service-row:first-child { border-top: 0; padding-top: 0; }
+.service-row::before {
+   content: counter(svc, decimal-leading-zero);
+   font-family: var(--font-serif); font-weight: 500; font-size: clamp(2.4rem, 5vw, 3.6rem);
+   line-height: 1; color: var(--gold); letter-spacing: -0.02em;
+}
+.service-row > * { grid-column: 2; }
+.service-row h3 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 0.4rem; }
+.service-row > p { color: var(--fg-muted); font-size: 1.05rem; max-width: 60ch; margin: 0 0 1.1rem; }
+.service-row ul {
+   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 1.6rem;
+   max-width: 620px;
+}
+.service-row ul li {
+   position: relative; padding-left: 1.5rem; font-size: 0.95rem; color: var(--fg);
+   list-style: none;
+}
+.service-row ul li::before {
+   content: ""; position: absolute; left: 0; top: 0.5em; width: 8px; height: 8px;
+   border-radius: 50%; background: var(--gold);
+}
+
+@media (max-width: 620px) {
+   .service-row { grid-template-columns: 1fr; gap: 0.6rem; }
+   .service-row > * { grid-column: 1; }
+   .service-row::before { font-size: 2rem; }
+   .service-row ul { grid-template-columns: 1fr; }
+}
+
 /* ---------- Contact form embed ---------- */
 .contact__form { background: var(--surface); border: 1px solid var(--ink-line); border-radius: var(--radius-lg); padding: clamp(1.4rem, 3vw, 2.4rem); box-shadow: var(--shadow-sm); }
 .contact__form iframe { width: 100%; border: 0; min-height: 620px; display: block; border-radius: var(--radius-sm); }
