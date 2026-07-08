@@ -3,12 +3,152 @@
     <title>Hirundo</title>
     <link href="https://frathom.github.io/hirundo/feed.xml" rel="self" />
     <link href="https://frathom.github.io/hirundo" />
-    <updated>2026-07-02T16:13:06+02:00</updated>
+    <updated>2026-07-08T15:40:33+02:00</updated>
     <author>
         <name>Franck</name>
     </author>
     <id>https://frathom.github.io/hirundo</id>
 
+    <entry>
+        <title>The migration checklist for cross-border growth</title>
+        <author>
+            <name>Franck</name>
+        </author>
+        <link href="https://frathom.github.io/hirundo/migration-playbook-cross-border-growth.html"/>
+        <id>https://frathom.github.io/hirundo/migration-playbook-cross-border-growth.html</id>
+            <category term="Strategy"/>
+
+        <updated>2026-07-08T13:24:12+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Expanding into a new market rarely fails on media budget — it fails on the translation of intent. These are the five principles we use to make campaigns travel. Localise&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+  <p>
+    Expanding into a new market rarely fails on media budget — it fails on the translation of intent. These are the five principles we use to make campaigns travel.
+  </p>
+
+  <ul>
+    <li><b>Localise the offer, not just the copy</b>&nbsp;- Translation is table stakes. What actually moves the needle is adapting the promotion, pricing and proof to what the local buyer already trusts.</li><li><b>Rebuild the funnel per market</b> -&nbsp;Awareness in one country is consideration in another. Map where demand already exists before deciding how much to spend creating it.<br></li><li><b>Respect the channel mix</b> -&nbsp;The dominant platform shifts by region. Lead with the channel your audience actually lives on, not the one that worked back home.<br></li><li><b>Measure in one currency of truth</b> -&nbsp;Normalise every market to the same metric — contribution margin, not last-click ROAS — so you can compare and reallocate without bias.<br></li><li><b>Staff for the timezone</b> -&nbsp;Speed of iteration wins launches. Put decision-making close to the market so tests don't wait 12 hours for approval.<br></li>
+  </ul>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Creative testing without burning budget</title>
+        <author>
+            <name>Franck</name>
+        </author>
+        <link href="https://frathom.github.io/hirundo/creative-testing-without-burning-budget.html"/>
+        <id>https://frathom.github.io/hirundo/creative-testing-without-burning-budget.html</id>
+            <category term="Paid media"/>
+
+        <updated>2026-07-08T13:23:12+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less. Every test should answer a question ("does social proof&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+  <p>
+    Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less.
+  </p>
+
+    <h2 id="start-with-a-hypothesis-not-an-asset">
+      Start with a hypothesis, not an asset
+    </h2>
+
+  <p>
+    Every test should answer a question ("does social proof beat urgency?"), so even a loser teaches you something reusable.
+  </p>
+
+    <h2 id="test-one-variable-at-a-time">
+      Test one variable at a time
+    </h2>
+
+  <p>
+    Hook, format, or offer — change one, hold the rest. Bundled changes give you a result you can't explain or repeat.
+  </p>
+
+    <h2 id="small-controlled-honest">
+      Small, controlled, honest
+    </h2>
+
+  <p>
+    Equal budget, same audience, enough time to reach significance. Cheap tests that can't conclude are the most expensive kind.
+  </p>
+
+    <h2 id="kill-fast-scale-slower">
+      Kill fast, scale slower
+    </h2>
+
+  <p>
+    Cut clear losers early, but let winners prove themselves before you pour spend in — early winners regress more often than you'd like.
+  </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Attribution you can actually act on</title>
+        <author>
+            <name>Franck</name>
+        </author>
+        <link href="https://frathom.github.io/hirundo/attribution-you-can-actually-act-on.html"/>
+        <id>https://frathom.github.io/hirundo/attribution-you-can-actually-act-on.html</id>
+            <category term="Analytics"/>
+
+        <updated>2026-07-08T13:22:12+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Perfect attribution doesn't exist. Useful attribution does — the kind that tells you what to do on Monday morning. The value isn't in the model's accuracy, it's in applying the&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+  <p>
+    Perfect attribution doesn't exist. Useful attribution does — the kind that tells you what to do on Monday morning.
+  </p>
+
+    <h2 id="pick-one-model-and-commit">
+      Pick one model and commit
+    </h2>
+
+  <p>
+    The value isn't in the model's accuracy, it's in applying the same lens consistently so trends are comparable over time.
+  </p>
+
+    <h2 id="fix-the-tracking-foundation">
+      Fix the tracking foundation
+    </h2>
+
+  <p>
+    Server-side tracking and clean event naming beat any clever model sitting on top of messy data.
+  </p>
+
+    <h2 id="validate-with-incrementality">
+      Validate with incrementality
+    </h2>
+
+  <p>
+    Geo-tests and holdouts answer the only question that matters: what would have happened anyway?
+  </p>
+
+    <h2 id="tie-every-metric-to-a-decision">
+      Tie every metric to a decision
+    </h2>
+
+  <p>
+    If a dashboard number wouldn't change a budget or a bid, stop reporting it. Measurement exists to drive action.
+  </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>test blog entry</title>
         <author>
