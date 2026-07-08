@@ -323,33 +323,33 @@
             "note": "Optional. Sits behind a navy gradient. Leave empty for a solid navy hero."
         },
         {
-            "name": "separatorTrust",
+            "name": "separatorPlatforms",
             "type": "separator",
-            "label": "Homepage — Trust bar",
+            "label": "Homepage — Platform expertise",
             "group": "Homepage",
             "size": "big"
         },
         {
-            "name": "trustEnabled",
-            "label": "Show client logo strip",
+            "name": "platformsEnabled",
+            "label": "Show platform expertise strip",
             "group": "Homepage",
             "value": true,
             "type": "checkbox"
         },
         {
-            "name": "trustHeading",
-            "label": "Trust bar heading",
+            "name": "platformsHeading",
+            "label": "Platform strip heading",
             "group": "Homepage",
-            "value": "Trusted by teams scaling across borders",
+            "value": "Certified expertise across the platforms that matter",
             "type": "text"
         },
         {
-            "name": "trustLogos",
-            "label": "Logos / client names",
+            "name": "platformsList",
+            "label": "Platforms",
             "group": "Homepage",
-            "value": "<span>Northwind</span><span>Aperture</span><span>Volari</span><span>Meridian</span><span>Cobalt</span><span>Lumen</span>",
+            "value": "<span class=\"platform\">Google Ads</span><span class=\"platform\">Meta</span><span class=\"platform\">Microsoft Ads</span><span class=\"platform\">Amazon Ads</span><span class=\"platform\">TikTok</span><span class=\"platform\">LinkedIn</span><span class=\"platform\">Programmatic (DV360)</span><span class=\"platform\">GA4 &amp; server-side</span>",
             "type": "wysiwyg",
-            "note": "Add &lt;img&gt; logos or &lt;span&gt; text names. Rendered greyscale in a row."
+            "note": "Each platform = a &lt;span class=\"platform\"&gt;Name&lt;/span&gt;. Add or remove freely; a gold dot is added automatically."
         },
         {
             "name": "separatorStats",

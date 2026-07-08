@@ -6,12 +6,12 @@
       {{> hero}}
    {{/if}}
 
-   {{!-- Trust / client strip --}}
-   {{#if @config.custom.trustEnabled}}
-      <section class="trust reveal">
+   {{!-- Platform expertise strip --}}
+   {{#if @config.custom.platformsEnabled}}
+      <section class="platforms reveal">
          <div class="wrap">
-            {{#if @config.custom.trustHeading}}<p class="trust__heading eyebrow">{{@config.custom.trustHeading}}</p>{{/if}}
-            <div class="trust__logos">{{{@config.custom.trustLogos}}}</div>
+            {{#if @config.custom.platformsHeading}}<p class="platforms__heading eyebrow">{{@config.custom.platformsHeading}}</p>{{/if}}
+            <div class="platforms__list">{{{@config.custom.platformsList}}}</div>
          </div>
       </section>
    {{/if}}
