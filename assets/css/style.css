@@ -254,17 +254,17 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
 /* ---------- Platform expertise strip ---------- */
 .platforms { padding-block: clamp(40px, 6vw, 64px); border-bottom: 1px solid var(--ink-line); }
 .platforms__heading { display: block; text-align: center; margin-bottom: 1.8rem; }
-.platforms__list { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.8rem; max-width: 940px; margin-inline: auto; }
+.platforms__list { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 0.7rem; max-width: 860px; margin-inline: auto; }
 .platform {
-   display: inline-flex; align-items: center; gap: 0.55rem;
-   padding: 0.6em 1.15em; border: 1px solid var(--ink-line); border-radius: 999px;
-   background: var(--surface); color: var(--navy); font-weight: 500; font-size: 0.98rem;
-   transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+   display: inline-flex; align-items: center;
+   padding: 0.5em 1.05em; border-radius: 999px;
+   background: var(--navy-soft); color: var(--navy);
+   font-weight: 500; font-size: 0.92rem; letter-spacing: 0.005em;
+   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
-.platform::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-.platform:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: var(--shadow-sm); }
+.platform:hover { background: var(--navy); color: var(--cream); }
 /* logos, if used instead of text */
-.platforms__list img { height: 26px; width: auto; filter: grayscale(1); opacity: 0.6; transition: all var(--dur) var(--ease); }
+.platforms__list img { height: 24px; width: auto; filter: grayscale(1); opacity: 0.55; transition: all var(--dur) var(--ease); }
 .platforms__list img:hover { filter: grayscale(0); opacity: 1; }
 
 /* ---------- Stats band ---------- */
@@ -323,6 +323,8 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
 .card__title a:hover { color: var(--gold-700); }
 .card__excerpt { color: var(--fg-muted); font-size: 0.95rem; margin: 0; flex: 1; }
 .card__author { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--fg-muted); margin-top: 0.3rem; }
+/* Homepage insights cards: hide the author byline (kept on archives) */
+.is-home .card__author { display: none; }
 
 .avatar { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
 .avatar--lg { width: 64px; height: 64px; }
