@@ -1,12 +1,13 @@
 {{> head}}
 {{> header}}
 
-<main class="main is-post-main">
+<main id="main" class="main is-post-main">
    {{#if @customHTML.beforePost}}
       <div class="wrap banner">{{{@customHTML.beforePost}}}</div>
    {{/if}}
 
    {{#post}}
+      {{> breadcrumb}}
       <article class="post">
          <header class="post__header">
             <div class="wrap wrap--narrow">

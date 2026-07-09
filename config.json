@@ -352,6 +352,14 @@
             "note": "Each platform = a &lt;span class=\"platform\"&gt;Name&lt;/span&gt;. Add or remove freely; a gold dot is added automatically."
         },
         {
+            "name": "certificationsEnabled",
+            "label": "Show certification badges",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox",
+            "note": "Shows the partner badges in assets/images/partners/ (google-partner.svg, meta-business-partner.webp, microsoft-partner.webp). Replace those files with your OWN official badges before going live."
+        },
+        {
             "name": "separatorStats",
             "type": "separator",
             "label": "Homepage — Stats band",
@@ -507,6 +515,84 @@
             "group": "Homepage",
             "value": "#contact",
             "type": "text"
+        },
+        {
+            "name": "separatorFaq",
+            "type": "separator",
+            "label": "Homepage — FAQ",
+            "group": "Homepage",
+            "size": "big"
+        },
+        {
+            "name": "faqEnabled",
+            "label": "Show FAQ",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox",
+            "note": "Renders an accordion + FAQPage structured data (Google rich result). Empty questions are skipped."
+        },
+        {
+            "name": "faqTitle",
+            "label": "FAQ heading",
+            "group": "Homepage",
+            "value": "Questions, answered",
+            "type": "text"
+        },
+        {
+            "name": "faqQ1",
+            "label": "Q1",
+            "group": "Homepage",
+            "value": "How quickly can we get started?",
+            "type": "text"
+        },
+        {
+            "name": "faqA1",
+            "label": "A1",
+            "group": "Homepage",
+            "value": "Most engagements kick off within a week of our first call, and your free consultation is confirmed within 24 hours.",
+            "type": "textarea"
+        },
+        {
+            "name": "faqQ2",
+            "label": "Q2",
+            "group": "Homepage",
+            "value": "Do you work with our existing team?",
+            "type": "text"
+        },
+        {
+            "name": "faqA2",
+            "label": "A2",
+            "group": "Homepage",
+            "value": "Yes — we plug in as an agile extension of your team, sharing dashboards, playbooks and knowledge so capability stays in-house.",
+            "type": "textarea"
+        },
+        {
+            "name": "faqQ3",
+            "label": "Q3",
+            "group": "Homepage",
+            "value": "Which markets do you cover?",
+            "type": "text"
+        },
+        {
+            "name": "faqA3",
+            "label": "A3",
+            "group": "Homepage",
+            "value": "We run cross-border campaigns across 40+ markets, adapting strategy, creative and measurement to each one.",
+            "type": "textarea"
+        },
+        {
+            "name": "faqQ4",
+            "label": "Q4",
+            "group": "Homepage",
+            "value": "How do you report on performance?",
+            "type": "text"
+        },
+        {
+            "name": "faqA4",
+            "label": "A4",
+            "group": "Homepage",
+            "value": "You get live dashboards tied to the metrics that matter — contribution margin and pipeline, not vanity metrics — plus a senior partner to interpret them.",
+            "type": "textarea"
         },
         {
             "name": "separatorFooter",

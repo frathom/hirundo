@@ -9,11 +9,12 @@
             {{#if @config.custom.calEnabled}}
                <a class="btn btn--gold btn--lg"
                   href="https://cal.com/{{@config.custom.calLink}}"
+                  data-event="book_call" data-event-location="cta_band"
                   data-cal-link="{{@config.custom.calLink}}"
                   data-cal-namespace="{{@config.custom.calNamespace}}"
                   data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>{{@config.custom.ctaButtonLabel}}</a>
             {{else}}
-               <a class="btn btn--gold btn--lg" href="{{@config.custom.ctaButtonUrl}}">{{@config.custom.ctaButtonLabel}}</a>
+               <a class="btn btn--gold btn--lg" href="{{@config.custom.ctaButtonUrl}}" data-event="book_call" data-event-location="cta_band">{{@config.custom.ctaButtonLabel}}</a>
             {{/if}}
          {{/if}}
       </div>

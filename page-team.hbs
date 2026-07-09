@@ -1,8 +1,9 @@
 {{> head}}
 {{> header}}
 
-<main class="main is-page-main is-team">
+<main id="main" class="main is-page-main is-team">
    {{#page}}
+      {{> breadcrumb}}
       {{#if @config.page.displayTitle}}
          <header class="archive-hero">
             <span class="landing-hero__mark mark mark--on-navy mark--120" aria-hidden="true"></span>

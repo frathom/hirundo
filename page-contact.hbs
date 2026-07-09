@@ -1,8 +1,9 @@
 {{> head}}
 {{> header}}
 
-<main class="main is-page-main is-contact">
+<main id="main" class="main is-page-main is-contact">
    {{#page}}
+      {{> breadcrumb}}
       {{#if @config.page.displayTitle}}
          <header class="page__header">
             <div class="wrap">
@@ -11,6 +12,24 @@
                {{#if @config.page.introText}}<p class="page__intro lead">{{@config.page.introText}}</p>{{/if}}
             </div>
          </header>
+      {{/if}}
+
+      {{#if @config.custom.calEnabled}}
+         {{#if @config.custom.calLink}}
+            <section class="section booking">
+               <div class="wrap">
+                  <div class="booking__intro reveal">
+                     <p class="eyebrow eyebrow--gold">Book a call</p>
+                     <h2 class="section__title">Book a free consultation</h2>
+                     <p class="lead">Pick a time that suits you — we'll confirm your <strong>free consultation within 24 hours</strong>.</p>
+                  </div>
+                  <div id="cal-inline" class="cal-inline"
+                       data-cal-link="{{@config.custom.calLink}}"
+                       data-cal-namespace="{{@config.custom.calNamespace}}"></div>
+                  <noscript><p class="booking__fallback"><a class="btn btn--gold btn--lg" href="https://cal.com/{{@config.custom.calLink}}">Open the booking calendar</a></p></noscript>
+               </div>
+            </section>
+         {{/if}}
       {{/if}}
 
       <div class="wrap contact__grid">

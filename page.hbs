@@ -1,12 +1,13 @@
 {{> head}}
 {{> header}}
 
-<main class="main is-page-main">
+<main id="main" class="main is-page-main">
    {{#if @customHTML.beforePage}}
       <div class="wrap banner">{{{@customHTML.beforePage}}}</div>
    {{/if}}
 
    {{#page}}
+      {{> breadcrumb}}
       <article class="page">
          {{#if @config.page.displayTitle}}
             <header class="page__header">

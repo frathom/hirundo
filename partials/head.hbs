@@ -32,6 +32,7 @@
       {{> fonts}}
       <link rel="stylesheet" href="{{css "style.css"}}">
       {{jsonLD}}
+      {{> structured-data}}
       <noscript>
          <style>
             img[loading] { opacity: 1; }
@@ -42,3 +43,4 @@
    </head>
    <body class="{{#is "index"}}is-home{{/is}}{{#is "index-pagination"}}is-paginated{{/is}}{{#is "tag"}}is-tag{{/is}}{{#is "tag-pagination"}}is-tag is-paginated{{/is}}{{#is "tags"}}is-tags{{/is}}{{#is "page"}}is-page{{/is}}{{#is "post"}}is-post{{/is}}{{#is "author"}}is-author{{/is}}{{#is "author-pagination"}}is-author is-paginated{{/is}}{{#is "404"}}is-error{{/is}}{{#is "search"}}is-search{{/is}}">
       {{{@bodyCustomCode}}}
+      <a class="skip-link" href="#main">{{translate 'a11y.skip'}}</a>

@@ -1,5 +1,5 @@
-{{!-- Brand webfonts. Cormorant Garamond (display serif) + Inter (UI/body) via
-      Google Fonts; JetBrains Mono (labels/eyebrows) is self-hosted in style.css. --}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap">
+{{!-- Brand webfonts are self-hosted (see @font-face in style.css) — no external
+      Google request, so nothing loads before cookie consent. Preload the two
+      most critical faces (body + display) to avoid a flash. --}}
+<link rel="preload" href="{{@website.assetsUrl}}/dynamic/fonts/inter/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{@website.assetsUrl}}/dynamic/fonts/cormorantgaramond/cormorantgaramond-500.woff2" as="font" type="font/woff2" crossorigin>

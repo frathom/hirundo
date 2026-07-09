@@ -1,8 +1,9 @@
 {{> head}}
 {{> header}}
 
-<main class="main is-post-main is-post-wide">
+<main id="main" class="main is-post-main is-post-wide">
    {{#post}}
+      {{> breadcrumb}}
       <article class="post post--wide">
          <header class="post-wide-hero{{#if featuredImage.url}} post-wide-hero--image{{/if}}"
             {{#featuredImage}}{{#if url}}style="--hero-image:url('{{url}}')"{{/if}}{{/featuredImage}}>

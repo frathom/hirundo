@@ -1,6 +1,7 @@
 {{> head}}
 {{> header}}
 
+<main id="main">
 {{#if @renderer.isFirstPage}}
    {{#if @config.custom.heroEnabled}}
       {{> hero}}
@@ -11,6 +12,13 @@
       <section class="platforms reveal">
          <div class="wrap">
             {{#if @config.custom.platformsHeading}}<p class="platforms__heading eyebrow">{{@config.custom.platformsHeading}}</p>{{/if}}
+            {{#if @config.custom.certificationsEnabled}}
+               <div class="certs">
+                  <span class="cert"><img src="{{@website.assetsUrl}}/images/partners/google-partner.svg" alt="Google Partner" loading="lazy" width="120" height="120"></span>
+                  <span class="cert"><img src="{{@website.assetsUrl}}/images/partners/meta-business-partner.webp" alt="Meta Business Partner" loading="lazy" width="180" height="103"></span>
+                  <span class="cert"><img src="{{@website.assetsUrl}}/images/partners/microsoft-partner.webp" alt="Microsoft Advertising Partner" loading="lazy" width="180" height="62"></span>
+               </div>
+            {{/if}}
             <div class="platforms__list">{{{@config.custom.platformsList}}}</div>
          </div>
       </section>
@@ -47,7 +55,7 @@
                </header>
                <div class="work__grid">
                   {{#each featuredPosts}}
-                     <a class="work-card" href="{{url}}">
+                     <a class="work-card" href="{{url}}" data-event="view_case_study" data-event-title="{{title}}">
                         {{#featuredImage}}
                            {{#if url}}
                               <span class="work-card__media">
@@ -94,9 +102,33 @@
    {{/if}}
 {{/if}}
 
+{{!-- FAQ --}}
+{{#if @renderer.isFirstPage}}
+   {{#if @config.custom.faqEnabled}}
+      <section class="section faq-section reveal" id="faq">
+         <div class="wrap wrap--narrow">
+            <header class="section__head section__head--center">
+               <p class="eyebrow eyebrow--gold">FAQ</p>
+               {{#if @config.custom.faqTitle}}<h2 class="section__title">{{@config.custom.faqTitle}}</h2>{{/if}}
+            </header>
+            <div class="faq-list">
+               {{#if @config.custom.faqQ1}}<details class="faq"><summary class="faq__q">{{@config.custom.faqQ1}}</summary><div class="faq__a">{{@config.custom.faqA1}}</div></details>{{/if}}
+               {{#if @config.custom.faqQ2}}<details class="faq"><summary class="faq__q">{{@config.custom.faqQ2}}</summary><div class="faq__a">{{@config.custom.faqA2}}</div></details>{{/if}}
+               {{#if @config.custom.faqQ3}}<details class="faq"><summary class="faq__q">{{@config.custom.faqQ3}}</summary><div class="faq__a">{{@config.custom.faqA3}}</div></details>{{/if}}
+               {{#if @config.custom.faqQ4}}<details class="faq"><summary class="faq__q">{{@config.custom.faqQ4}}</summary><div class="faq__a">{{@config.custom.faqA4}}</div></details>{{/if}}
+            </div>
+         </div>
+      </section>
+      <script type="application/ld+json">
+      { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{{#if @config.custom.faqQ1}}{ "@type": "Question", "name": {{{jsonify @config.custom.faqQ1}}}, "acceptedAnswer": { "@type": "Answer", "text": {{{jsonify @config.custom.faqA1}}} } }{{/if}}{{#if @config.custom.faqQ2}}{{#if @config.custom.faqQ1}}, {{/if}}{ "@type": "Question", "name": {{{jsonify @config.custom.faqQ2}}}, "acceptedAnswer": { "@type": "Answer", "text": {{{jsonify @config.custom.faqA2}}} } }{{/if}}{{#if @config.custom.faqQ3}}{{#checkIfAny @config.custom.faqQ1 @config.custom.faqQ2}}, {{/checkIfAny}}{ "@type": "Question", "name": {{{jsonify @config.custom.faqQ3}}}, "acceptedAnswer": { "@type": "Answer", "text": {{{jsonify @config.custom.faqA3}}} } }{{/if}}{{#if @config.custom.faqQ4}}{{#checkIfAny @config.custom.faqQ1 @config.custom.faqQ2 @config.custom.faqQ3}}, {{/checkIfAny}}{ "@type": "Question", "name": {{{jsonify @config.custom.faqQ4}}}, "acceptedAnswer": { "@type": "Answer", "text": {{{jsonify @config.custom.faqA4}}} } }{{/if}}] }
+      </script>
+   {{/if}}
+{{/if}}
+
 {{!-- CTA band --}}
 {{#if @renderer.isFirstPage}}
    {{> cta-band}}
 {{/if}}
+</main>
 
 {{> footer}}

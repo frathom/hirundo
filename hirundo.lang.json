@@ -55,6 +55,9 @@
         "instagram": "Instagram",
         "youtube": "YouTube"
     },
+    "a11y": {
+        "skip": "Skip to content"
+    },
     "error": {
         "title": "Page not found",
         "text": "This page has flown the nest. Let's get you back on course.",

@@ -1,0 +1,16 @@
+{{!-- Global Organization + WebSite structured data. Publii's {{jsonLD}} adds
+      Article/Person/Organization on posts; this adds the site-wide entities. --}}
+<script type="application/ld+json">
+{
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": {{{jsonify @website.name}}},
+   "url": "{{@website.url}}",
+   "logo": "{{@website.assetsUrl}}/images/favicon/favicon-512.png",
+   "sameAs": [{{#if @config.custom.socialLinkedin}}"{{@config.custom.socialLinkedin}}"{{/if}}{{#if @config.custom.socialTwitter}}{{#if @config.custom.socialLinkedin}}, {{/if}}"{{@config.custom.socialTwitter}}"{{/if}}{{#if @config.custom.socialInstagram}}{{#checkIfAny @config.custom.socialLinkedin @config.custom.socialTwitter}}, {{/checkIfAny}}"{{@config.custom.socialInstagram}}"{{/if}}{{#if @config.custom.socialYoutube}}{{#checkIfAny @config.custom.socialLinkedin @config.custom.socialTwitter @config.custom.socialInstagram}}, {{/checkIfAny}}"{{@config.custom.socialYoutube}}"{{/if}}]{{#if @website.contactEmail}},
+   "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "{{@website.contactEmail}}" }{{/if}}
+}
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebSite", "name": {{{jsonify @website.name}}}, "url": "{{@website.url}}" }
+</script>

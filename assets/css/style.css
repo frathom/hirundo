@@ -21,14 +21,15 @@
    Type:  Cormorant Garamond (display) · Inter (UI/body) · JetBrains Mono (labels)
    ============================================================ */
 
-/* ---------- Self-hosted mono (display serif + sans via Google Fonts) ---------- */
-@font-face {
-   font-family: 'JetBrains Mono';
-   src: url('../dynamic/fonts/jetbrainsmono/jetbrainsmono.woff2') format('woff2');
-   font-weight: 100 800;
-   font-display: swap;
-   font-style: normal;
-}
+/* ---------- Self-hosted brand fonts (no external Google request) ---------- */
+@font-face { font-family: 'Cormorant Garamond'; src: url('../dynamic/fonts/cormorantgaramond/cormorantgaramond-500.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Cormorant Garamond'; src: url('../dynamic/fonts/cormorantgaramond/cormorantgaramond-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Cormorant Garamond'; src: url('../dynamic/fonts/cormorantgaramond/cormorantgaramond-500-italic.woff2') format('woff2'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('../dynamic/fonts/inter/inter-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('../dynamic/fonts/inter/inter-500.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('../dynamic/fonts/inter/inter-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('../dynamic/fonts/inter/inter-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'JetBrains Mono'; src: url('../dynamic/fonts/jetbrainsmono/jetbrainsmono.woff2') format('woff2'); font-weight: 100 800; font-style: normal; font-display: swap; }
 
 /* NOTE: --navy/--gold/--cream/--ink and their soft/line/ring variants are
    injected ABOVE this file by theme-variables.js (editor colour-pickers).
@@ -68,6 +69,17 @@
    /* --header-h and --logo-height are injected by theme-variables.js (derived
       from the "Logo height" setting) and must not be re-declared here. */
 }
+
+/* ---------- Accessibility ---------- */
+.skip-link {
+   position: fixed; top: 0; left: 0; z-index: 200; transform: translateY(-120%);
+   background: var(--navy); color: var(--cream); padding: 0.75rem 1.25rem;
+   border-radius: 0 0 var(--radius-sm) 0; font-weight: 600; font-size: 0.9rem;
+   transition: transform var(--dur) var(--ease);
+}
+.skip-link:focus { transform: translateY(0); color: var(--cream); outline: 2px solid var(--gold); }
+:focus-visible { outline: 2px solid var(--gold-700); outline-offset: 2px; }
+a:focus-visible, .menu > li > a:focus-visible { outline: 2px solid var(--gold-700); outline-offset: 3px; border-radius: 2px; }
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -119,6 +131,7 @@ sup { font-size: 0.55em; vertical-align: super; }
 .wrap--narrow { max-width: var(--wrap-narrow); }
 .section { padding-block: clamp(56px, 8vw, 112px); }
 .section__head { max-width: 720px; margin-bottom: clamp(32px, 5vw, 56px); }
+.section__head--center { max-width: 640px; margin-inline: auto; text-align: center; }
 .section__title { font-size: clamp(1.9rem, 3.4vw, 2.9rem); }
 .banner { margin-block: 1.5rem; }
 
@@ -253,7 +266,15 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
 
 /* ---------- Platform expertise strip ---------- */
 .platforms { padding-block: clamp(40px, 6vw, 64px); border-bottom: 1px solid var(--ink-line); }
-.platforms__heading { display: block; text-align: center; margin-bottom: 1.8rem; }
+.platforms__heading { display: block; text-align: center; margin-bottom: 1.6rem; }
+/* Certification / partner badges */
+.certs { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.9rem; margin-bottom: 1.8rem; }
+.cert {
+   display: inline-flex; align-items: center; justify-content: center; height: 66px;
+   padding: 0.5rem 0.9rem; background: #fff; border: 1px solid var(--ink-line);
+   border-radius: 12px; box-shadow: var(--shadow-sm);
+}
+.cert img { height: 100%; width: auto; display: block; }
 .platforms__list { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 0.7rem; max-width: 860px; margin-inline: auto; }
 .platform {
    display: inline-flex; align-items: center;
@@ -588,6 +609,26 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 .contact__form { background: var(--surface); border: 1px solid var(--ink-line); border-radius: var(--radius-lg); padding: clamp(1.4rem, 3vw, 2.4rem); box-shadow: var(--shadow-sm); }
 .contact__form iframe { width: 100%; border: 0; min-height: 620px; display: block; border-radius: var(--radius-sm); }
 .contact__placeholder { color: var(--fg-muted); }
+
+/* ---------- FAQ ---------- */
+.faq-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.faq { background: var(--surface); border: 1px solid var(--ink-line); border-radius: var(--radius); overflow: hidden; }
+.faq__q {
+   list-style: none; cursor: pointer; padding: 1.1rem 1.3rem; font-weight: 600; color: var(--navy);
+   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.faq__q::-webkit-details-marker { display: none; }
+.faq__q::after { content: "+"; font-family: var(--font-mono); font-size: 1.3rem; color: var(--gold-700); transition: transform var(--dur) var(--ease); line-height: 1; }
+.faq[open] .faq__q::after { transform: rotate(45deg); }
+.faq__a { padding: 0 1.3rem 1.2rem; color: var(--fg-muted); }
+.faq__a p { margin: 0; }
+
+/* ---------- Inline Cal.com booking ---------- */
+.booking { padding-top: clamp(24px, 4vw, 40px); }
+.booking__intro { text-align: center; max-width: 640px; margin: 0 auto clamp(20px, 3vw, 36px); }
+.booking__intro .section__title { margin-bottom: 0.4rem; }
+.cal-inline { width: 100%; min-height: 640px; overflow: hidden; border-radius: var(--radius); }
+.booking__fallback { text-align: center; margin-top: 1rem; }
 
 @media (max-width: 1024px) {
    .team-grid { grid-template-columns: repeat(2, 1fr); }

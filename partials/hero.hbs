@@ -16,10 +16,10 @@
       {{#checkIfAny @config.custom.heroCtaPrimaryLabel @config.custom.heroCtaSecondaryLabel}}
          <div class="hero__actions">
             {{#if @config.custom.heroCtaPrimaryLabel}}
-               <a class="btn btn--gold btn--lg" href="{{@config.custom.heroCtaPrimaryUrl}}">{{@config.custom.heroCtaPrimaryLabel}}</a>
+               <a class="btn btn--gold btn--lg" href="{{@config.custom.heroCtaPrimaryUrl}}" data-event="cta_primary" data-event-location="hero">{{@config.custom.heroCtaPrimaryLabel}}</a>
             {{/if}}
             {{#if @config.custom.heroCtaSecondaryLabel}}
-               <a class="btn btn--ghost-light btn--lg" href="{{@config.custom.heroCtaSecondaryUrl}}">{{@config.custom.heroCtaSecondaryLabel}}</a>
+               <a class="btn btn--ghost-light btn--lg" href="{{@config.custom.heroCtaSecondaryUrl}}" data-event="cta_secondary" data-event-location="hero">{{@config.custom.heroCtaSecondaryLabel}}</a>
             {{/if}}
          </div>
       {{/checkIfAny}}
