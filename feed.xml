@@ -3,7 +3,7 @@
     <title>Hirundo</title>
     <link href="https://frathom.github.io/hirundo/feed.xml" rel="self" />
     <link href="https://frathom.github.io/hirundo" />
-    <updated>2026-07-08T18:46:15+02:00</updated>
+    <updated>2026-07-09T09:25:48+02:00</updated>
     <author>
         <name>Franck</name>
     </author>
@@ -21,20 +21,49 @@
         <updated>2026-07-08T18:46:15+02:00</updated>
             <summary>
                 <![CDATA[
-                    <div><p>How a disciplined testing framework tripled ROAS in six months.</p></div>
+                    
+  <p>
+    How a disciplined testing framework tripled ROAS in six months
+  </p>
 
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <div><p>How a disciplined testing framework tripled ROAS in six months.</p></div>
+                
+  <p>
+    How a disciplined testing framework tripled ROAS in six months
+  </p>
 
-<div><h2>The challenge</h2><p>A fast-growing DTC brand had proven demand at home but no repeatable way to enter new markets. Every launch felt like starting from scratch, and spend outran returns.</p><h2>Our approach</h2><p>We built a market-by-market testing framework: a small controlled budget per market, one variable changed at a time, and a single metric of truth &mdash; contribution margin. Winners were scaled, losers cut fast.</p><h2>The results</h2><p>Within six months the brand was live in 12 new markets, return on ad spend had tripled versus the old approach, and the in-house team had a launch playbook they could run themselves.</p></div>
+
+    <h2 id="the-challenge">
+      The challenge
+    </h2>
+
+  <p>
+    A fast-growing DTC brand had proven demand at home but no repeatable way to enter new markets. Every launch felt like starting from scratch, and spend outran returns.
+  </p>
+
+    <h2 id="our-approach">
+      Our approach
+    </h2>
+
+  <p>
+    We built a market-by-market testing framework: a small controlled budget per market, one variable changed at a time, and a single metric of truth — contribution margin. Winners were scaled, losers cut fast.
+  </p>
+
+    <h2 id="the-results">
+      The results
+    </h2>
+
+  <p>
+    Within six months the brand was live in 12 new markets, return on ad spend had tripled versus the old approach, and the in-house team had a launch playbook they could run themselves.
+  </p>
             ]]>
         </content>
     </entry>
     <entry>
-        <title>From invisible to page one in a crowded category</title>
+        <title>From invisible to a strong challenger in a crowded category</title>
         <author>
             <name>Franck</name>
         </author>
@@ -45,15 +74,48 @@
         <updated>2026-07-08T18:45:15+02:00</updated>
             <summary>
                 <![CDATA[
-                    <div><p>A content engine that grew organic pipeline by 218%.</p></div>
+                    
+  <p>
+    A content engine that grew organic pipeline by 218%.
+  </p>
 
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <div><p>A content engine that grew organic pipeline by 218%.</p></div>
+                
+  <p>
+    A content engine that grew organic pipeline by 218%.
+  </p>
 
-<div><h2>The challenge</h2><p>In a saturated category, the client's site sat on page three for every commercial term. Paid media carried the entire funnel and costs were climbing.</p><h2>Our approach</h2><p>We rebuilt the technical foundation, mapped demand to a topic-cluster content plan, and shipped a steady cadence of editorial backed by digital PR.</p><h2>The results</h2><p>Over twelve months organic pipeline grew 218%, dozens of terms reached page one, and organic became the lowest-cost channel in the mix.</p></div>
+
+    <h2 id="the-challenge">
+      The challenge
+    </h2>
+
+  <p>
+    In a saturated category, the client's site sat on page three for every commercial term. Paid media carried the entire funnel and costs were climbing.
+  </p>
+
+    <h2 id="our-approach">
+      Our approach
+    </h2>
+
+  <p>
+    We rebuilt the technical foundation, mapped demand to a topic-cluster content plan, and shipped a steady cadence of editorial backed by digital PR.
+  </p>
+
+    <h2 id="the-results">
+      The results
+    </h2>
+
+  <p>
+    Over twelve months organic pipeline grew 218%, dozens of terms reached page one, and organic became the lowest-cost channel in the mix.
+  </p>
+
+  <p>
+    
+  </p>
             ]]>
         </content>
     </entry>

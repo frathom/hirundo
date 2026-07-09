@@ -1,6 +1,7 @@
 /* ============================================================
    HIRUNDO — front-end behaviour
-   Mobile nav · sticky/solid header on scroll · reveal-on-scroll · back-to-top
+   Mobile nav · sticky/solid header · reveal-on-scroll · back-to-top
+   · analytics event push (dataLayer) · inline Cal.com embed
    No dependencies.
    ============================================================ */
 (function () {
@@ -15,14 +16,12 @@
          var open = body.classList.toggle('nav-open');
          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
-      // Close the menu when a link is tapped
       document.querySelectorAll('.primary-nav a').forEach(function (link) {
          link.addEventListener('click', function () {
             body.classList.remove('nav-open');
             toggle.setAttribute('aria-expanded', 'false');
          });
       });
-      // Close on Escape
       document.addEventListener('keyup', function (e) {
          if (e.key === 'Escape') {
             body.classList.remove('nav-open');
@@ -65,5 +64,42 @@
          e.preventDefault();
          window.scrollTo({ top: 0, behavior: 'smooth' });
       });
+   }
+
+   /* ---- Analytics: push clicks on [data-event] to dataLayer (GTM/GA4) ---- */
+   window.dataLayer = window.dataLayer || [];
+   document.addEventListener('click', function (e) {
+      var el = e.target.closest('[data-event]');
+      if (!el) { return; }
+      var payload = { event: el.getAttribute('data-event') };
+      for (var i = 0; i < el.attributes.length; i++) {
+         var a = el.attributes[i];
+         if (a.name.indexOf('data-event-') === 0) {
+            payload[a.name.slice(11).replace(/-/g, '_')] = a.value;
+         }
+      }
+      window.dataLayer.push(payload);
+   }, true);
+
+   /* ---- Cal.com: inline embed + booking-success event ---- */
+   var calInline = document.getElementById('cal-inline');
+   if (calInline && window.Cal) {
+      var ns = calInline.getAttribute('data-cal-namespace');
+      var link = calInline.getAttribute('data-cal-link');
+      try {
+         window.Cal.ns[ns]('inline', {
+            elementOrSelector: '#cal-inline',
+            calLink: link,
+            config: { layout: 'month_view' }
+         });
+      } catch (err) {}
+   }
+   if (window.Cal) {
+      try {
+         window.Cal('on', {
+            action: 'bookingSuccessful',
+            callback: function () { window.dataLayer.push({ event: 'book_call_completed' }); }
+         });
+      } catch (err) {}
    }
 })();
