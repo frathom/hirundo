@@ -19,7 +19,12 @@
                   <span class="cert"><img src="{{@website.assetsUrl}}/images/partners/microsoft-partner.webp" alt="Microsoft Advertising Partner" loading="lazy" width="180" height="62"></span>
                </div>
             {{/if}}
-            <div class="platforms__list">{{{@config.custom.platformsList}}}</div>
+         </div>
+         <div class="platforms__marquee">
+            <div class="platforms__track">
+               <div class="platforms__group">{{{@config.custom.platformsList}}}</div>
+               <div class="platforms__group" aria-hidden="true">{{{@config.custom.platformsList}}}</div>
+            </div>
          </div>
       </section>
    {{/if}}
