@@ -352,6 +352,14 @@
             "note": "Each platform = a &lt;span class=\"platform\"&gt;Name&lt;/span&gt;. Add or remove freely; a gold dot is added automatically."
         },
         {
+            "name": "platformsList2",
+            "label": "Platforms — second row (opposite scroll)",
+            "group": "Homepage",
+            "value": "<span class=\"platform\">Search &amp; Shopping</span><span class=\"platform\">Performance Max</span><span class=\"platform\">Advantage+ Shopping</span><span class=\"platform\">Demand Gen</span><span class=\"platform\">Reels &amp; Stories</span><span class=\"platform\">Spark Ads</span><span class=\"platform\">Sponsored Products</span><span class=\"platform\">Server-side tagging</span><span class=\"platform\">Consent Mode v2</span><span class=\"platform\">Looker Studio</span>",
+            "type": "wysiwyg",
+            "note": "Optional second marquee row that scrolls the opposite way. Same &lt;span class=\"platform\"&gt;…&lt;/span&gt; format. Leave empty for a single row."
+        },
+        {
             "name": "certificationsEnabled",
             "label": "Show certification badges",
             "group": "Homepage",

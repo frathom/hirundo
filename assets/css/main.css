@@ -259,13 +259,15 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
    border-radius: 12px; box-shadow: var(--shadow-sm);
 }
 .cert img { height: 100%; width: auto; display: block; }
-/* Infinite marquee / conveyor of platform pills */
+/* Infinite marquee / conveyor of platform pills — two rows, opposite directions */
+.platforms__rows { display: flex; flex-direction: column; gap: 0.7rem; }
 .platforms__marquee {
-   position: relative; overflow: hidden; padding-block: 0.4rem;
+   position: relative; overflow: hidden; padding-block: 0.15rem;
    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
            mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
 }
 .platforms__track { display: flex; width: max-content; will-change: transform; animation: platforms-scroll 42s linear infinite; }
+.platforms__marquee--rev .platforms__track { animation-duration: 52s; animation-direction: reverse; }
 .platforms__marquee:hover .platforms__track { animation-play-state: paused; }
 .platforms__group { display: flex; flex: 0 0 auto; align-items: center; gap: 0.7rem; padding-inline: 0.35rem; }
 @keyframes platforms-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }

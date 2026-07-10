@@ -20,11 +20,21 @@
                </div>
             {{/if}}
          </div>
-         <div class="platforms__marquee">
-            <div class="platforms__track">
-               <div class="platforms__group">{{{@config.custom.platformsList}}}</div>
-               <div class="platforms__group" aria-hidden="true">{{{@config.custom.platformsList}}}</div>
+         <div class="platforms__rows">
+            <div class="platforms__marquee">
+               <div class="platforms__track">
+                  <div class="platforms__group">{{{@config.custom.platformsList}}}</div>
+                  <div class="platforms__group" aria-hidden="true">{{{@config.custom.platformsList}}}</div>
+               </div>
             </div>
+            {{#if @config.custom.platformsList2}}
+               <div class="platforms__marquee platforms__marquee--rev">
+                  <div class="platforms__track">
+                     <div class="platforms__group">{{{@config.custom.platformsList2}}}</div>
+                     <div class="platforms__group" aria-hidden="true">{{{@config.custom.platformsList2}}}</div>
+                  </div>
+               </div>
+            {{/if}}
          </div>
       </section>
    {{/if}}
