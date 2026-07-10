@@ -270,6 +270,9 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
 .platforms__marquee--rev .platforms__track { animation-duration: 52s; animation-direction: reverse; }
 .platforms__marquee:hover .platforms__track { animation-play-state: paused; }
 .platforms__group { display: flex; flex: 0 0 auto; align-items: center; gap: 0.7rem; padding-inline: 0.35rem; }
+/* If the WYSIWYG wrapped the pills in a <p>, make that a matching flex row so
+   the spacing is identical to a row of direct spans (gap ignores whitespace). */
+.platforms__group p { display: flex; align-items: center; gap: 0.7rem; margin: 0; }
 @keyframes platforms-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .platform {
    display: inline-flex; align-items: center; white-space: nowrap;
