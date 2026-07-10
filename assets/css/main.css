@@ -259,18 +259,34 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
    border-radius: 12px; box-shadow: var(--shadow-sm);
 }
 .cert img { height: 100%; width: auto; display: block; }
-.platforms__list { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 0.7rem; max-width: 860px; margin-inline: auto; }
+/* Infinite marquee / conveyor of platform pills — two rows, opposite directions */
+.platforms__rows { display: flex; flex-direction: column; gap: 0.7rem; }
+.platforms__marquee {
+   position: relative; overflow: hidden; padding-block: 0.15rem;
+   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+           mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+}
+.platforms__track { display: flex; width: max-content; will-change: transform; animation: platforms-scroll 42s linear infinite; }
+.platforms__marquee--rev .platforms__track { animation-duration: 52s; animation-direction: reverse; }
+.platforms__marquee:hover .platforms__track { animation-play-state: paused; }
+.platforms__group { display: flex; flex: 0 0 auto; align-items: center; gap: 0.7rem; padding-inline: 0.35rem; }
+@keyframes platforms-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .platform {
-   display: inline-flex; align-items: center;
-   padding: 0.5em 1.05em; border-radius: 999px;
+   display: inline-flex; align-items: center; white-space: nowrap;
+   padding: 0.55em 1.15em; border-radius: 999px;
    background: var(--navy-soft); color: var(--navy);
-   font-weight: 500; font-size: 0.92rem; letter-spacing: 0.005em;
+   font-weight: 500; font-size: 0.95rem; letter-spacing: 0.005em;
    transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 .platform:hover { background: var(--navy); color: var(--cream); }
-/* logos, if used instead of text */
-.platforms__list img { height: 24px; width: auto; filter: grayscale(1); opacity: 0.55; transition: all var(--dur) var(--ease); }
-.platforms__list img:hover { filter: grayscale(0); opacity: 1; }
+/* logos, if used instead of text pills */
+.platforms__group img { height: 26px; width: auto; filter: grayscale(1); opacity: 0.55; transition: all var(--dur) var(--ease); }
+.platforms__group img:hover { filter: grayscale(0); opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+   .platforms__track { animation: none; }
+   .platforms__marquee { overflow-x: auto; }
+   .platforms__group:nth-child(2) { display: none; }
+}
 
 /* ---------- Stats band ---------- */
 .stats { background: var(--navy); color: var(--cream); }
