@@ -716,9 +716,10 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 /* Embedded (Tally) form: a white inner panel so the transparent, dark-text form
    reads inside the navy brand card, with a gold top accent to tie it in. */
 .guide-form__embed { background: #fff; border-radius: var(--radius); border-top: 3px solid var(--gold); padding: 0.85rem 1.1rem; margin-top: 0.4rem; }
-.guide-form__embed iframe { width: 100%; border: 0; min-height: 320px; display: block; }
+/* No min-height: let Tally's dynamicHeight size the iframe to the form. */
+.guide-form__embed iframe { width: 100%; border: 0; display: block; }
 /* Fallback if a form is embedded directly without the wrapper */
-.guide-form > iframe { width: 100%; border: 0; min-height: 320px; background: #fff; border-radius: var(--radius); }
+.guide-form > iframe { width: 100%; border: 0; background: #fff; border-radius: var(--radius); }
 
 @media (max-width: 900px) {
    .guide-hero__inner, .guide-cta__grid { grid-template-columns: 1fr; }
