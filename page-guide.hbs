@@ -18,15 +18,14 @@
                   <span class="guide-hero__meta">Free · PDF · No spam</span>
                </div>
             </div>
-            {{#featuredImage}}
-               {{#if url}}
-                  <figure class="guide-hero__cover reveal">
-                     <img src="{{url}}"
-                        {{#if @config.site.responsiveImages}}{{responsiveImageAttributes 'featuredImage' srcset.post sizes.post}}{{/if}}
-                        {{lazyload "eager"}} width="{{width}}" height="{{height}}" alt="{{alt}}">
-                  </figure>
-               {{/if}}
-            {{/featuredImage}}
+            <figure class="guide-hero__cover reveal">
+               <div class="guide-hero__cover__ph" aria-hidden="true"><span>Placeholder for Guide cover</span></div>
+               {{#featuredImage}}{{#if url}}
+                  <img src="{{url}}"
+                     {{#if @config.site.responsiveImages}}{{responsiveImageAttributes 'featuredImage' srcset.post sizes.post}}{{/if}}
+                     {{lazyload "eager"}} width="{{width}}" height="{{height}}" alt="{{alt}}">
+               {{/if}}{{/featuredImage}}
+            </figure>
          </div>
       </header>
 
@@ -59,6 +58,19 @@
                   <h2 class="section__title">Four parts, one system</h2>
                </header>
                <div class="guide-parts">{{{@config.page.guideToc}}}</div>
+            </div>
+         </section>
+      {{/if}}
+
+      {{!-- Where this comes from (source / credibility) --}}
+      {{#if @config.page.guideSource}}
+         <section class="section guide-source reveal">
+            <div class="wrap wrap--narrow">
+               <div class="guide-source__card">
+                  <p class="eyebrow eyebrow--gold">Where this comes from</p>
+                  <h2 class="section__title">Built on real operating experience</h2>
+                  <div class="guide-source__body">{{{@config.page.guideSource}}}</div>
+               </div>
             </div>
          </section>
       {{/if}}

@@ -966,6 +966,14 @@
             "value": "<p>Hirundo is the growth partner for luxury resorts that want control of their own demand. Built by senior operators from Meta, Google and Nike, we combine luxury-brand creative with performance and CRM depth — and we measure ourselves in your booking cost, not media metrics.</p>"
         },
         {
+            "name": "guideSource",
+            "label": "Guide — where this comes from (source)",
+            "group": "Homepage",
+            "type": "textarea",
+            "note": "Credibility / provenance block. Keep the client unnamed.",
+            "value": "<p class=\"lead\">This playbook isn’t desk research. It distils hundreds of hours optimizing direct bookings for one of Europe’s most recognised luxury resort groups — a client we keep unnamed out of respect for the relationship — alongside benchmarks from across the sector.</p><ul class=\"guide-source__list\"><li><strong>Hundreds of hours</strong> of hands-on optimisation across paid media, CRM and CRO at resort scale.</li><li><strong>A benchmark European resort group</strong> (kept anonymous) as the proving ground.</li><li><strong>Senior operators</strong> from Meta, Google and Nike behind the method.</li><li><strong>Public sources</strong> — the EU DMA, OTA-commission benchmarks and IDC’s agent-era forecasts — applied to luxury hospitality.</li></ul>"
+        },
+        {
             "name": "guideFormEmbed",
             "label": "Guide — lead form embed",
             "group": "Homepage",

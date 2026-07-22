@@ -655,8 +655,11 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 .guide-hero__lead { color: rgba(251, 248, 241, 0.82); font-size: clamp(1.1rem, 1.7vw, 1.3rem); line-height: 1.55; max-width: 44ch; margin-bottom: 1.8rem; }
 .guide-hero__actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .guide-hero__meta { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(251, 248, 241, 0.6); }
-.guide-hero__cover { margin: 0; }
-.guide-hero__cover img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg); transform: rotate(1.5deg); }
+.guide-hero__cover { position: relative; margin: 0; aspect-ratio: 3 / 4; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); transform: rotate(1.5deg); }
+.guide-hero__cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.guide-hero__cover__ph { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 1.2rem; background: #dedbd3; color: #8b897f; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.guide-hero__cover__ph::after { content: ""; position: absolute; inset: 12px; border: 2px dashed #b7b4aa; border-radius: 8px; }
+.guide-hero__cover__ph span { position: relative; z-index: 1; }
 
 .guide-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.6rem); }
 .guide-card { background: var(--surface); border: 1px solid var(--ink-line); border-radius: var(--radius); padding: clamp(1.4rem, 2.2vw, 1.9rem); position: relative; counter-increment: gcard; transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease); }
@@ -709,3 +712,11 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
    .guide-part__no { grid-column: 1; grid-row: auto; padding-top: 0; margin-bottom: 0.2rem; }
    .guide-part > :not(.guide-part__no) { grid-column: 1; }
 }
+
+/* Guide — source / provenance card */
+.guide-source__card { background: var(--surface); border: 1px solid var(--ink-line); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: clamp(1.6rem, 3vw, 2.6rem); }
+.guide-source__body { margin-top: 0.6rem; }
+.guide-source__list { display: grid; gap: 0.65rem; margin-top: 1.1rem; }
+.guide-source__list li { position: relative; padding-left: 1.6rem; color: var(--fg-muted); font-size: 1rem; }
+.guide-source__list li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+.guide-source__list strong { color: var(--navy); font-weight: 600; }
