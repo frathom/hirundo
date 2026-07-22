@@ -697,8 +697,12 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 .guide-form__form .btn { width: 100%; }
 .guide-form__note { margin-top: 1rem; font-size: 0.82rem; color: rgba(251, 248, 241, 0.55); }
 .guide-form__note em { color: rgba(251, 248, 241, 0.4); }
-/* When a form is embedded (iframe), give it room */
-.guide-form iframe { width: 100%; border: 0; min-height: 420px; }
+/* Embedded (Tally) form: a white inner panel so the transparent, dark-text form
+   reads inside the navy brand card, with a gold top accent to tie it in. */
+.guide-form__embed { background: #fff; border-radius: var(--radius); border-top: 3px solid var(--gold); padding: 0.85rem 1.1rem; margin-top: 0.4rem; }
+.guide-form__embed iframe { width: 100%; border: 0; min-height: 320px; display: block; }
+/* Fallback if a form is embedded directly without the wrapper */
+.guide-form > iframe { width: 100%; border: 0; min-height: 320px; background: #fff; border-radius: var(--radius); }
 
 @media (max-width: 900px) {
    .guide-hero__inner, .guide-cta__grid { grid-template-columns: 1fr; }

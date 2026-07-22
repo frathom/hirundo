@@ -97,7 +97,7 @@
                <h3 class="guide-form__title">{{#if @config.page.guideDownloadLabel}}{{@config.page.guideDownloadLabel}}{{else}}Get your free copy{{/if}}</h3>
                <p class="guide-form__sub">Enter your email and we'll send the PDF straight to your inbox.</p>
                {{#if @config.page.guideFormEmbed}}
-                  {{{@config.page.guideFormEmbed}}}
+                  <div class="guide-form__embed">{{{@config.page.guideFormEmbed}}}</div>
                {{else}}
                   <form class="guide-form__form" action="#" method="post" onsubmit="return false;" data-event="guide_download" data-event-location="form">
                      <input type="email" name="email" required aria-label="Email" placeholder="you@resort.com">
