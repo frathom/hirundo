@@ -639,3 +639,84 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 @media (max-width: 620px) {
    .team-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   Guide — lead-capture landing
+   ============================================================ */
+.guide-hero {
+   position: relative; overflow: hidden; color: var(--cream);
+   background: radial-gradient(120% 120% at 85% -10%, #3a4c6d, var(--navy) 50%, var(--navy-900));
+   padding-top: calc(var(--header-h, 88px) + clamp(40px, 6vw, 80px));
+   padding-bottom: clamp(48px, 7vw, 88px);
+}
+.guide-hero__mark { position: absolute; top: 48px; right: -22px; opacity: 0.85; }
+.guide-hero__inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.guide-hero__title { color: #fff; font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 0.4em; }
+.guide-hero__lead { color: rgba(251, 248, 241, 0.82); font-size: clamp(1.1rem, 1.7vw, 1.3rem); line-height: 1.55; max-width: 44ch; margin-bottom: 1.8rem; }
+.guide-hero__actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.guide-hero__meta { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(251, 248, 241, 0.6); }
+.guide-hero__cover { position: relative; margin: 0; aspect-ratio: 3 / 4; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); transform: rotate(1.5deg); }
+.guide-hero__cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.guide-hero__cover__ph { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 1.2rem; background: #dedbd3; color: #8b897f; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.guide-hero__cover__ph::after { content: ""; position: absolute; inset: 12px; border: 2px dashed #b7b4aa; border-radius: 8px; }
+.guide-hero__cover__ph span { position: relative; z-index: 1; }
+
+.guide-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.6rem); }
+.guide-card { background: var(--surface); border: 1px solid var(--ink-line); border-radius: var(--radius); padding: clamp(1.4rem, 2.2vw, 1.9rem); position: relative; counter-increment: gcard; transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.guide-cards { counter-reset: gcard; }
+.guide-card::before { content: counter(gcard, decimal-leading-zero); font-family: var(--font-mono); font-size: 0.8rem; color: var(--gold-700); display: block; margin-bottom: 0.6rem; }
+.guide-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: transparent; }
+.guide-card h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+.guide-card p { margin: 0; color: var(--fg-muted); font-size: 0.97rem; }
+
+.guide-parts { display: flex; flex-direction: column; }
+.guide-part { display: grid; grid-template-columns: 140px 1fr; column-gap: clamp(1rem, 3vw, 2.5rem); row-gap: 0.35rem; align-items: start; padding-block: clamp(1.4rem, 2.5vw, 2rem); border-top: 1px solid var(--ink-line); }
+.guide-part:first-child { border-top: 0; }
+/* The "Part" label sits in the left column and spans the block; everything else
+   (title, description, any list) stacks in the right column. */
+.guide-part__no { grid-column: 1; grid-row: 1 / -1; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold-700); padding-top: 0.5rem; white-space: nowrap; }
+.guide-part > :not(.guide-part__no) { grid-column: 2; }
+.guide-part h3 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0 0 0.3rem; }
+.guide-part p { margin: 0; color: var(--fg-muted); }
+
+.guide-cta-section { background: var(--navy-soft); }
+.guide-cta__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.guide-about__body { margin: 1rem 0 1.6rem; }
+.guide-about__proof { display: grid; gap: 0.8rem; }
+.guide-about__proof li { display: flex; flex-direction: column; padding-left: 1.1rem; border-left: 2px solid var(--gold); }
+.guide-about__proof strong { font-weight: 600; color: var(--navy); }
+.guide-about__proof span { font-size: 0.92rem; color: var(--fg-muted); }
+
+.guide-form { background: var(--navy); color: var(--cream); border-radius: var(--radius-lg); padding: clamp(1.8rem, 3vw, 2.6rem); box-shadow: var(--shadow-lg); position: sticky; top: calc(var(--header-h, 88px) + 16px); }
+.guide-form__title { color: #fff; font-family: var(--font-serif); font-weight: 500; font-size: 1.8rem; margin-bottom: 0.4rem; }
+.guide-form__sub { color: rgba(251, 248, 241, 0.75); font-size: 0.98rem; margin-bottom: 1.3rem; }
+.guide-form__form { display: flex; flex-direction: column; gap: 0.7rem; }
+.guide-form__form input { padding: 0.9em 1.1em; border-radius: 999px; border: 1px solid rgba(251, 248, 241, 0.22); background: rgba(251, 248, 241, 0.06); color: var(--cream); font-family: var(--font-sans); font-size: 1rem; }
+.guide-form__form input::placeholder { color: rgba(251, 248, 241, 0.45); }
+.guide-form__form input:focus { outline: none; border-color: var(--gold); }
+.guide-form__form .btn { width: 100%; }
+.guide-form__note { margin-top: 1rem; font-size: 0.82rem; color: rgba(251, 248, 241, 0.55); }
+.guide-form__note em { color: rgba(251, 248, 241, 0.4); }
+/* When a form is embedded (iframe), give it room */
+.guide-form iframe { width: 100%; border: 0; min-height: 420px; }
+
+@media (max-width: 900px) {
+   .guide-hero__inner, .guide-cta__grid { grid-template-columns: 1fr; }
+   .guide-hero__cover { max-width: 420px; }
+   .guide-cards { grid-template-columns: repeat(2, 1fr); }
+   .guide-form { position: static; }
+}
+@media (max-width: 620px) {
+   .guide-cards { grid-template-columns: 1fr; }
+   .guide-part { grid-template-columns: 1fr; gap: 0.3rem; }
+   .guide-part__no { grid-column: 1; grid-row: auto; padding-top: 0; margin-bottom: 0.2rem; }
+   .guide-part > :not(.guide-part__no) { grid-column: 1; }
+}
+
+/* Guide — source / provenance card */
+.guide-source__card { background: var(--surface); border: 1px solid var(--ink-line); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: clamp(1.6rem, 3vw, 2.6rem); }
+.guide-source__body { margin-top: 0.6rem; }
+.guide-source__list { display: grid; gap: 0.65rem; margin-top: 1.1rem; }
+.guide-source__list li { position: relative; padding-left: 1.6rem; color: var(--fg-muted); font-size: 1rem; }
+.guide-source__list li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+.guide-source__list strong { color: var(--navy); font-weight: 600; }
