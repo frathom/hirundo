@@ -102,4 +102,19 @@
          });
       } catch (err) {}
    }
+
+   /* ---- Tally: forward a submit event to dataLayer (needs formEventsForwarding=1) ---- */
+   window.addEventListener('message', function (e) {
+      if (typeof e.origin !== 'string' || e.origin.indexOf('tally.so') === -1) { return; }
+      var data = e.data;
+      if (typeof data === 'string') { try { data = JSON.parse(data); } catch (err) { return; } }
+      if (!data) { return; }
+      var name = String(data.event || data.type || '').toLowerCase();
+      if (name.indexOf('submit') > -1) {
+         window.dataLayer.push({
+            event: 'guide_lead_submitted',
+            form_id: (data.payload && data.payload.formId) || data.formId || 'tally'
+         });
+      }
+   }, false);
 })();
