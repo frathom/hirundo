@@ -15,7 +15,6 @@
             "title": "Scaling a DTC brand into 12 new markets",
             "summary": "How a disciplined testing framework tripled ROAS in six months A fast-growing DTC brand had proven demand at home but no repeatable way to enter new markets. Every launch felt&hellip;",
             "content_html": "\n  <p>\n    How a disciplined testing framework tripled ROAS in six months\n  </p>\n\n    <h2 id=\"the-challenge\">\n      The challenge\n    </h2>\n\n  <p>\n    A fast-growing DTC brand had proven demand at home but no repeatable way to enter new markets. Every launch felt like starting from scratch, and spend outran returns.\n  </p>\n\n    <h2 id=\"our-approach\">\n      Our approach\n    </h2>\n\n  <p>\n    We built a market-by-market testing framework: a small controlled budget per market, one variable changed at a time, and a single metric of truth — contribution margin. Winners were scaled, losers cut fast.\n  </p>\n\n    <h2 id=\"the-results\">\n      The results\n    </h2>\n\n  <p>\n    Within six months the brand was live in 12 new markets, return on ad spend had tripled versus the old approach, and the in-house team had a launch playbook they could run themselves.\n  </p>",
-            "image": "https://frathom.github.io/hirundo/media/posts/9/pexels-soner-arkan-277045183-19370155.jpg",
             "author": {
                 "name": "Franck"
             },
@@ -23,7 +22,7 @@
                    "Paid media"
             ],
             "date_published": "2026-07-08T18:46:15+02:00",
-            "date_modified": "2026-07-22T20:44:46+02:00"
+            "date_modified": "2026-07-22T20:48:27+02:00"
         },
         {
             "id": "https://frathom.github.io/hirundo/migration-playbook-cross-border-growth/",
@@ -39,7 +38,7 @@
                    "Strategy"
             ],
             "date_published": "2026-07-08T13:24:12+02:00",
-            "date_modified": "2026-07-22T20:42:18+02:00"
+            "date_modified": "2026-07-22T20:47:44+02:00"
         },
         {
             "id": "https://frathom.github.io/hirundo/creative-testing-without-burning-budget/",
@@ -47,7 +46,6 @@
             "title": "Creative testing without burning budget",
             "summary": "Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less. Every test should answer a question (\"does social proof&hellip;",
             "content_html": "\n  <p>\n    Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less.\n  </p>\n\n    <h2 id=\"start-with-a-hypothesis-not-an-asset\">\n      Start with a hypothesis, not an asset\n    </h2>\n\n  <p>\n    Every test should answer a question (\"does social proof beat urgency?\"), so even a loser teaches you something reusable.\n  </p>\n\n    <h2 id=\"test-one-variable-at-a-time\">\n      Test one variable at a time\n    </h2>\n\n  <p>\n    Hook, format, or offer — change one, hold the rest. Bundled changes give you a result you can't explain or repeat.\n  </p>\n\n    <h2 id=\"small-controlled-honest\">\n      Small, controlled, honest\n    </h2>\n\n  <p>\n    Equal budget, same audience, enough time to reach significance. Cheap tests that can't conclude are the most expensive kind.\n  </p>\n\n    <h2 id=\"kill-fast-scale-slower\">\n      Kill fast, scale slower\n    </h2>\n\n  <p>\n    Cut clear losers early, but let winners prove themselves before you pour spend in — early winners regress more often than you'd like.\n  </p>",
-            "image": "https://frathom.github.io/hirundo/media/posts/6/pexels-vladimirsrajber-30955076.jpg",
             "author": {
                 "name": "Franck"
             },
@@ -55,7 +53,7 @@
                    "Paid media"
             ],
             "date_published": "2026-07-08T13:23:12+02:00",
-            "date_modified": "2026-07-22T20:44:04+02:00"
+            "date_modified": "2026-07-22T20:48:40+02:00"
         },
         {
             "id": "https://frathom.github.io/hirundo/attribution-you-can-actually-act-on/",
@@ -63,6 +61,7 @@
             "title": "Attribution you can actually act on",
             "summary": "Perfect attribution doesn't exist. Useful attribution does — the kind that tells you what to do on Monday morning. The value isn't in the model's accuracy, it's in applying the&hellip;",
             "content_html": "\n  <p>\n    Perfect attribution doesn't exist. Useful attribution does — the kind that tells you what to do on Monday morning.\n  </p>\n\n    <h2 id=\"pick-one-model-and-commit\">\n      Pick one model and commit\n    </h2>\n\n  <p>\n    The value isn't in the model's accuracy, it's in applying the same lens consistently so trends are comparable over time.\n  </p>\n\n    <h2 id=\"fix-the-tracking-foundation\">\n      Fix the tracking foundation\n    </h2>\n\n  <p>\n    Server-side tracking and clean event naming beat any clever model sitting on top of messy data.\n  </p>\n\n    <h2 id=\"validate-with-incrementality\">\n      Validate with incrementality\n    </h2>\n\n  <p>\n    Geo-tests and holdouts answer the only question that matters: what would have happened anyway?\n  </p>\n\n    <h2 id=\"tie-every-metric-to-a-decision\">\n      Tie every metric to a decision\n    </h2>\n\n  <p>\n    If a dashboard number wouldn't change a budget or a bid, stop reporting it. Measurement exists to drive action.\n  </p>",
+            "image": "https://frathom.github.io/hirundo/media/posts/7/pexels-reinis-bruzitis-2153679369-35828991.jpg",
             "author": {
                 "name": "Franck"
             },
@@ -70,7 +69,7 @@
                    "Analytics"
             ],
             "date_published": "2026-07-08T13:22:12+02:00",
-            "date_modified": "2026-07-08T15:36:41+02:00"
+            "date_modified": "2026-07-22T20:48:53+02:00"
         }
     ]
 }

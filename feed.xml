@@ -3,7 +3,7 @@
     <title>Hirundo</title>
     <link href="https://frathom.github.io/hirundo/feed.xml" rel="self" />
     <link href="https://frathom.github.io/hirundo" />
-    <updated>2026-07-22T20:44:46+02:00</updated>
+    <updated>2026-07-22T20:48:53+02:00</updated>
     <author>
         <name>Franck</name>
     </author>
@@ -16,19 +16,16 @@
         </author>
         <link href="https://frathom.github.io/hirundo/scaling-dtc-brand-new-markets/"/>
         <id>https://frathom.github.io/hirundo/scaling-dtc-brand-new-markets/</id>
-        <media:content url="https://frathom.github.io/hirundo/media/posts/9/pexels-soner-arkan-277045183-19370155.jpg" medium="image" />
             <category term="Paid media"/>
 
         <updated>2026-07-08T18:46:15+02:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://frathom.github.io/hirundo/media/posts/9/pexels-soner-arkan-277045183-19370155.jpg" alt="" />
                     How a disciplined testing framework tripled ROAS in six months A fast-growing DTC brand had proven demand at home but no repeatable way to enter new markets. Every launch felt&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://frathom.github.io/hirundo/media/posts/9/pexels-soner-arkan-277045183-19370155.jpg" class="type:primaryImage" alt="" /></p>
                 
   <p>
     How a disciplined testing framework tripled ROAS in six months
@@ -98,19 +95,16 @@
         </author>
         <link href="https://frathom.github.io/hirundo/creative-testing-without-burning-budget/"/>
         <id>https://frathom.github.io/hirundo/creative-testing-without-burning-budget/</id>
-        <media:content url="https://frathom.github.io/hirundo/media/posts/6/pexels-vladimirsrajber-30955076.jpg" medium="image" />
             <category term="Paid media"/>
 
         <updated>2026-07-08T13:23:12+02:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://frathom.github.io/hirundo/media/posts/6/pexels-vladimirsrajber-30955076.jpg" alt="" />
                     Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less. Every test should answer a question ("does social proof&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://frathom.github.io/hirundo/media/posts/6/pexels-vladimirsrajber-30955076.jpg" class="type:primaryImage" alt="" /></p>
                 
   <p>
     Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less.
@@ -157,16 +151,19 @@
         </author>
         <link href="https://frathom.github.io/hirundo/attribution-you-can-actually-act-on/"/>
         <id>https://frathom.github.io/hirundo/attribution-you-can-actually-act-on/</id>
+        <media:content url="https://frathom.github.io/hirundo/media/posts/7/pexels-reinis-bruzitis-2153679369-35828991.jpg" medium="image" />
             <category term="Analytics"/>
 
         <updated>2026-07-08T13:22:12+02:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://frathom.github.io/hirundo/media/posts/7/pexels-reinis-bruzitis-2153679369-35828991.jpg" alt="" />
                     Perfect attribution doesn't exist. Useful attribution does — the kind that tells you what to do on Monday morning. The value isn't in the model's accuracy, it's in applying the&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://frathom.github.io/hirundo/media/posts/7/pexels-reinis-bruzitis-2153679369-35828991.jpg" class="type:primaryImage" alt="" /></p>
                 
   <p>
     Perfect attribution doesn't exist. Useful attribution does — the kind that tells you what to do on Monday morning.
