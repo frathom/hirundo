@@ -683,9 +683,12 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 .guide-card p { margin: 0; color: var(--fg-muted); font-size: 0.97rem; }
 
 .guide-parts { display: flex; flex-direction: column; }
-.guide-part { display: grid; grid-template-columns: auto 1fr; gap: clamp(1rem, 3vw, 2rem); padding-block: clamp(1.4rem, 2.5vw, 2rem); border-top: 1px solid var(--ink-line); }
+.guide-part { display: grid; grid-template-columns: 140px 1fr; column-gap: clamp(1rem, 3vw, 2.5rem); row-gap: 0.35rem; align-items: start; padding-block: clamp(1.4rem, 2.5vw, 2rem); border-top: 1px solid var(--ink-line); }
 .guide-part:first-child { border-top: 0; }
-.guide-part__no { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold-700); padding-top: 0.35rem; white-space: nowrap; }
+/* The "Part" label sits in the left column and spans the block; everything else
+   (title, description, any list) stacks in the right column. */
+.guide-part__no { grid-column: 1; grid-row: 1 / -1; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold-700); padding-top: 0.5rem; white-space: nowrap; }
+.guide-part > :not(.guide-part__no) { grid-column: 2; }
 .guide-part h3 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0 0 0.3rem; }
 .guide-part p { margin: 0; color: var(--fg-muted); }
 
@@ -719,4 +722,6 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 @media (max-width: 620px) {
    .guide-cards { grid-template-columns: 1fr; }
    .guide-part { grid-template-columns: 1fr; gap: 0.3rem; }
+   .guide-part__no { grid-column: 1; grid-row: auto; padding-top: 0; margin-bottom: 0.2rem; }
+   .guide-part > :not(.guide-part__no) { grid-column: 1; }
 }
