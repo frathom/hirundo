@@ -15,6 +15,7 @@
             "title": "Scaling a DTC brand into 12 new markets",
             "summary": "How a disciplined testing framework tripled ROAS in six months A fast-growing DTC brand had proven demand at home but no repeatable way to enter new markets. Every launch felt&hellip;",
             "content_html": "\n  <p>\n    How a disciplined testing framework tripled ROAS in six months\n  </p>\n\n    <h2 id=\"the-challenge\">\n      The challenge\n    </h2>\n\n  <p>\n    A fast-growing DTC brand had proven demand at home but no repeatable way to enter new markets. Every launch felt like starting from scratch, and spend outran returns.\n  </p>\n\n    <h2 id=\"our-approach\">\n      Our approach\n    </h2>\n\n  <p>\n    We built a market-by-market testing framework: a small controlled budget per market, one variable changed at a time, and a single metric of truth — contribution margin. Winners were scaled, losers cut fast.\n  </p>\n\n    <h2 id=\"the-results\">\n      The results\n    </h2>\n\n  <p>\n    Within six months the brand was live in 12 new markets, return on ad spend had tripled versus the old approach, and the in-house team had a launch playbook they could run themselves.\n  </p>",
+            "image": "https://frathom.github.io/hirundo/media/posts/9/pexels-soner-arkan-277045183-19370155.jpg",
             "author": {
                 "name": "Franck"
             },
@@ -22,22 +23,7 @@
                    "Paid media"
             ],
             "date_published": "2026-07-08T18:46:15+02:00",
-            "date_modified": "2026-07-09T09:24:16+02:00"
-        },
-        {
-            "id": "https://frathom.github.io/hirundo/from-invisible-to-page-one/",
-            "url": "https://frathom.github.io/hirundo/from-invisible-to-page-one/",
-            "title": "From invisible to a strong challenger in a crowded category",
-            "summary": "A content engine that grew organic pipeline by 218%. In a saturated category, the client's site sat on page three for every commercial term. Paid media carried the entire funnel&hellip;",
-            "content_html": "\n  <p>\n    A content engine that grew organic pipeline by 218%.\n  </p>\n\n    <h2 id=\"the-challenge\">\n      The challenge\n    </h2>\n\n  <p>\n    In a saturated category, the client's site sat on page three for every commercial term. Paid media carried the entire funnel and costs were climbing.\n  </p>\n\n    <h2 id=\"our-approach\">\n      Our approach\n    </h2>\n\n  <p>\n    We rebuilt the technical foundation, mapped demand to a topic-cluster content plan, and shipped a steady cadence of editorial backed by digital PR.\n  </p>\n\n    <h2 id=\"the-results\">\n      The results\n    </h2>\n\n  <p>\n    Over twelve months organic pipeline grew 218%, dozens of terms reached page one, and organic became the lowest-cost channel in the mix.\n  </p>\n\n  <p>\n    \n  </p>",
-            "author": {
-                "name": "Franck"
-            },
-            "tags": [
-                   "SEO"
-            ],
-            "date_published": "2026-07-08T18:45:15+02:00",
-            "date_modified": "2026-07-09T09:25:48+02:00"
+            "date_modified": "2026-07-22T20:44:46+02:00"
         },
         {
             "id": "https://frathom.github.io/hirundo/migration-playbook-cross-border-growth/",
@@ -45,6 +31,7 @@
             "title": "The migration checklist for cross-border growth",
             "summary": "Expanding into a new market rarely fails on media budget — it fails on the translation of intent. These are the five principles we use to make campaigns travel. Localise&hellip;",
             "content_html": "\n  <p>\n    Expanding into a new market rarely fails on media budget — it fails on the translation of intent. These are the five principles we use to make campaigns travel.\n  </p>\n\n  <ul>\n    <li><b>Localise the offer, not just the copy</b>&nbsp;- Translation is table stakes. What actually moves the needle is adapting the promotion, pricing and proof to what the local buyer already trusts.</li><li><b>Rebuild the funnel per market</b> -&nbsp;Awareness in one country is consideration in another. Map where demand already exists before deciding how much to spend creating it.<br></li><li><b>Respect the channel mix</b> -&nbsp;The dominant platform shifts by region. Lead with the channel your audience actually lives on, not the one that worked back home.<br></li><li><b>Measure in one currency of truth</b> -&nbsp;Normalise every market to the same metric — contribution margin, not last-click ROAS — so you can compare and reallocate without bias.<br></li><li><b>Staff for the timezone</b> -&nbsp;Speed of iteration wins launches. Put decision-making close to the market so tests don't wait 12 hours for approval.<br></li>\n  </ul>",
+            "image": "https://frathom.github.io/hirundo/media/posts/5/pexels-kirandeepsingh-10053702.jpg",
             "author": {
                 "name": "Franck"
             },
@@ -52,7 +39,7 @@
                    "Strategy"
             ],
             "date_published": "2026-07-08T13:24:12+02:00",
-            "date_modified": "2026-07-08T15:40:33+02:00"
+            "date_modified": "2026-07-22T20:42:18+02:00"
         },
         {
             "id": "https://frathom.github.io/hirundo/creative-testing-without-burning-budget/",
@@ -60,6 +47,7 @@
             "title": "Creative testing without burning budget",
             "summary": "Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less. Every test should answer a question (\"does social proof&hellip;",
             "content_html": "\n  <p>\n    Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less.\n  </p>\n\n    <h2 id=\"start-with-a-hypothesis-not-an-asset\">\n      Start with a hypothesis, not an asset\n    </h2>\n\n  <p>\n    Every test should answer a question (\"does social proof beat urgency?\"), so even a loser teaches you something reusable.\n  </p>\n\n    <h2 id=\"test-one-variable-at-a-time\">\n      Test one variable at a time\n    </h2>\n\n  <p>\n    Hook, format, or offer — change one, hold the rest. Bundled changes give you a result you can't explain or repeat.\n  </p>\n\n    <h2 id=\"small-controlled-honest\">\n      Small, controlled, honest\n    </h2>\n\n  <p>\n    Equal budget, same audience, enough time to reach significance. Cheap tests that can't conclude are the most expensive kind.\n  </p>\n\n    <h2 id=\"kill-fast-scale-slower\">\n      Kill fast, scale slower\n    </h2>\n\n  <p>\n    Cut clear losers early, but let winners prove themselves before you pour spend in — early winners regress more often than you'd like.\n  </p>",
+            "image": "https://frathom.github.io/hirundo/media/posts/6/pexels-vladimirsrajber-30955076.jpg",
             "author": {
                 "name": "Franck"
             },
@@ -67,7 +55,7 @@
                    "Paid media"
             ],
             "date_published": "2026-07-08T13:23:12+02:00",
-            "date_modified": "2026-07-08T15:38:21+02:00"
+            "date_modified": "2026-07-22T20:44:04+02:00"
         },
         {
             "id": "https://frathom.github.io/hirundo/attribution-you-can-actually-act-on/",

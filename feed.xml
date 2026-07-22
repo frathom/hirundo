@@ -3,7 +3,7 @@
     <title>Hirundo</title>
     <link href="https://frathom.github.io/hirundo/feed.xml" rel="self" />
     <link href="https://frathom.github.io/hirundo" />
-    <updated>2026-07-09T09:25:48+02:00</updated>
+    <updated>2026-07-22T20:44:46+02:00</updated>
     <author>
         <name>Franck</name>
     </author>
@@ -16,16 +16,19 @@
         </author>
         <link href="https://frathom.github.io/hirundo/scaling-dtc-brand-new-markets/"/>
         <id>https://frathom.github.io/hirundo/scaling-dtc-brand-new-markets/</id>
+        <media:content url="https://frathom.github.io/hirundo/media/posts/9/pexels-soner-arkan-277045183-19370155.jpg" medium="image" />
             <category term="Paid media"/>
 
         <updated>2026-07-08T18:46:15+02:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://frathom.github.io/hirundo/media/posts/9/pexels-soner-arkan-277045183-19370155.jpg" alt="" />
                     How a disciplined testing framework tripled ROAS in six months A fast-growing DTC brand had proven demand at home but no repeatable way to enter new markets. Every launch felt&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://frathom.github.io/hirundo/media/posts/9/pexels-soner-arkan-277045183-19370155.jpg" class="type:primaryImage" alt="" /></p>
                 
   <p>
     How a disciplined testing framework tripled ROAS in six months
@@ -58,74 +61,25 @@
         </content>
     </entry>
     <entry>
-        <title>From invisible to a strong challenger in a crowded category</title>
-        <author>
-            <name>Franck</name>
-        </author>
-        <link href="https://frathom.github.io/hirundo/from-invisible-to-page-one/"/>
-        <id>https://frathom.github.io/hirundo/from-invisible-to-page-one/</id>
-            <category term="SEO"/>
-
-        <updated>2026-07-08T18:45:15+02:00</updated>
-            <summary>
-                <![CDATA[
-                    A content engine that grew organic pipeline by 218%. In a saturated category, the client's site sat on page three for every commercial term. Paid media carried the entire funnel&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                
-  <p>
-    A content engine that grew organic pipeline by 218%.
-  </p>
-
-    <h2 id="the-challenge">
-      The challenge
-    </h2>
-
-  <p>
-    In a saturated category, the client's site sat on page three for every commercial term. Paid media carried the entire funnel and costs were climbing.
-  </p>
-
-    <h2 id="our-approach">
-      Our approach
-    </h2>
-
-  <p>
-    We rebuilt the technical foundation, mapped demand to a topic-cluster content plan, and shipped a steady cadence of editorial backed by digital PR.
-  </p>
-
-    <h2 id="the-results">
-      The results
-    </h2>
-
-  <p>
-    Over twelve months organic pipeline grew 218%, dozens of terms reached page one, and organic became the lowest-cost channel in the mix.
-  </p>
-
-  <p>
-    
-  </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
         <title>The migration checklist for cross-border growth</title>
         <author>
             <name>Franck</name>
         </author>
         <link href="https://frathom.github.io/hirundo/migration-playbook-cross-border-growth/"/>
         <id>https://frathom.github.io/hirundo/migration-playbook-cross-border-growth/</id>
+        <media:content url="https://frathom.github.io/hirundo/media/posts/5/pexels-kirandeepsingh-10053702.jpg" medium="image" />
             <category term="Strategy"/>
 
         <updated>2026-07-08T13:24:12+02:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://frathom.github.io/hirundo/media/posts/5/pexels-kirandeepsingh-10053702.jpg" alt="" />
                     Expanding into a new market rarely fails on media budget — it fails on the translation of intent. These are the five principles we use to make campaigns travel. Localise&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://frathom.github.io/hirundo/media/posts/5/pexels-kirandeepsingh-10053702.jpg" class="type:primaryImage" alt="" /></p>
                 
   <p>
     Expanding into a new market rarely fails on media budget — it fails on the translation of intent. These are the five principles we use to make campaigns travel.
@@ -144,16 +98,19 @@
         </author>
         <link href="https://frathom.github.io/hirundo/creative-testing-without-burning-budget/"/>
         <id>https://frathom.github.io/hirundo/creative-testing-without-burning-budget/</id>
+        <media:content url="https://frathom.github.io/hirundo/media/posts/6/pexels-vladimirsrajber-30955076.jpg" medium="image" />
             <category term="Paid media"/>
 
         <updated>2026-07-08T13:23:12+02:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://frathom.github.io/hirundo/media/posts/6/pexels-vladimirsrajber-30955076.jpg" alt="" />
                     Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less. Every test should answer a question ("does social proof&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://frathom.github.io/hirundo/media/posts/6/pexels-vladimirsrajber-30955076.jpg" class="type:primaryImage" alt="" /></p>
                 
   <p>
     Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster — and for less.
