@@ -25,16 +25,7 @@
             {{> menu menus.mainMenu}}
          {{/if}}
          {{#if @config.custom.headerCtaLabel}}
-            {{#if @config.custom.calEnabled}}
-               <a class="btn btn--gold nav-cta"
-                  href="https://cal.com/{{@config.custom.calLink}}"
-                  data-event="book_call" data-event-location="header"
-                  data-cal-link="{{@config.custom.calLink}}"
-                  data-cal-namespace="{{@config.custom.calNamespace}}"
-                  data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>{{@config.custom.headerCtaLabel}}</a>
-            {{else}}
-               <a class="btn btn--gold nav-cta" href="{{@config.custom.headerCtaUrl}}" data-event="book_call" data-event-location="header">{{@config.custom.headerCtaLabel}}</a>
-            {{/if}}
+            <a class="btn btn--gold nav-cta" href="{{@website.url}}book-a-call/" data-event="book_call" data-event-location="header">{{@config.custom.headerCtaLabel}}</a>
          {{/if}}
       </nav>
    </div>

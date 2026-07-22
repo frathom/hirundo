@@ -1,0 +1,50 @@
+{{> head}}
+{{> header}}
+
+<main id="main" class="main is-page-main is-book">
+   {{#page}}
+      {{> breadcrumb}}
+
+      <header class="page__header booking-head">
+         <div class="wrap wrap--narrow">
+            <p class="eyebrow eyebrow--gold">Book a call</p>
+            <h1 class="page__title">{{title}}</h1>
+            {{#if @config.page.bookLead}}
+               <p class="page__intro lead">{{@config.page.bookLead}}</p>
+            {{else}}
+               <p class="page__intro lead">Tell us about your resort and where you want to grow. We'll confirm your <strong>free consultation within 24 hours</strong>.</p>
+            {{/if}}
+         </div>
+      </header>
+
+      <section class="section booking-section">
+         <div class="wrap booking-layout">
+            <div class="booking-embed reveal">
+               {{#if @config.page.bookFormEmbed}}
+                  {{{@config.page.bookFormEmbed}}}
+               {{else}}
+                  <iframe data-tally-src="https://tally.so/embed/q47Nk7?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="216" frameborder="0" marginheight="0" marginwidth="0" title="Book a call"></iframe>
+                  <script>(function(){var d=document,s="https://tally.so/widgets/embed.js",v=function(){if(typeof Tally!=="undefined"){Tally.loadEmbeds();}else{d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc;});}};if(typeof Tally!=="undefined"){v();}else if(d.querySelector('script[src="'+s+'"]')==null){var j=d.createElement("script");j.src=s;j.onload=v;j.onerror=v;d.body.appendChild(j);}})();</script>
+               {{/if}}
+            </div>
+
+            <aside class="booking-aside reveal">
+               <ul class="booking-points">
+                  <li><span class="booking-points__mark" aria-hidden="true"></span><div><strong>Free consultation</strong><span>No cost, no obligation — a working session, not a sales pitch.</span></div></li>
+                  <li><span class="booking-points__mark" aria-hidden="true"></span><div><strong>Reply within 24 hours</strong><span>We confirm your slot and send a calendar invite fast.</span></div></li>
+                  <li><span class="booking-points__mark" aria-hidden="true"></span><div><strong>Senior operators</strong><span>You talk to the people who'll run the work, not an SDR.</span></div></li>
+               </ul>
+               {{#if @website.contactEmail}}
+                  <p class="booking-aside__alt">Prefer email? <a href="mailto:{{@website.contactEmail}}">{{@website.contactEmail}}</a></p>
+               {{/if}}
+            </aside>
+         </div>
+
+         {{#if text}}
+            <div class="wrap wrap--narrow entry booking-body">{{{text}}}</div>
+         {{/if}}
+      </section>
+   {{/page}}
+</main>
+
+{{> footer}}

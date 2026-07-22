@@ -60,6 +60,7 @@
     "pageTemplates": {
         "landing": "Landing — full-width marketing sections",
         "guide": "Guide — lead-capture landing",
+        "book": "Book a call — Tally scheduling",
         "services": "Services — detailed offerings",
         "team": "Team — member grid",
         "contact": "Contact — form + details",
@@ -213,43 +214,6 @@
             "label": "Header button label",
             "group": "Header",
             "value": "Book a call",
-            "type": "text"
-        },
-        {
-            "name": "headerCtaUrl",
-            "label": "Header button link",
-            "group": "Header",
-            "value": "#contact",
-            "type": "text"
-        },
-        {
-            "name": "separatorBooking",
-            "type": "separator",
-            "label": "Booking (Cal.com)",
-            "group": "Header",
-            "size": "big"
-        },
-        {
-            "name": "calEnabled",
-            "label": "Open a Cal.com popup on booking buttons",
-            "group": "Header",
-            "value": true,
-            "type": "checkbox",
-            "note": "When on, the header button and the CTA-band button open a Cal.com scheduling popup instead of following their link (no-JS visitors fall back to the Cal.com page)."
-        },
-        {
-            "name": "calLink",
-            "label": "Cal.com event link",
-            "group": "Header",
-            "value": "team/hello-hirundo/discovery-call",
-            "type": "text",
-            "note": "The part after cal.com/ — e.g. team/hello-hirundo/discovery-call"
-        },
-        {
-            "name": "calNamespace",
-            "label": "Cal.com namespace",
-            "group": "Header",
-            "value": "discovery-call",
             "type": "text"
         },
         {
@@ -560,13 +524,6 @@
             "label": "CTA button label",
             "group": "Homepage",
             "value": "Book a discovery call",
-            "type": "text"
-        },
-        {
-            "name": "ctaButtonUrl",
-            "label": "CTA button link",
-            "group": "Homepage",
-            "value": "#contact",
             "type": "text"
         },
         {
@@ -905,7 +862,7 @@
             "note": "Shown under the page title on standard, landing, team and contact pages.",
             "value": "",
             "type": "textarea",
-            "pageTemplates": "!guide,empty"
+            "pageTemplates": "!guide,empty,book"
         },
         {
             "name": "teamMembers",
@@ -936,7 +893,7 @@
             "label": "Display page title",
             "value": true,
             "type": "checkbox",
-            "pageTemplates": "!guide,empty"
+            "pageTemplates": "!guide,empty,book"
         },
         {
             "name": "displayFeaturedImage",
@@ -1042,6 +999,27 @@
             "note": "Paste your Tally / email-capture form embed. Leave empty for a placeholder note.",
             "value": "",
             "pageTemplates": "guide"
+        },
+        {
+            "name": "separatorBook",
+            "type": "separator",
+            "label": "Book a call template",
+            "group": "Page",
+            "pageTemplates": "book"
+        },
+        {
+            "name": "bookLead",
+            "label": "Book a call — intro / lead",
+            "type": "textarea",
+            "pageTemplates": "book"
+        },
+        {
+            "name": "bookFormEmbed",
+            "label": "Book a call — scheduling form embed",
+            "note": "Paste your Tally / scheduling embed here. Leave empty to use the built-in Tally form.",
+            "type": "textarea",
+            "value": "<iframe data-tally-src=\"https://tally.so/embed/q47Nk7?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1\" loading=\"lazy\" width=\"100%\" height=\"216\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\" title=\"Book a call\"></iframe><script>(function(){var d=document,s=\"https://tally.so/widgets/embed.js\",v=function(){if(typeof Tally!==\"undefined\"){Tally.loadEmbeds();}else{d.querySelectorAll(\"iframe[data-tally-src]:not([src])\").forEach(function(e){e.src=e.dataset.tallySrc;});}};if(typeof Tally!==\"undefined\"){v();}else if(d.querySelector(String.fromCharCode(39)+\"script[src=\"+String.fromCharCode(34)+s+String.fromCharCode(34)+\"]\"+String.fromCharCode(39))==null){var j=d.createElement(\"script\");j.src=s;j.onload=v;j.onerror=v;d.body.appendChild(j);}})();</script>",
+            "pageTemplates": "book"
         }
     ],
     "tagConfig": [
