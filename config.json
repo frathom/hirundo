@@ -59,6 +59,7 @@
     },
     "pageTemplates": {
         "landing": "Landing — full-width marketing sections",
+        "guide": "Guide — lead-capture landing",
         "services": "Services — detailed offerings",
         "team": "Team — member grid",
         "contact": "Contact — form + details",
@@ -911,6 +912,66 @@
             "label": "Display comments",
             "value": false,
             "type": "checkbox"
+        },
+        {
+            "name": "separatorGuide",
+            "type": "separator",
+            "label": "Guide template",
+            "group": "Homepage",
+            "size": "big"
+        },
+        {
+            "name": "guideLead",
+            "label": "Guide — lead / subhead",
+            "group": "Homepage",
+            "type": "textarea",
+            "value": "How Europe’s luxury resorts are winning back margin from the OTAs — and getting ready for the AI-agent era. A practical playbook from the team at Hirundo."
+        },
+        {
+            "name": "guideDownloadLabel",
+            "label": "Guide — download button label",
+            "group": "Homepage",
+            "type": "text",
+            "value": "Get the free guide"
+        },
+        {
+            "name": "guideLearn",
+            "label": "Guide — what you'll learn (cards)",
+            "group": "Homepage",
+            "type": "textarea",
+            "note": "One .guide-card per topic: &lt;h3&gt; + &lt;p&gt;.",
+            "value": "<div class=\"guide-card\"><h3>The real cost of a booking</h3><p>OTA commissions run 15–30% (all-in up to ~35%) versus roughly 10% for a direct booking — and the margin you recover with every point of direct share.</p></div><div class=\"guide-card\"><h3>Your 2024 pricing window</h3><p>How the EU’s Digital Markets Act ended OTA rate-parity, so EEA resorts can finally price direct below the OTAs.</p></div><div class=\"guide-card\"><h3>The AI-agent shift</h3><p>Why guests increasingly discover and book through AI assistants, why those assistants default to OTAs, and how to stay visible.</p></div><div class=\"guide-card\"><h3>One system, not three vendors</h3><p>Running demand creation, on-site capture (CRO) and retention (CRM) as a single, luxury-native engine instead of siloed tactics.</p></div><div class=\"guide-card\"><h3>Measure what matters</h3><p>Booking cost (spend ÷ revenue) as the number that runs the P&amp;L — not vanity media metrics.</p></div><div class=\"guide-card\"><h3>A 90-day plan</h3><p>A pragmatic sequence to audit, prioritise and grow direct-booking share this season.</p></div>"
+        },
+        {
+            "name": "guideToc",
+            "label": "Guide — what's inside (parts)",
+            "group": "Homepage",
+            "type": "textarea",
+            "note": "One .guide-part per part: .guide-part__no + &lt;h3&gt; + &lt;p&gt;.",
+            "value": "<div class=\"guide-part\"><span class=\"guide-part__no\">Part I</span><h3>The opportunity</h3><p>The money on the table: the margin spread, the value of a point of direct share, and a worked example on a 200-key resort.</p></div><div class=\"guide-part\"><span class=\"guide-part__no\">Part II</span><h3>The two threats</h3><p>OTAs today and AI agents tomorrow — how each captures demand the resort itself creates.</p></div><div class=\"guide-part\"><span class=\"guide-part__no\">Part III</span><h3>The system</h3><p>Demand creation → direct capture → retention, with creative built for luxury.</p></div><div class=\"guide-part\"><span class=\"guide-part__no\">Part IV</span><h3>The 90-day plan &amp; measurement</h3><p>Audit, prioritise, execute — and track everything in booking cost.</p></div>"
+        },
+        {
+            "name": "guideStats",
+            "label": "Guide — key numbers",
+            "group": "Homepage",
+            "type": "textarea",
+            "note": "One .stat per number: .stat__num + .stat__label.",
+            "value": "<div class=\"stat\"><span class=\"stat__num\">~10%</span><span class=\"stat__label\">Cost of a direct booking vs 15–30% via OTAs</span></div><div class=\"stat\"><span class=\"stat__num\">€38k</span><span class=\"stat__label\">Recovered per point of direct share / yr (200-key resort, illustrative)</span></div><div class=\"stat\"><span class=\"stat__num\">+3–8 pts</span><span class=\"stat__label\">Realistic annual direct-share gain</span></div><div class=\"stat\"><span class=\"stat__num\">30%</span><span class=\"stat__label\">Of travel bookings agent-executed by 2030 (IDC)</span></div>"
+        },
+        {
+            "name": "guideAbout",
+            "label": "Guide — about / credibility",
+            "group": "Homepage",
+            "type": "textarea",
+            "value": "<p>Hirundo is the growth partner for luxury resorts that want control of their own demand. Built by senior operators from Meta, Google and Nike, we combine luxury-brand creative with performance and CRM depth — and we measure ourselves in your booking cost, not media metrics.</p>"
+        },
+        {
+            "name": "guideFormEmbed",
+            "label": "Guide — lead form embed",
+            "group": "Homepage",
+            "type": "textarea",
+            "note": "Paste your Tally / email-capture form embed. Leave empty for a placeholder note.",
+            "value": ""
         }
     ],
     "tagConfig": [

@@ -1,0 +1,104 @@
+{{> head}}
+{{> header}}
+
+<main id="main" class="main is-guide">
+   {{#page}}
+      {{> breadcrumb}}
+
+      {{!-- Hero --}}
+      <header class="guide-hero">
+         <span class="guide-hero__mark mark mark--on-navy mark--120" aria-hidden="true"></span>
+         <div class="wrap guide-hero__inner">
+            <div class="guide-hero__text reveal">
+               <p class="eyebrow eyebrow--light">Free guide · Luxury hospitality</p>
+               <h1 class="guide-hero__title">{{title}}</h1>
+               {{#if @config.page.guideLead}}<p class="guide-hero__lead">{{@config.page.guideLead}}</p>{{/if}}
+               <div class="guide-hero__actions">
+                  <a class="btn btn--gold btn--lg" href="#guide-form" data-event="guide_download_intent" data-event-location="hero">{{#if @config.page.guideDownloadLabel}}{{@config.page.guideDownloadLabel}}{{else}}Get the free guide{{/if}}</a>
+                  <span class="guide-hero__meta">Free · PDF · No spam</span>
+               </div>
+            </div>
+            {{#featuredImage}}
+               {{#if url}}
+                  <figure class="guide-hero__cover reveal">
+                     <img src="{{url}}"
+                        {{#if @config.site.responsiveImages}}{{responsiveImageAttributes 'featuredImage' srcset.post sizes.post}}{{/if}}
+                        {{lazyload "eager"}} width="{{width}}" height="{{height}}" alt="{{alt}}">
+                  </figure>
+               {{/if}}
+            {{/featuredImage}}
+         </div>
+      </header>
+
+      {{!-- What you'll learn --}}
+      {{#if @config.page.guideLearn}}
+         <section class="section guide-learn reveal">
+            <div class="wrap">
+               <header class="section__head section__head--center">
+                  <p class="eyebrow eyebrow--gold">What you'll learn</p>
+                  <h2 class="section__title">Inside the playbook</h2>
+               </header>
+               <div class="guide-cards">{{{@config.page.guideLearn}}}</div>
+            </div>
+         </section>
+      {{/if}}
+
+      {{!-- Key numbers --}}
+      {{#if @config.page.guideStats}}
+         <section class="stats reveal">
+            <div class="wrap stats__grid">{{{@config.page.guideStats}}}</div>
+         </section>
+      {{/if}}
+
+      {{!-- What's inside / table of contents --}}
+      {{#if @config.page.guideToc}}
+         <section class="section guide-toc reveal">
+            <div class="wrap wrap--narrow">
+               <header class="section__head section__head--center">
+                  <p class="eyebrow eyebrow--gold">What's inside</p>
+                  <h2 class="section__title">Four parts, one system</h2>
+               </header>
+               <div class="guide-parts">{{{@config.page.guideToc}}}</div>
+            </div>
+         </section>
+      {{/if}}
+
+      {{!-- Optional block-editor body --}}
+      {{#if text}}
+         <div class="landing__content entry entry--wide">{{{text}}}</div>
+      {{/if}}
+
+      {{!-- About + lead capture --}}
+      <section class="section guide-cta-section" id="guide-form">
+         <div class="wrap guide-cta__grid">
+            <div class="guide-about reveal">
+               <p class="eyebrow eyebrow--gold">About this guide</p>
+               <h2 class="section__title">Written by operators, measured in booking cost</h2>
+               {{#if @config.page.guideAbout}}<div class="guide-about__body lead">{{{@config.page.guideAbout}}}</div>{{/if}}
+               <ul class="guide-about__proof">
+                  <li><strong>3 disciplines</strong><span>Creation · capture · retention, one system</span></li>
+                  <li><strong>Booking-cost</strong><span>Measured in your number, not media metrics</span></li>
+                  <li><strong>Senior operators</strong><span>Ex-Meta, Google &amp; Nike on every account</span></li>
+               </ul>
+            </div>
+            <aside class="guide-form reveal">
+               <h3 class="guide-form__title">{{#if @config.page.guideDownloadLabel}}{{@config.page.guideDownloadLabel}}{{else}}Get your free copy{{/if}}</h3>
+               <p class="guide-form__sub">Enter your email and we'll send the PDF straight to your inbox.</p>
+               {{#if @config.page.guideFormEmbed}}
+                  {{{@config.page.guideFormEmbed}}}
+               {{else}}
+                  <form class="guide-form__form" action="#" method="post" onsubmit="return false;" data-event="guide_download" data-event-location="form">
+                     <input type="email" name="email" required aria-label="Email" placeholder="you@resort.com">
+                     <button type="submit" class="btn btn--gold btn--lg">Send me the guide</button>
+                  </form>
+                  <p class="guide-form__note">No spam. Unsubscribe anytime. <em>Add your Tally / email form in the page's “Guide — lead form embed” setting.</em></p>
+               {{/if}}
+            </aside>
+         </div>
+      </section>
+   {{/page}}
+
+   {{> cta-band}}
+</main>
+
+{{> footer}}
