@@ -1,7 +1,7 @@
 /* ============================================================
    HIRUNDO — front-end behaviour
    Mobile nav · sticky/solid header · reveal-on-scroll · back-to-top
-   · analytics event push (dataLayer) · inline Cal.com embed
+   · analytics event push (dataLayer) · Tally submit forwarding
    No dependencies.
    ============================================================ */
 (function () {
@@ -80,28 +80,6 @@
       }
       window.dataLayer.push(payload);
    }, true);
-
-   /* ---- Cal.com: inline embed + booking-success event ---- */
-   var calInline = document.getElementById('cal-inline');
-   if (calInline && window.Cal) {
-      var ns = calInline.getAttribute('data-cal-namespace');
-      var link = calInline.getAttribute('data-cal-link');
-      try {
-         window.Cal.ns[ns]('inline', {
-            elementOrSelector: '#cal-inline',
-            calLink: link,
-            config: { layout: 'month_view' }
-         });
-      } catch (err) {}
-   }
-   if (window.Cal) {
-      try {
-         window.Cal('on', {
-            action: 'bookingSuccessful',
-            callback: function () { window.dataLayer.push({ event: 'book_call_completed' }); }
-         });
-      } catch (err) {}
-   }
 
    /* ---- Tally: forward a submit event to dataLayer (needs formEventsForwarding=1) ---- */
    window.addEventListener('message', function (e) {
