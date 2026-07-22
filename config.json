@@ -484,6 +484,50 @@
             "type": "text"
         },
         {
+            "name": "insightsGuideEnabled",
+            "label": "Show the guide promo card",
+            "note": "Adds a highlighted card in the Insights grid that promotes the free guide.",
+            "group": "Homepage",
+            "value": true,
+            "type": "checkbox"
+        },
+        {
+            "name": "insightsGuideUrl",
+            "label": "Guide promo — link",
+            "note": "Leave blank to link to the /guide/ page automatically.",
+            "group": "Homepage",
+            "value": "",
+            "type": "text"
+        },
+        {
+            "name": "insightsGuideEyebrow",
+            "label": "Guide promo — eyebrow",
+            "group": "Homepage",
+            "value": "Free guide",
+            "type": "text"
+        },
+        {
+            "name": "insightsGuideTitle",
+            "label": "Guide promo — title",
+            "group": "Homepage",
+            "value": "The luxury-hospitality direct-booking playbook",
+            "type": "text"
+        },
+        {
+            "name": "insightsGuideText",
+            "label": "Guide promo — text",
+            "group": "Homepage",
+            "value": "The margin spread, the DMA pricing window, the AI-agent shift — and a 90-day plan to grow direct bookings. Free PDF.",
+            "type": "textarea"
+        },
+        {
+            "name": "insightsGuideCta",
+            "label": "Guide promo — button label",
+            "group": "Homepage",
+            "value": "Read the guide",
+            "type": "text"
+        },
+        {
             "name": "separatorCta",
             "type": "separator",
             "label": "Homepage — Call to action",

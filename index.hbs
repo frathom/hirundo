@@ -107,6 +107,27 @@
                </header>
             {{/if}}
             <div class="cards-grid">
+               {{#if @renderer.isFirstPage}}
+                  {{#if @config.custom.insightsGuideEnabled}}
+                     {{#*inline "guideUrl"}}{{#if @config.custom.insightsGuideUrl}}{{@config.custom.insightsGuideUrl}}{{else}}{{@website.url}}guide/{{/if}}{{/inline}}
+                     <article class="card card--guide reveal">
+                        <a class="card__media card--guide__media" href="{{> guideUrl}}" tabindex="-1" aria-hidden="true">
+                           <span class="mark mark--on-navy mark--100" aria-hidden="true"></span>
+                           <span class="card--guide__ribbon">Free PDF</span>
+                        </a>
+                        <div class="card__body">
+                           <div class="card__meta">
+                              <span class="chip chip--gold">{{#if @config.custom.insightsGuideEyebrow}}{{@config.custom.insightsGuideEyebrow}}{{else}}Free guide{{/if}}</span>
+                           </div>
+                           <h3 class="card__title">
+                              <a href="{{> guideUrl}}" data-event="guide_promo_click" data-event-location="insights">{{#if @config.custom.insightsGuideTitle}}{{@config.custom.insightsGuideTitle}}{{else}}The luxury-hospitality direct-booking playbook{{/if}}</a>
+                           </h3>
+                           <p class="card__excerpt">{{#if @config.custom.insightsGuideText}}{{@config.custom.insightsGuideText}}{{else}}The margin spread, the DMA pricing window, the AI-agent shift — and a 90-day plan to grow direct bookings.{{/if}}</p>
+                           <a class="card--guide__cta" href="{{> guideUrl}}" data-event="guide_promo_click" data-event-location="insights">{{#if @config.custom.insightsGuideCta}}{{@config.custom.insightsGuideCta}}{{else}}Read the guide{{/if}} <span aria-hidden="true">→</span></a>
+                        </div>
+                     </article>
+                  {{/if}}
+               {{/if}}
                {{#each posts}}
                   {{> post-card}}
                {{/each}}

@@ -366,6 +366,31 @@ a.chip:hover { background: var(--navy); color: var(--cream); }
 /* Homepage insights cards: hide the author byline (kept on archives) */
 .is-home .card__author { display: none; }
 
+/* Guide promo card — same box as .card, highlighted in brand colours */
+.card--guide { border-color: var(--gold-ring); box-shadow: 0 0 0 1px var(--gold-ring); }
+.card--guide:hover { border-color: transparent; box-shadow: var(--shadow-md), 0 0 0 1px var(--gold-ring); }
+.card--guide__media {
+   position: relative;
+   background:
+      radial-gradient(120% 120% at 85% 15%, rgba(212, 185, 104, 0.25), transparent 60%),
+      linear-gradient(135deg, var(--navy-900), var(--navy-800));
+   display: flex; align-items: center; justify-content: center;
+}
+.card--guide__media .mark { transition: transform var(--dur) var(--ease); }
+.card--guide:hover .card--guide__media .mark { transform: scale(1.06) rotate(3deg); }
+.card--guide__ribbon {
+   position: absolute; top: 0.85rem; left: 0.85rem;
+   font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+   color: var(--navy-900); background: var(--gold); padding: 0.28rem 0.6rem; border-radius: 999px; font-weight: 600;
+}
+.card--guide__cta {
+   margin-top: 0.4rem; align-self: flex-start;
+   font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; color: var(--gold-700);
+   display: inline-flex; align-items: center; gap: 0.4rem;
+}
+.card--guide__cta span { transition: transform var(--dur) var(--ease); }
+.card--guide:hover .card--guide__cta span { transform: translateX(4px); }
+
 .avatar { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
 .avatar--lg { width: 64px; height: 64px; }
 .avatar--xl { width: 96px; height: 96px; }
