@@ -904,79 +904,91 @@
             "label": "Intro text",
             "note": "Shown under the page title on standard, landing, team and contact pages.",
             "value": "",
-            "type": "textarea"
+            "type": "textarea",
+            "pageTemplates": "!guide,empty"
         },
         {
             "name": "teamMembers",
             "label": "Team members (Team template — optional override)",
             "note": "Leave EMPTY to build the Team page automatically from your site's Authors (name, avatar and bio). Fill this only to override with custom cards (HTML): one .team-member block per person — a .team-member__photo (an &lt;img&gt; or 2-letter initials), an &lt;h3 class=\"team-member__name\"&gt; name, an optional .team-member__role and .team-member__bio.",
             "value": "",
-            "type": "textarea"
+            "type": "textarea",
+            "pageTemplates": "team"
         },
         {
             "name": "formEmbed",
             "label": "Form embed (Contact template)",
             "note": "Used by the Contact template. Paste your Tally or Google Form embed code here (an &lt;iframe&gt; or script). Leave empty to show a mailto button instead.",
             "value": "",
-            "type": "textarea"
+            "type": "textarea",
+            "pageTemplates": "contact"
         },
         {
             "name": "servicesList",
             "label": "Services (Services template)",
             "note": "Used by the Services template. Paste HTML: one .service-row per offering; the number is added automatically. Inside each: an &lt;h3&gt; title, a &lt;p&gt; description, and an optional &lt;ul&gt; of deliverables.",
             "value": "<div class=\"service-row\"><h3>SEA</h3><p>Search engine advertising built as full-funnel strategies — from the first touchpoint to the final conversion, not just ads.</p><ul><li>Google Ads</li><li>Microsoft Ads</li><li>Shopping &amp; Performance Max</li><li>Full-funnel strategy</li></ul></div><div class=\"service-row\"><h3>Social advertising</h3><p>Reach the right people with the right message at every stage of the funnel, and drive measurable impact throughout the journey.</p><ul><li>Meta &amp; Instagram</li><li>TikTok</li><li>LinkedIn</li><li>Full-funnel targeting</li></ul></div><div class=\"service-row\"><h3>Performance-driven creative</h3><p>Creative optimised for stronger performance across every paid-media channel.</p><ul><li>Ad creative</li><li>A/B &amp; iterative testing</li><li>Landing pages &amp; CRO</li><li>Motion &amp; video</li></ul></div><div class=\"service-row\"><h3>Email marketing &amp; CRM</h3><p>We embed email into the complete ecosystem for a seamless, end-to-end consumer journey.</p><ul><li>Lifecycle automation</li><li>Segmentation &amp; personalisation</li><li>Deliverability</li><li>CRM integration</li></ul></div><div class=\"service-row\"><h3>Analytics &amp; measurement</h3><p>From GA4 to Power BI and Looker Studio, we turn complex data into clear, actionable insights that fuel smarter marketing.</p><ul><li>GA4 &amp; server-side tracking</li><li>Power BI &amp; Looker Studio</li><li>Attribution modelling</li><li>Dashboards &amp; reporting</li></ul></div><div class=\"service-row\"><h3>AI &amp; digital growth consulting</h3><p>Expert consulting to drive transformation and smarter, compounding growth.</p><ul><li>Growth strategy</li><li>AI adoption</li><li>Marketing automation</li><li>Transformation roadmaps</li></ul></div><div class=\"service-row\"><h3>Project management</h3><p>Structured project management that brings clarity, speed and accountability across teams.</p><ul><li>Roadmaps &amp; sprints</li><li>Cross-team coordination</li><li>Reporting cadence</li><li>Delivery accountability</li></ul></div><div class=\"service-row\"><h3>Corporate training</h3><p>Senior-led, customised trainings covering the full digital-marketing landscape — flexible and hands-on.</p><ul><li>Tailored workshops</li><li>Paid media &amp; analytics</li><li>In-person or remote</li><li>Team upskilling</li></ul></div>",
-            "type": "textarea"
+            "type": "textarea",
+            "pageTemplates": "services"
         },
         {
             "name": "displayTitle",
             "label": "Display page title",
             "value": true,
-            "type": "checkbox"
+            "type": "checkbox",
+            "pageTemplates": "!guide,empty"
         },
         {
             "name": "displayFeaturedImage",
             "label": "Display featured image",
             "value": true,
-            "type": "checkbox"
+            "type": "checkbox",
+            "pageTemplates": ",landing"
         },
         {
             "name": "displayShareButtons",
             "label": "Display share buttons",
             "value": false,
-            "type": "checkbox"
+            "type": "checkbox",
+            "pageTemplates": ","
         },
         {
             "name": "displayChildPages",
             "label": "Display child pages",
             "value": true,
-            "type": "checkbox"
+            "type": "checkbox",
+            "pageTemplates": ",landing,services"
         },
         {
             "name": "displayComments",
             "label": "Display comments",
             "value": false,
-            "type": "checkbox"
+            "type": "checkbox",
+            "pageTemplates": ",contact"
         },
         {
             "name": "separatorGuide",
             "type": "separator",
             "label": "Guide template",
             "group": "Homepage",
-            "size": "big"
+            "size": "big",
+            "pageTemplates": "guide"
         },
         {
             "name": "guideLead",
             "label": "Guide — lead / subhead",
             "group": "Homepage",
             "type": "textarea",
-            "value": "How Europe’s luxury resorts are winning back margin from the OTAs — and getting ready for the AI-agent era. A practical playbook from the team at Hirundo."
+            "value": "How Europe’s luxury resorts are winning back margin from the OTAs — and getting ready for the AI-agent era. A practical playbook from the team at Hirundo.",
+            "pageTemplates": "guide"
         },
         {
             "name": "guideDownloadLabel",
             "label": "Guide — download button label",
             "group": "Homepage",
             "type": "text",
-            "value": "Get the free guide"
+            "value": "Get the free guide",
+            "pageTemplates": "guide"
         },
         {
             "name": "guideLearn",
@@ -984,7 +996,8 @@
             "group": "Homepage",
             "type": "textarea",
             "note": "One .guide-card per topic: &lt;h3&gt; + &lt;p&gt;.",
-            "value": "<div class=\"guide-card\"><h3>The real cost of a booking</h3><p>OTA commissions run 15–30% (all-in up to ~35%) versus roughly 10% for a direct booking — and the margin you recover with every point of direct share.</p></div><div class=\"guide-card\"><h3>Your 2024 pricing window</h3><p>How the EU’s Digital Markets Act ended OTA rate-parity, so EEA resorts can finally price direct below the OTAs.</p></div><div class=\"guide-card\"><h3>The AI-agent shift</h3><p>Why guests increasingly discover and book through AI assistants, why those assistants default to OTAs, and how to stay visible.</p></div><div class=\"guide-card\"><h3>One system, not three vendors</h3><p>Running demand creation, on-site capture (CRO) and retention (CRM) as a single, luxury-native engine instead of siloed tactics.</p></div><div class=\"guide-card\"><h3>Measure what matters</h3><p>Booking cost (spend ÷ revenue) as the number that runs the P&amp;L — not vanity media metrics.</p></div><div class=\"guide-card\"><h3>A 90-day plan</h3><p>A pragmatic sequence to audit, prioritise and grow direct-booking share this season.</p></div>"
+            "value": "<div class=\"guide-card\"><h3>The real cost of a booking</h3><p>OTA commissions run 15–30% (all-in up to ~35%) versus roughly 10% for a direct booking — and the margin you recover with every point of direct share.</p></div><div class=\"guide-card\"><h3>Your 2024 pricing window</h3><p>How the EU’s Digital Markets Act ended OTA rate-parity, so EEA resorts can finally price direct below the OTAs.</p></div><div class=\"guide-card\"><h3>The AI-agent shift</h3><p>Why guests increasingly discover and book through AI assistants, why those assistants default to OTAs, and how to stay visible.</p></div><div class=\"guide-card\"><h3>One system, not three vendors</h3><p>Running demand creation, on-site capture (CRO) and retention (CRM) as a single, luxury-native engine instead of siloed tactics.</p></div><div class=\"guide-card\"><h3>Measure what matters</h3><p>Booking cost (spend ÷ revenue) as the number that runs the P&amp;L — not vanity media metrics.</p></div><div class=\"guide-card\"><h3>A 90-day plan</h3><p>A pragmatic sequence to audit, prioritise and grow direct-booking share this season.</p></div>",
+            "pageTemplates": "guide"
         },
         {
             "name": "guideToc",
@@ -992,7 +1005,8 @@
             "group": "Homepage",
             "type": "textarea",
             "note": "One .guide-part per part: .guide-part__no + &lt;h3&gt; + &lt;p&gt;.",
-            "value": "<div class=\"guide-part\"><span class=\"guide-part__no\">Part I</span><div class=\"guide-part__body\"><h3>The opportunity</h3><p>The money on the table: the margin spread, the value of a point of direct share, and a worked example on a 200-key resort.</p></div></div><div class=\"guide-part\"><span class=\"guide-part__no\">Part II</span><div class=\"guide-part__body\"><h3>The two threats</h3><p>OTAs today and AI agents tomorrow — how each captures demand the resort itself creates.</p></div></div><div class=\"guide-part\"><span class=\"guide-part__no\">Part III</span><div class=\"guide-part__body\"><h3>The system</h3><p>Demand creation → direct capture → retention, with creative built for luxury.</p></div></div><div class=\"guide-part\"><span class=\"guide-part__no\">Part IV</span><div class=\"guide-part__body\"><h3>The 90-day plan &amp; measurement</h3><p>Audit, prioritise, execute — and track everything in booking cost.</p></div></div>"
+            "value": "<div class=\"guide-part\"><span class=\"guide-part__no\">Part I</span><div class=\"guide-part__body\"><h3>The opportunity</h3><p>The money on the table: the margin spread, the value of a point of direct share, and a worked example on a 200-key resort.</p></div></div><div class=\"guide-part\"><span class=\"guide-part__no\">Part II</span><div class=\"guide-part__body\"><h3>The two threats</h3><p>OTAs today and AI agents tomorrow — how each captures demand the resort itself creates.</p></div></div><div class=\"guide-part\"><span class=\"guide-part__no\">Part III</span><div class=\"guide-part__body\"><h3>The system</h3><p>Demand creation → direct capture → retention, with creative built for luxury.</p></div></div><div class=\"guide-part\"><span class=\"guide-part__no\">Part IV</span><div class=\"guide-part__body\"><h3>The 90-day plan &amp; measurement</h3><p>Audit, prioritise, execute — and track everything in booking cost.</p></div></div>",
+            "pageTemplates": "guide"
         },
         {
             "name": "guideStats",
@@ -1000,14 +1014,16 @@
             "group": "Homepage",
             "type": "textarea",
             "note": "One .stat per number: .stat__num + .stat__label.",
-            "value": "<div class=\"stat\"><span class=\"stat__num\">~10%</span><span class=\"stat__label\">Cost of a direct booking vs 15–30% via OTAs</span></div><div class=\"stat\"><span class=\"stat__num\">€38k</span><span class=\"stat__label\">Recovered per point of direct share / yr (200-key resort, illustrative)</span></div><div class=\"stat\"><span class=\"stat__num\">+3–8 pts</span><span class=\"stat__label\">Realistic annual direct-share gain</span></div><div class=\"stat\"><span class=\"stat__num\">30%</span><span class=\"stat__label\">Of travel bookings agent-executed by 2030 (IDC)</span></div>"
+            "value": "<div class=\"stat\"><span class=\"stat__num\">~10%</span><span class=\"stat__label\">Cost of a direct booking vs 15–30% via OTAs</span></div><div class=\"stat\"><span class=\"stat__num\">€38k</span><span class=\"stat__label\">Recovered per point of direct share / yr (200-key resort, illustrative)</span></div><div class=\"stat\"><span class=\"stat__num\">+3–8 pts</span><span class=\"stat__label\">Realistic annual direct-share gain</span></div><div class=\"stat\"><span class=\"stat__num\">30%</span><span class=\"stat__label\">Of travel bookings agent-executed by 2030 (IDC)</span></div>",
+            "pageTemplates": "guide"
         },
         {
             "name": "guideAbout",
             "label": "Guide — about / credibility",
             "group": "Homepage",
             "type": "textarea",
-            "value": "<p>Hirundo is the growth partner for luxury resorts that want control of their own demand. Built by senior operators from Meta, Google and Nike, we combine luxury-brand creative with performance and CRM depth — and we measure ourselves in your booking cost, not media metrics.</p>"
+            "value": "<p>Hirundo is the growth partner for luxury resorts that want control of their own demand. Built by senior operators from Meta, Google and Nike, we combine luxury-brand creative with performance and CRM depth — and we measure ourselves in your booking cost, not media metrics.</p>",
+            "pageTemplates": "guide"
         },
         {
             "name": "guideSource",
@@ -1015,7 +1031,8 @@
             "group": "Homepage",
             "type": "textarea",
             "note": "Credibility / provenance block. Keep the client unnamed.",
-            "value": "<p class=\"lead\">This playbook isn’t desk research. It distils hundreds of hours optimizing direct bookings for one of Europe’s most recognised luxury resort groups — a client we keep unnamed out of respect for the relationship — alongside benchmarks from across the sector.</p><ul class=\"guide-source__list\"><li><strong>Hundreds of hours</strong> of hands-on optimisation across paid media, CRM and CRO at resort scale.</li><li><strong>A benchmark European resort group</strong> (kept anonymous) as the proving ground.</li><li><strong>Senior operators</strong> from Meta, Google and Nike behind the method.</li><li><strong>Public sources</strong> — the EU DMA, OTA-commission benchmarks and IDC’s agent-era forecasts — applied to luxury hospitality.</li></ul>"
+            "value": "<p class=\"lead\">This playbook isn’t desk research. It distils hundreds of hours optimizing direct bookings for one of Europe’s most recognised luxury resort groups — a client we keep unnamed out of respect for the relationship — alongside benchmarks from across the sector.</p><ul class=\"guide-source__list\"><li><strong>Hundreds of hours</strong> of hands-on optimisation across paid media, CRM and CRO at resort scale.</li><li><strong>A benchmark European resort group</strong> (kept anonymous) as the proving ground.</li><li><strong>Senior operators</strong> from Meta, Google and Nike behind the method.</li><li><strong>Public sources</strong> — the EU DMA, OTA-commission benchmarks and IDC’s agent-era forecasts — applied to luxury hospitality.</li></ul>",
+            "pageTemplates": "guide"
         },
         {
             "name": "guideFormEmbed",
@@ -1023,7 +1040,8 @@
             "group": "Homepage",
             "type": "textarea",
             "note": "Paste your Tally / email-capture form embed. Leave empty for a placeholder note.",
-            "value": ""
+            "value": "",
+            "pageTemplates": "guide"
         }
     ],
     "tagConfig": [
