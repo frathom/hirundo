@@ -768,3 +768,7 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 .nav-open .site-header {
    z-index: 60;
 }
+/* Mobile: tame the decorative hero mark so it isn't invasive on phones */
+@media (max-width: 620px) {
+   .hero__mark, .guide-hero__mark, .landing-hero__mark { width: 68px; height: 68px; right: 6px; opacity: 0.5; }
+}
