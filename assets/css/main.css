@@ -762,3 +762,9 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 .guide-source__list li { position: relative; padding-left: 1.6rem; color: var(--fg-muted); font-size: 1rem; }
 .guide-source__list li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
 .guide-source__list strong { color: var(--navy); font-weight: 600; }
+
+/* Mobile nav fix: lift the header (nav drawer, z-index:50) above the .nav-open
+   scrim (z-index:55) so the open menu is tappable and undimmed. */
+.nav-open .site-header {
+   z-index: 60;
+}
