@@ -772,3 +772,5 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 @media (max-width: 620px) {
    .hero__mark, .guide-hero__mark, .landing-hero__mark { width: 68px; height: 68px; right: 6px; opacity: 0.5; }
 }
+/* Guide cover: keep the loaded cover image above the placeholder text (span has z-index:1) */
+.guide-hero__cover img { z-index: 2; }
