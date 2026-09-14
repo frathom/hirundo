@@ -774,3 +774,18 @@ img[loading].is-loaded, img.is-loaded { opacity: 1; }
 }
 /* Guide cover: keep the loaded cover image above the placeholder text (span has z-index:1) */
 .guide-hero__cover img { z-index: 2; }
+/* ---------- Announcement bar (pinned to very top) ---------- */
+.announce { position: fixed; top: 0; left: 0; right: 0; z-index: 300; background: var(--navy-900); color: var(--cream); font-size: 0.9rem; box-shadow: 0 1px 0 rgba(212,185,104,0.25); }
+.announce--gold { background: var(--gold); color: var(--navy-900); box-shadow: 0 1px 0 rgba(27,36,52,0.12); }
+.announce[hidden] { display: none; }
+.announce__inner { display: flex; align-items: center; justify-content: center; gap: 0.6rem; position: relative; padding: 0.5rem clamp(2.6rem, 7vw, 3.2rem); min-height: 40px; }
+.announce__text { margin: 0; text-align: center; line-height: 1.35; }
+.announce__link { color: var(--gold); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.announce--gold .announce__link { color: var(--navy-900); text-decoration: underline; }
+.announce__link:hover { text-decoration: underline; }
+.announce__close { position: absolute; right: 0.35rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: inherit; font-size: 1.4rem; line-height: 1; cursor: pointer; opacity: 0.6; padding: 0 0.5rem; border-radius: 6px; }
+.announce__close:hover { opacity: 1; }
+html:has(.announce:not([hidden])) { --announce-h: 44px; scroll-padding-top: calc(var(--header-h, 88px) + var(--announce-h) + 12px); }
+html:has(.announce:not([hidden])) body { padding-top: var(--announce-h); }
+html:has(.announce:not([hidden])) .site-header--sticky { top: var(--announce-h); }
+@media (max-width: 620px) { .announce { font-size: 0.82rem; } }
