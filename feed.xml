@@ -3,7 +3,7 @@
     <title>Hirundo</title>
     <link href="https://hirundo.global/feed.xml" rel="self" />
     <link href="https://hirundo.global" />
-    <updated>2026-10-02T12:19:49+02:00</updated>
+    <updated>2026-10-02T12:42:00+02:00</updated>
     <author>
         <name>Hirundo Team</name>
     </author>
@@ -16,17 +16,40 @@
         </author>
         <link href="https://hirundo.global/mews-booking-engine-datalayer/"/>
         <id>https://hirundo.global/mews-booking-engine-datalayer/</id>
+        <media:content url="https://hirundo.global/media/posts/16/mews-datalayer.png" medium="image" />
             <category term="Analytics"/>
 
         <updated>2026-10-02T10:27:07+02:00</updated>
             <summary>
                 <![CDATA[
-                    Mews gives hotels a solid booking engine and a native Google Tag Manager integration. What it does not give you is a dataLayer your tags can use as it comes.
+                        <img src="https://hirundo.global/media/posts/16/mews-datalayer.png" alt="" />
+                    In short Hotels on Mews pay for traffic they cannot measure properly. The booking engine sends events to Google Tag Manager, but not the stay data, net revenue or stable&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Mews gives hotels a solid booking engine and a native Google Tag Manager integration. What it does not give you is a dataLayer your tags can use as it comes. The events are there, but they are named and shaped the Mews way, they miss the fields paid media needs, and Mews provides them “as is”, with no customisation.</p><p>We built a dataLayer kit that fixes this inside GTM, without asking Mews for anything. It is free, and you can get it at the end of this post.</p><p class="mkit"><a class="btn btn--gold btn--lg" href="#guide-form" data-event="guide_download_intent" data-event-location="post_intro">Get the free kit</a></p>
+                    <p><img src="https://hirundo.global/media/posts/16/mews-datalayer.png" class="type:primaryImage" alt="" /></p>
+                <div class="mkit mkit-chapo">
+<p class="eyebrow eyebrow--gold">In short</p>
+<p class="mkit-chapo__lead">Hotels on Mews pay for traffic they cannot measure properly. The booking engine sends events to Google Tag Manager, but not the stay data, net revenue or stable event names that bidding and reporting depend on. This free kit closes that gap inside GTM.</p>
+<dl class="mkit-chapo__facts">
+<div><dt>Why it matters</dt><dd>Without nights, lead time and net value on every event, Google Ads and Meta optimise on incomplete signals.</dd></div>
+<div><dt>When to use it</dt><dd>Before you launch or scale paid media, when you move to Mews, or when you rebuild tracking for GA4 and Consent Mode v2.</dd></div>
+<div><dt>Who it is for</dt><dd>Marketing and e-commerce leads at hotels and groups on the Mews Booking Engine, and the agencies or analysts who run their GTM.</dd></div>
+</dl>
+</div>
+<style>
+.entry>.mkit-chapo{margin-block:0 clamp(1.8rem,4vw,2.6rem)}
+.mkit-chapo{background:var(--gold-soft);border-top:3px solid var(--gold);border-radius:0 0 var(--radius) var(--radius);padding:clamp(1.4rem,3vw,2.2rem)}
+.mkit-chapo .eyebrow{margin-bottom:.7rem}
+.mkit-chapo__lead{font-family:var(--font-serif);font-weight:500;font-size:clamp(1.4rem,2.5vw,1.75rem);line-height:1.32;color:var(--navy);margin:0}
+.mkit-chapo__facts{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2.5vw,1.8rem);margin:clamp(1.2rem,2.5vw,1.7rem) 0 0;padding-top:clamp(1rem,2vw,1.4rem);border-top:1px solid var(--navy-line)}
+.mkit-chapo__facts dt{font-family:var(--font-mono);font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:var(--navy);margin-bottom:.4rem}
+.mkit-chapo__facts dd{margin:0;font-size:.95rem;line-height:1.55;color:#2a2d35}
+@media(max-width:640px){.mkit-chapo__facts{grid-template-columns:1fr}}
+</style>
+
+<p>Mews gives hotels a solid booking engine and a native Google Tag Manager integration. What it does not give you is a dataLayer your tags can use as it comes. The events are there, but they are named and shaped the Mews way, they miss the fields paid media needs, and Mews provides them “as is”, with no customisation.</p><p>We built a dataLayer kit that fixes this inside GTM, without asking Mews for anything. It is free, and you can get it at the end of this post.</p><p class="mkit"><a class="btn btn--gold btn--lg" href="#guide-form" data-event="guide_download_intent" data-event-location="post_intro">Get the free kit</a></p>
 
 <figure class="mkit mkit-panel" aria-label="Example of a normalised purchase event">
 <div class="mkit-panel__bar"><span></span><span></span><span></span><em>hirundo-mews-datalayer.js</em></div>
