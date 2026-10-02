@@ -3,12 +3,63 @@
     <title>Hirundo</title>
     <link href="https://hirundo.global/feed.xml" rel="self" />
     <link href="https://hirundo.global" />
-    <updated>2026-07-22T20:48:53+02:00</updated>
+    <updated>2026-10-02T10:35:32+02:00</updated>
     <author>
         <name>Hirundo Team</name>
     </author>
     <id>https://hirundo.global</id>
 
+    <entry>
+        <title>A ready-to-use dataLayer for the Mews Booking Engine</title>
+        <author>
+            <name>Hirundo Team</name>
+        </author>
+        <link href="https://hirundo.global/mews-booking-engine-datalayer/"/>
+        <id>https://hirundo.global/mews-booking-engine-datalayer/</id>
+            <category term="Analytics"/>
+
+        <updated>2026-10-02T10:27:07+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Mews gives hotels a solid booking engine and a native Google Tag Manager integration. What it does not give you is a dataLayer your tags can use as it comes.
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Mews gives hotels a solid booking engine and a native Google Tag Manager integration. What it does not give you is a dataLayer your tags can use as it comes. The events are there, but they are named and shaped the Mews way, they miss the fields paid media needs, and Mews provides them “as is”, with no customisation.</p><p>We built a dataLayer kit that fixes this inside GTM, without asking Mews for anything. You can download it for free at the end of this post.</p><p><a href="https://drive.google.com/uc?export=download&id=1t-TrHmkJvjRARpT9-agX_up9rtS_yJIK">Download the Mews dataLayer kit (.js)</a></p><h2 id="what-mews-sends-and-where-it-falls-short">What Mews sends, and where it falls short</h2>
+<p>The Mews Booking Engine pushes 19 events to the dataLayer: 12 page events prefixed <code>ga4_</code> (calendar loaded, rates loaded, booking created and so on) and 7 GA4 e-commerce events, from <code>view_item_list</code> to <code>purchase</code>.</p><p>That is a good base. Four gaps show up as soon as you plug real tags into it:</p><ul>
+<li><strong>No search event.</strong> The date search and the click on a room are not events. You have to derive them from other steps.</li>
+<li><strong>No stay metrics.</strong> Nights and lead time, the two numbers that drive hotel bidding, are not calculated anywhere before the purchase.</li>
+<li><strong>Tax-inclusive prices only.</strong> Funnel events carry gross prices. The net value exists on the purchase alone, so ROAS is not comparable between markets with different tax rules.</li>
+<li><strong>Names you do not control.</strong> If Mews renames an event, every trigger that listens to it breaks.</li>
+</ul>
+<h2 id="the-approach-normalise-do-not-rewrite">The approach: normalise, do not rewrite</h2>
+<p>You cannot change what Mews pushes. You can change what your tags read.</p><p>The kit adds one tag to your GTM container, the Normalizer. It listens to each native Mews event and pushes a second event next to it, prefixed <code>hirundo_</code>, in a schema that stays the same at every step of the funnel:</p><ul>
+<li><strong>context</strong>: the property, the chain, the funnel step and the consent state</li>
+<li><strong>stay</strong>: check-in and check-out dates, nights, lead time, guests, rooms, promo code</li>
+<li><strong>ecommerce</strong>: the standard GA4 object, plus net value and the split between room revenue and extras</li>
+<li><strong>booking</strong>: the Mews reservation group ID, your join key with the PMS</li>
+</ul>
+<p>GA4, Google Ads and Meta read only the <code>hirundo_</code> events. If Mews changes something, you update one mapping in one tag.</p><h2 id="what-you-get-in-the-file">What you get in the file</h2>
+<ol>
+<li><strong>The target schema</strong>, with a complete purchase example you can compare against GTM Preview.</li>
+<li><strong>The event mapping</strong>: each native Mews event, its <code>hirundo_</code> equivalent and the GA4 event name to send. Sixteen events, including <code>hirundo_search</code> and <code>hirundo_no_availability</code>, which Mews does not provide.</li>
+<li><strong>The Normalizer tag</strong>, ready to paste into a Custom HTML tag. It calculates nights and lead time, separates room revenue from extras, maps Mews consent to Consent Mode v2 and blocks duplicate purchases when the confirmation page is reloaded.</li>
+<li><strong>The GTM checklist</strong>: the variables, triggers and tags to create, the Mews Operations settings to switch on, and the tests to run before you publish.</li>
+</ol>
+<h2 id="three-decisions-already-made-for-you">Three decisions already made for you</h2>
+<p><strong>Net value for ad platforms, gross for analytics.</strong> GA4 receives the tax-inclusive value, which matches what the hotel reports. Google Ads and Meta receive the net value, so a campaign in a market with 10% VAT is judged on the same basis as one with 20%.</p><p><strong>One primary conversion.</strong> <code>hirundo_purchase</code> is the only conversion that carries a value and drives bidding. Add to cart and begin checkout are secondary conversions, there to help the algorithms learn.</p><p><strong>Multi-property from day one.</strong> Every event carries the property ID. A single lookup table in GTM routes each hotel to its own GA4 property, Google Ads conversion and Hotel Center ID, with a chain default for the steps before a guest picks a hotel.</p><h2 id="before-you-install-it">Before you install it</h2>
+<ul>
+<li>You need the GTM container ID entered in Mews Operations, under Settings &gt; Services &gt; Booking engines.</li>
+<li>For Enhanced Conversions, switch on “Collect emails for bookings in Google Tag Manager purchase event” in the same screen, and check that your privacy policy covers it.</li>
+<li>If the booking engine runs as a widget on your site, add your domain and <code>mews.com</code> to the GA4 cross-domain settings.</li>
+<li>Test everything in GTM Preview first. Mews owns the native events and can change them.</li>
+</ul>
+<p>One limit to know about: this kit covers the Booking Engine. The Guest Journey (online check-in, Kiosk, upsells after booking, cancellations) has no dataLayer. Measuring it means working server-side from the Mews PMS, which is a separate project.</p><h2 id="download-the-kit">Download the kit</h2>
+<p>The file is free to use and adapt. It is a commented JavaScript file: open it in any text editor and follow the four sections in order.</p><p><a href="https://drive.google.com/uc?export=download&id=1t-TrHmkJvjRARpT9-agX_up9rtS_yJIK">Download the Mews dataLayer kit (.js)</a></p><p>Running a hotel group on Mews and want this set up, or extended to the Guest Journey and to offline conversions? <a href="https://hirundo.global/contact">Get in touch with Hirundo</a>.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Scaling a DTC brand into 12 new markets</title>
         <author>
@@ -44,7 +95,7 @@
     </h2>
 
   <p>
-    We built a market-by-market testing framework: a small controlled budget per market, one variable changed at a time, and a single metric of truth, contribution margin. Winners were scaled, losers cut fast.
+    We built a market-by-market testing framework: a small controlled budget per market, one variable changed at a time, and a single metric of truth: contribution margin. We scaled winners and cut losers fast.
   </p>
 
     <h2 id="the-results">
@@ -100,7 +151,7 @@
         <updated>2026-07-08T13:23:12+02:00</updated>
             <summary>
                 <![CDATA[
-                    Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster, and for less. Every test should answer a question ("does social proof beat&hellip;
+                    Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster, and for less. Every test should answer a question: 'does social proof beat&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -115,7 +166,7 @@
     </h2>
 
   <p>
-    Every test should answer a question ("does social proof beat urgency?"), so even a loser teaches you something reusable.
+    Every test should answer a question: 'does social proof beat urgency?' Even a loser teaches you something reusable.
   </p>
 
     <h2 id="test-one-variable-at-a-time">
@@ -123,7 +174,7 @@
     </h2>
 
   <p>
-    Hook, format, or offer, change one, hold the rest. Bundled changes give you a result you can't explain or repeat.
+    Hook, format, or offer: change one, hold the rest. Bundled changes give you a result you can't explain or repeat.
   </p>
 
     <h2 id="small-controlled-honest">
@@ -131,7 +182,7 @@
     </h2>
 
   <p>
-    Equal budget, same audience, enough time to reach significance. Cheap tests that can't conclude are the most expensive kind.
+    Equal budget, same audience, enough time to reach significance. Cheap tests that don't bring conclusions are an expensive waste.
   </p>
 
     <h2 id="kill-fast-scale-slower">
@@ -139,7 +190,7 @@
     </h2>
 
   <p>
-    Cut clear losers early, but let winners prove themselves before you pour spend in, early winners regress more often than you'd like.
+    Cut clear losers early, but let winners prove themselves before you pour in cash. Early winners regress more often than anyone would like.
   </p>
             ]]>
         </content>
