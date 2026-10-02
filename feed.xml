@@ -3,7 +3,7 @@
     <title>Hirundo</title>
     <link href="https://hirundo.global/feed.xml" rel="self" />
     <link href="https://hirundo.global" />
-    <updated>2026-10-02T15:23:03+02:00</updated>
+    <updated>2026-10-02T15:34:32+02:00</updated>
     <author>
         <name>Hirundo Team</name>
     </author>
@@ -23,7 +23,7 @@
             <summary>
                 <![CDATA[
                         <img src="https://hirundo.global/media/posts/16/mews-datalayer.png" alt="" />
-                    In short Hotels on Mews pay for traffic they cannot measure properly. The booking engine sends events to Google Tag Manager, but not the stay data, net revenue or stable&hellip;
+                    In short The Mews Booking Engine already sends a solid set of events to Google Tag Manager. This free kit builds on them: it adds the stay data, net revenue&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -31,7 +31,7 @@
                     <p><img src="https://hirundo.global/media/posts/16/mews-datalayer.png" class="type:primaryImage" alt="" /></p>
                 <div class="mkit mkit-chapo">
 <p class="eyebrow eyebrow--gold">In short</p>
-<p class="mkit-chapo__lead">Hotels on Mews pay for traffic they cannot measure properly. The booking engine sends events to Google Tag Manager, but not the stay data, net revenue or stable event names that bidding and reporting depend on. This free kit closes that gap inside GTM.</p>
+<p class="mkit-chapo__lead">The Mews Booking Engine already sends a solid set of events to Google Tag Manager. This free kit builds on them: it adds the stay data, net revenue and stable event names that paid media bidding and reporting rely on, without leaving GTM.</p>
 <dl class="mkit-chapo__facts">
 <div><dt>Why it matters</dt><dd>Without nights, lead time and net value on every event, Google Ads and Meta optimise on incomplete signals.</dd></div>
 <div><dt>When to use it</dt><dd>Before you launch or scale paid media, when you move to Mews, or when you rebuild tracking for GA4 and Consent Mode v2.</dd></div>
