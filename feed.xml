@@ -3,12 +3,37 @@
     <title>Hirundo</title>
     <link href="https://hirundo.global/feed.xml" rel="self" />
     <link href="https://hirundo.global" />
-    <updated>2026-10-02T12:42:00+02:00</updated>
+    <updated>2026-10-02T13:04:03+02:00</updated>
     <author>
         <name>Hirundo Team</name>
     </author>
     <id>https://hirundo.global</id>
 
+    <entry>
+        <title>Digital marketing in the AI era: innovation with a security shield</title>
+        <author>
+            <name>Hirundo Team</name>
+        </author>
+        <link href="https://hirundo.global/digital-marketing-in-the-ai-era-innovation-with-a-security-shield/"/>
+        <id>https://hirundo.global/digital-marketing-in-the-ai-era-innovation-with-a-security-shield/</id>
+
+        <updated>2026-10-02T13:04:03+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Artificial intelligence is changing digital marketing at remarkable speed. It can accelerate research, uncover patterns, streamline repetitive work and help teams explore more creative directions. But using AI well is&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Artificial intelligence is changing digital marketing at remarkable speed. It can accelerate research, uncover patterns, streamline repetitive work and help teams explore more creative directions. But using AI well is not simply a matter of adopting the latest tool. It is about deciding how much autonomy to allow, where to maintain control and what information should never enter an AI workflow.</p><p>At Hirundo, we see AI as a powerful co-pilot, not an unsupervised decision-maker. It supports the expertise of our senior marketing team without replacing professional judgement, accountability or the safeguards our clients expect.</p><h2 id="how-much-we-allow-how-much-we-control">How much we allow, how much we control</h2>
+<p>The real question is not whether marketers should use AI, but where and under what conditions it should be used.</p><p>AI can help structure information, generate initial variations, identify trends and make certain processes more efficient. However, strategic decisions, campaign direction, brand positioning and final approvals remain in human hands. Every AI-assisted output must pass through the same professional review process as any other deliverable.</p><p>This approach allows us to benefit from AI’s speed without giving up control over accuracy, context or quality. If a task involves sensitive data, important brand decisions or reputational risk, automation never has the final word.</p><h2 id="privacy-and-security-start-before-the-prompt">Privacy and security start before the prompt</h2>
+<p>Security cannot be added after an AI tool has already received sensitive information. It must begin before the first prompt is written.</p><p>At Hirundo, raw personally identifiable information, confidential client data and sensitive business metrics are not entered into external AI systems. Before information is used in an approved AI workflow, identifying elements are removed or replaced with neutral placeholders. A brand name, for example, may become “Client A,” while confidential campaign values may be converted into anonymised or representative data.</p><p>The real information is re-associated only within the appropriate secure environment. This allows our team to benefit from AI-assisted analysis without unnecessarily exposing the client behind the data.</p><p>We also follow a classification-first approach. Client assets are assessed when they enter our systems so that the appropriate access controls, masking and encryption measures can be applied upstream. The AI component only interacts with the information it genuinely needs and only in a sanitised form.</p><p>Where dedicated AI workflows are created for a client, access is compartmentalised. Service identities, restricted permissions and read-only access are used wherever possible to prevent data from being mixed across accounts. One client’s information should never become another client’s context.</p><h2 id="protecting-more-than-data">Protecting more than data</h2>
+<p>Security in marketing also means protecting the brand.</p><p>AI can produce content quickly, but speed without guardrails can create inconsistent messaging, inaccurate claims or language that does not reflect the brand’s values. This is why every AI use case needs clear boundaries covering what may be generated, what information may be referenced and what must never be published without specialist review.</p><p>Our safety nets include brand guidelines, approved terminology, tone-of-voice rules and defined escalation points. Claims, statistics, legal statements and sensitive subjects require additional verification. Final materials are reviewed by people who understand both the brand and the wider commercial context.</p><p>AI may suggest. Hirundo’s specialists decide.</p><h2 id="training-the-team-to-protect-the-client">Training the team to protect the client</h2>
+<p>Secure AI use depends on people as much as technology. Even the strongest platform controls can be undermined by an unsafe prompt, which is why our team is prepared to recognise sensitive information before it reaches an AI system.</p><p>A central part of this preparation is de-identification training. Team members know how to sanitise prompts, documents, datasets and code by removing names, account details, confidential metrics and identifying context. They also learn when anonymisation is insufficient and when a task should not involve an external AI tool at all.</p><p>Training additionally covers approved use cases, access management, output verification, copyright awareness and the limitations of generative models. Knowing when to stop and escalate is just as important as knowing how to use the technology.</p><p>Because Hirundo is built around experienced digital marketing professionals, AI is integrated into an already mature decision-making process. It amplifies expertise rather than attempting to manufacture it.</p><h2 id="keeping-humans-in-control">Keeping humans in control</h2>
+<p>Responsible AI adoption does not mean avoiding innovation. It means using innovation deliberately.</p><p>For us, AI can accelerate execution, broaden exploration and reduce time spent on repetitive work. What it cannot replace is responsibility. Our team remains accountable for the strategy, the final recommendation and the work delivered to the client.</p><p>That is how we approach digital marketing in the AI era: with curiosity, strong professional judgement and a security shield around every client relationship. AI helps us move faster, but trust determines how far we allow it to go.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>A ready-to-use dataLayer for the Mews Booking Engine</title>
         <author>
