@@ -20,7 +20,7 @@
             <category term="Strategy"/>
 
         <updated>2026-10-02T12:54:20+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://hirundo.global/media/posts/17/dreamstime_m_471066104.jpg" alt="" />
                     In short AI makes marketing teams faster, but it also opens a new way to expose client data and dilute a brand. This is how Hirundo uses it: as a&hellip;
@@ -69,7 +69,7 @@
             <category term="Analytics"/>
 
         <updated>2026-10-02T10:27:07+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://hirundo.global/media/posts/16/mews-datalayer.png" alt="" />
                     In short The Mews Booking Engine already sends a solid set of events to Google Tag Manager. This free kit builds on them: it adds the stay data, net revenue&hellip;
@@ -207,7 +207,7 @@ dataLayer.push({
             <category term="Paid media"/>
 
         <updated>2026-07-08T18:46:15+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                     How a disciplined testing framework tripled ROAS in six months A fast-growing DTC brand had proven demand at home but no repeatable way to enter new markets. Every launch felt&hellip;
                 ]]>
@@ -256,7 +256,7 @@ dataLayer.push({
             <category term="Strategy"/>
 
         <updated>2026-07-08T13:24:12+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://hirundo.global/media/posts/5/pexels-kirandeepsingh-10053702.jpg" alt="" />
                     Expanding into a new market rarely fails on media budget, it fails on the translation of intent. These are the five principles we use to make campaigns travel. Localise the&hellip;
@@ -286,7 +286,7 @@ dataLayer.push({
             <category term="Paid media"/>
 
         <updated>2026-07-08T13:23:12+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                     Most creative budgets are spent proving what we already suspected. A lean testing framework finds winners faster, and for less. Every test should answer a question: 'does social proof beat&hellip;
                 ]]>
@@ -343,7 +343,7 @@ dataLayer.push({
             <category term="Analytics"/>
 
         <updated>2026-07-08T13:22:12+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://hirundo.global/media/posts/7/pexels-reinis-bruzitis-2153679369-35828991.jpg" alt="" />
                     Perfect attribution doesn't exist. Useful attribution does, the kind that tells you what to do on Monday morning. The value isn't in the model's accuracy, it's in applying the same&hellip;
